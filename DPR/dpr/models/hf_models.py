@@ -23,50 +23,14 @@ from transformers import BertTokenizer
 from transformers import RobertaTokenizer
 from transformers import ElectraTokenizer
 
-import json
-import logging
-import math
-import pickle
-import random
-from typing import List, Iterator, Callable
+import sys
+sys.path.append("DPR\dpr\utils")
 
-from torch import Tensor as T
-
-
-# from dpr.utils.data_utils import Tensorizer
+from data_utils import Tensorizer
 from .biencoder import BiEncoder
 from .reader import Reader
 
 logger = logging.getLogger(__name__)
-
-class Tensorizer(object):
-    """
-    Component for all text to model input data conversions and related utility methods
-    """
-
-    # Note: title, if present, is supposed to be put before text (i.e. optional title + document body)
-    def text_to_tensor(
-        self, text: str, title: str = None, add_special_tokens: bool = True
-    ):
-        raise NotImplementedError
-
-    def get_pair_separator_ids(self) -> T:
-        raise NotImplementedError
-
-    def get_pad_id(self) -> int:
-        raise NotImplementedError
-
-    def get_attn_mask(self, tokens_tensor: T):
-        raise NotImplementedError
-
-    def is_sub_word_id(self, token_id: int):
-        raise NotImplementedError
-
-    def to_string(self, token_ids, skip_special_tokens=True):
-        raise NotImplementedError
-
-    def set_pad_to_max(self, pad: bool):
-        raise NotImplementedError
 
 
 def count_parameters(model):

@@ -20,54 +20,14 @@ import torch.nn.functional as F
 from torch import Tensor as T
 from torch import nn
 
-import json
-import logging
-import math
-import pickle
-import random
-from typing import List, Iterator, Callable
-
-from torch import Tensor as T
+import sys
+sys.path.append("DPR\dpr\utils")
 
 
-# from dpr.utils.data_utils import Tensorizer
-# from dpr.utils.data_utils import normalize_question
+from data_utils import Tensorizer
+from data_utils import normalize_question
 
 logger = logging.getLogger(__name__)
-
-def normalize_question(question: str) -> str:
-    if question[-1] == "?":
-        question = question[:-1]
-    return question
-
-class Tensorizer(object):
-    """
-    Component for all text to model input data conversions and related utility methods
-    """
-
-    # Note: title, if present, is supposed to be put before text (i.e. optional title + document body)
-    def text_to_tensor(
-        self, text: str, title: str = None, add_special_tokens: bool = True
-    ):
-        raise NotImplementedError
-
-    def get_pair_separator_ids(self) -> T:
-        raise NotImplementedError
-
-    def get_pad_id(self) -> int:
-        raise NotImplementedError
-
-    def get_attn_mask(self, tokens_tensor: T):
-        raise NotImplementedError
-
-    def is_sub_word_id(self, token_id: int):
-        raise NotImplementedError
-
-    def to_string(self, token_ids, skip_special_tokens=True):
-        raise NotImplementedError
-
-    def set_pad_to_max(self, pad: bool):
-        raise NotImplementedError
 
 
 BiEncoderBatch = collections.namedtuple(

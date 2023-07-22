@@ -19,8 +19,12 @@ import torch.nn as nn
 from torch import Tensor as T
 from torch.nn import CrossEntropyLoss
 
-from dpr.data.reader_data import ReaderSample, ReaderPassage
-from dpr.utils.model_utils import init_weights
+import sys
+sys.path.append("DPR\dpr\data")
+sys.path.append("DPR\dpr\utils")
+
+from reader_data import ReaderSample, ReaderPassage
+from model_utils import init_weights
 
 logger = logging.getLogger()
 
