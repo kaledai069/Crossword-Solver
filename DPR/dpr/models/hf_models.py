@@ -24,7 +24,7 @@ from transformers import RobertaTokenizer
 from transformers import ElectraTokenizer
 
 import sys
-sys.path.append("DPR\dpr\utils")
+sys.path.append("DPR/dpr/utils")
 
 from data_utils import Tensorizer
 from .biencoder import BiEncoder
