@@ -32,9 +32,9 @@ RERANKER_CACHE = {}
 
 def setup_closedbook(process_id):
     dpr = DPRForCrossword(
-        "checkpoints/biencoder/dpr_biencoder.bin",
-        "checkpoints/biencoder/wordlist.tsv",
-        "checkpoints/biencoder/embeddings/embeddings.json_*",
+        "/kaggle/working/checkpoints/biencoder/dpr_biencoder.bin",
+        "/kaggle/working/checkpoints/biencoder/wordlist.tsv",
+        "/kaggle/working/checkpoints/biencoder/embeddings/embeddings.json_*",
         retrievalmodel=False,
         process_id=process_id
     )
@@ -42,7 +42,7 @@ def setup_closedbook(process_id):
 
 def setup_t5_reranker(process_id):
     tokenizer = AutoTokenizer.from_pretrained('google/byt5-small')
-    model = T5ForConditionalGeneration.from_pretrained('checkpoints/byt5_reranker/')
+    model = T5ForConditionalGeneration.from_pretrained('/kaggle/working/checkpoints/byt5_reranker/')
     model.eval().to('cuda:'+str(process_id % torch.cuda.device_count()))
     return model, tokenizer
 

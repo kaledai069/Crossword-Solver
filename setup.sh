@@ -9,15 +9,6 @@ pip install transformers
 pip install wordsegment
 pip install git+https://github.com/alexdej/puzpy.git
 
-# Download checkpoints
-mkdir -p checkpoints/byt5_reranker
-mkdir -p checkpoints/biencoder/embeddings
-mkdir -p checkpoints/gpt2_segmenter
-
-# Download precomputed embeddings
-for i in {0..3}; do
-    wget https://huggingface.co/albertxu/Berkeley-Crossword-Solver/resolve/main/biencoder/embeddings/embeddings.json_$i.pkl -O /kaggle/working/checkpoints/biencoder/embeddings/embeddings.json_$i.pkl
-done
 
 # # Download checkpoints
 # mkdir -p checkpoints/byt5_reranker
