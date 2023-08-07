@@ -20,8 +20,8 @@ from torch import Tensor as T
 from torch.nn import CrossEntropyLoss
 
 import sys
-sys.path.append("DPR\dpr\data")
-sys.path.append("DPR\dpr\utils")
+sys.path.append("DPR/dpr/data")
+sys.path.append("DPR/dpr/utils")
 
 from reader_data import ReaderSample, ReaderPassage
 from model_utils import init_weights

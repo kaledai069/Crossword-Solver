@@ -21,7 +21,7 @@ from torch import Tensor as T
 from torch import nn
 
 import sys
-sys.path.append("DPR\dpr\utils")
+sys.path.append("DPR/dpr/utils")
 
 
 from data_utils import Tensorizer
