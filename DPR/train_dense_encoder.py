@@ -79,9 +79,9 @@ class BiEncoderTrainer(object):
         # if model file is specified, encoder parameters from saved state should be used for initialization
         model_file = get_model_file(self.args, self.args.checkpoint_file_name)
         saved_state = None
-        if model_file:
-            saved_state = load_states_from_checkpoint(model_file)
-            set_encoder_params_from_state(saved_state.encoder_params, args)
+        # if model_file:
+        #     saved_state = load_states_from_checkpoint(model_file)
+        #     set_encoder_params_from_state(saved_state.encoder_params, args)
 
         tensorizer, model, optimizer = init_biencoder_components(
             args.encoder_model_type, args
@@ -473,6 +473,9 @@ class BiEncoderTrainer(object):
                     loss.item(),
                     lr,
                 )
+                print_text = f"EPOCH_LOSS\tEpoch: {epoch}: Step: {data_iteration}{epoch_batches}, loss={loss.item()}, lr={lr}\n"
+                with open('/kaggle/working/output_file.txt', 'a') as file:
+                    file.write(print_text)
 
             if (i + 1) % rolling_loss_step == 0:
                 logger.info("Train batch %d", data_iteration)
@@ -482,6 +485,9 @@ class BiEncoderTrainer(object):
                     rolling_loss_step,
                     latest_rolling_train_av_loss,
                 )
+                print_text = f"AVG_LOSS_PER_LAST_BATCH\tAvg. loss per last {rolling_loss_step} batches: {latest_rolling_train_av_loss}\n"
+                with open('/kaggle/working/output_file.txt', 'a') as file:
+                    file.write(print_text)
                 rolling_train_loss = 0.0
 
             if data_iteration % eval_step == 0:
@@ -500,17 +506,30 @@ class BiEncoderTrainer(object):
 
         epoch_loss = (epoch_loss / epoch_batches) if epoch_batches > 0 else 0
         logger.info("Av Loss per epoch=%f", epoch_loss)
+
+        print_text = f"AVG_LOSS_PER_EPOCH\tAv Loss per epoch={epoch_loss}\n"
+        with open('/kaggle/working/output_file.txt', 'a') as file:
+            file.write(print_text)
+
         logger.info("epoch total correct predictions=%d", epoch_correct_predictions)
+        print_text = f"CORRECT_PREDICTIONS\tepoch total correct predictions={epoch_correct_predictions}\n"
+        with open('/kaggle/working/content/output_file.txt', 'a') as file:
+            file.write(print_text)
 
     def _save_checkpoint(self, scheduler, epoch: int, offset: int) -> str:
         args = self.args
         model_to_save = get_model_obj(self.biencoder)
+        # cp = os.path.join(
+        #     args.output_dir,
+        #     args.checkpoint_file_name
+        #     + "."
+        #     + str(epoch)
+        #     + ("." + str(offset) if offset > 0 else ""),
+        # )
+
         cp = os.path.join(
             args.output_dir,
-            args.checkpoint_file_name
-            + "."
-            + str(epoch)
-            + ("." + str(offset) if offset > 0 else ""),
+            args.checkpoint_file_name + '_trained.bin'
         )
 
         meta_params = get_encoder_params_state(args)

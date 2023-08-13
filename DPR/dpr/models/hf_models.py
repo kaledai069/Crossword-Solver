@@ -266,20 +266,24 @@ class HFBertEncoder(BertModel):
         self, input_ids: T, token_type_ids: T, attention_mask: T
     ) -> Tuple[T, ...]:
         if self.config.output_hidden_states:
-            sequence_output, pooled_output, hidden_states = super().forward(
+            outputs = super().forward(
                 input_ids=input_ids,
                 token_type_ids=token_type_ids,
                 attention_mask=attention_mask,
             )
+            sequence_output = outputs.last_hidden_state
+            pooled_output = outputs.pooler_output
+            hidden_states = outputs.hidden_states
         else:
             hidden_states = None
-            sequence_output, pooled_output = super().forward(
+            outputs = super().forward(
                 input_ids=input_ids,
                 token_type_ids=token_type_ids,
                 attention_mask=attention_mask,
             )
+            sequence_output = outputs.last_hidden_state
+            pooled_output = outputs.pooler_output
 
-        pooled_output = sequence_output[:, 0, :]
         if self.encode_proj:
             pooled_output = self.encode_proj(pooled_output)
         return sequence_output, pooled_output, hidden_states
@@ -420,6 +424,8 @@ class BertTensorizer(Tensorizer):
     def text_to_tensor(
         self, text: str, title: str = None, add_special_tokens: bool = True
     ):
+        if isinstance(text, float):
+            text = 'nan'
         text = text.strip()
 
         # tokenizer automatic padding is explicitly disabled since its inconsistent behavior
