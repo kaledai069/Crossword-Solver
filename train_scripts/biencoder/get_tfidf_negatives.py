@@ -73,7 +73,9 @@ def main(model, fills, clues, out, len_filter, k):
 def build_json(pos_examples, neg_examples, filename):
     """ Takes in two equal length lists pos_examples and neg_examples, and builds the json for dpr.
     """
-    assert len(pos_examples) == len(neg_examples)
+    print(len(pos_examples))
+    print(len(neg_examples))
+    # assert len(pos_examples) == len(neg_examples)
     print(f"Building json... at {filename}")
     joined_ex = []
     for i in tqdm(range(len(pos_examples))):

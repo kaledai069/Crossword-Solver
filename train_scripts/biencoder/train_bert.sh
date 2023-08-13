@@ -3,8 +3,8 @@ VALID_FILE=$2
 OUTPUT_DIR=$3
 
 python DPR/train_dense_encoder.py \
-	--batch_size 128 \
-	--dev_batch_size 128 \
+	--batch_size 16 \
+	--dev_batch_size 16 \
 	--sequence_length 32 \
 	--warmup_steps 1237 \
 	--max_grad_norm 2.0 \
