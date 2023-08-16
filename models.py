@@ -233,7 +233,7 @@ class DenseRetriever(object):
                 _, out, _ = self.question_encoder(q_ids_batch, q_seg_batch, q_attn_mask)
 
                 query_vectors.extend(out.cpu().split(1, dim=0))
-        print(query_vectors)
+    
         query_tensor = torch.cat(query_vectors, dim=0)
         assert query_tensor.size(0) == len(questions)
         return query_tensor

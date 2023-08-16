@@ -79,9 +79,9 @@ class BiEncoderTrainer(object):
         # if model file is specified, encoder parameters from saved state should be used for initialization
         model_file = get_model_file(self.args, self.args.checkpoint_file_name)
         saved_state = None
-        # if model_file:
-        #     saved_state = load_states_from_checkpoint(model_file)
-        #     set_encoder_params_from_state(saved_state.encoder_params, args)
+        if model_file:
+            saved_state = load_states_from_checkpoint(model_file)
+            set_encoder_params_from_state(saved_state.encoder_params, args)
 
         tensorizer, model, optimizer = init_biencoder_components(
             args.encoder_model_type, args
