@@ -514,7 +514,7 @@ class BiEncoderTrainer(object):
 
         logger.info("epoch total correct predictions=%d", epoch_correct_predictions)
         print_text = f"CORRECT_PREDICTIONS\tepoch total correct predictions={epoch_correct_predictions}\n"
-        with open('/kaggle/working/content/output_file.txt', 'a') as file:
+        with open('/kaggle/working/output_file.txt', 'a') as file:
             file.write(print_text)
 
     def _save_checkpoint(self, scheduler, epoch: int, offset: int) -> str:
