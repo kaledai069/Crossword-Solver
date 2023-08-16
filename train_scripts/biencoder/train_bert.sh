@@ -10,7 +10,7 @@ python DPR/train_dense_encoder.py \
 	--max_grad_norm 2.0 \
 	--learning_rate 2e-05 \
 	--seed 1 \
-	--num_train_epochs 15 \
+	--num_train_epochs 5 \
 	--eval_per_epoch 3 \
 	--do_lower_case \
 	--encoder_model_type hf_bert \

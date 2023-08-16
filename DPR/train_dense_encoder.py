@@ -17,6 +17,7 @@ import math
 import os
 import random
 import time
+from tqdm import tqdm
 
 
 import torch
@@ -415,9 +416,9 @@ class BiEncoderTrainer(object):
         self.biencoder.train()
         epoch_batches = train_data_iterator.max_iterations
         data_iteration = 0
-        for i, samples_batch in enumerate(
+        for i, samples_batch in tqdm(enumerate(
             train_data_iterator.iterate_data(epoch=epoch)
-        ):
+        ), ncols = 100):
 
             # to be able to resume shuffled ctx- pools
             data_iteration = train_data_iterator.get_iteration()
