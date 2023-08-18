@@ -31,11 +31,19 @@ SEGMENTER_CACHE = {}
 RERANKER_CACHE = {}
 
 def setup_closedbook(process_id):
+    # dpr = DPRForCrossword(
+    #     "checkpoints/biencoder/dpr_biencoder.bin",
+    #     "checkpoints/biencoder/wordlist.tsv",
+    #     "checkpoints/biencoder/embeddings/embeddings.json_*",
+    #     retrievalmodel=False,
+    #     process_id=process_id
+    # )
+
     dpr = DPRForCrossword(
-        "checkpoints/biencoder/dpr_biencoder.bin",
-        "checkpoints/biencoder/wordlist.tsv",
-        "checkpoints/biencoder/embeddings/embeddings.json_*",
-        retrievalmodel=False,
+        "/content/drive/MyDrive/First Pass Model/dpr_biencoder_trained_500k.bin",
+        "/content/answer_list.tsv",
+        "/content/embeddings.json_*",
+        retrievalmodel = False,
         process_id=process_id
     )
     return dpr
