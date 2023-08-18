@@ -128,7 +128,7 @@ def main(args):
         for (key, value) in saved_state.model_dict.items()
         if key.startswith("ctx_model.")
     }
-    model_to_load.load_state_dict(ctx_state)
+    model_to_load.load_state_dict(ctx_state, strict = False)
 
     logger.info("reading data from file=%s", args.ctx_file)
 

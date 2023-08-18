@@ -306,7 +306,7 @@ class DPRForCrossword(object):
             for (key, value) in saved_state.model_dict.items()
             if key.startswith("question_model.")
         }
-        model_to_load.load_state_dict(question_encoder_state)
+        model_to_load.load_state_dict(question_encoder_state, strict = False)
         vector_size = model_to_load.get_out_size()
 
         index = DenseFlatIndexer(vector_size, 50000)
