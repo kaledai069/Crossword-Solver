@@ -78,7 +78,7 @@ class BiEncoderTrainer(object):
         logger.info("***** Initializing components for training *****")
 
         # if model file is specified, encoder parameters from saved state should be used for initialization
-        model_file = get_model_file(self.args, self.args.checkpoint_file_name)
+        # model_file = get_model_file(self.args, self.args.checkpoint_file_name)
         saved_state = None
         # if model_file:
         #     saved_state = load_states_from_checkpoint(model_file)
@@ -97,6 +97,7 @@ class BiEncoderTrainer(object):
             args.fp16,
             args.fp16_opt_level,
         )
+        
         self.biencoder = model
         self.optimizer = optimizer
         self.tensorizer = tensorizer
@@ -105,6 +106,7 @@ class BiEncoderTrainer(object):
         self.scheduler_state = None
         self.best_validation_result = None
         self.best_cp_name = None
+
         if saved_state:
             self._load_saved_state(saved_state)
 
@@ -829,7 +831,6 @@ def main():
         logger.warning(
             "Neither train_file or (model_file & dev_file) parameters are specified. Nothing to do."
         )
-
 
 if __name__ == "__main__":
     main()

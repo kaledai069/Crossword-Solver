@@ -17,7 +17,7 @@ def getGrid(dateStr):
         bytevalue = response.content
         jsonText = bytevalue.decode('utf-8').replace("'", '"')
         grid_data = json.loads(jsonText) 
-        save_file = open("crossword_2.json", "w")  
+        save_file = open("crossword_3.json", "w")  
         json.dump(grid_data, save_file, indent = 6)  
         save_file.close()  
         context['data'] = grid_data
@@ -28,4 +28,4 @@ def getGrid(dateStr):
 if __name__ == "__main__":
     
     #mm//dd//yy
-    getGrid("04/20/2020")
+    getGrid("7/17/2023")
