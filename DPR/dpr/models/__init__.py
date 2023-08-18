@@ -20,6 +20,10 @@ def init_hf_albert_biencoder(args, **kwargs):
     from .hf_models import get_albert_biencoder_components
     return get_albert_biencoder_components(args, **kwargs)
 
+def init_hf_mobilebert_biencoder(args, **kwargs):
+    from .hf_models import get_mobilebert_biencoder_components
+    return get_mobilebert_biencoder_components(args, **kwargs)
+
 def init_hf_roberta_biencoder(args, **kwargs):
     from .hf_models import get_roberta_biencoder_components
     return get_roberta_biencoder_components(args, **kwargs)
@@ -55,6 +59,10 @@ def init_hf_albert_tenzorizer(args, **kwargs):
     from .hf_models import get_albert_tensorizer
     return get_albert_tensorizer(args)
 
+def init_hf_mobilebert_tenzorizer(args, **kwargs):
+    from .hf_models import get_mobilebert_tensorizer
+    return get_mobilebert_tensorizer(args)
+
 def init_hf_electra_tenzorizer(args, **kwargs):
     from .hf_models import get_electra_tensorizer
     return get_electra_tensorizer(args)
@@ -70,7 +78,8 @@ BIENCODER_INITIALIZERS = {
     'hf_roberta': init_hf_roberta_biencoder,
     'pytext_bert': init_pytext_bert_biencoder,
     'fairseq_roberta': init_fairseq_roberta_biencoder,
-    'hf_albert': init_hf_albert_biencoder
+    'hf_albert': init_hf_albert_biencoder,
+    'hf_mobilebert': init_hf_mobilebert_biencoder
 }
 
 READER_INITIALIZERS = {
@@ -83,7 +92,8 @@ TENSORIZER_INITIALIZERS = {
     'hf_roberta': init_hf_roberta_tenzorizer,
     'pytext_bert': init_hf_bert_tenzorizer,  # using HF's code as of now
     'fairseq_roberta': init_hf_roberta_tenzorizer,  # using HF's code as of now
-    'hf_albert': init_hf_albert_tenzorizer
+    'hf_albert': init_hf_albert_tenzorizer,
+    'hf_mobilebert': init_hf_mobilebert_tenzorizer
 }
 
 def init_comp(initializers_dict, type, args, **kwargs):
