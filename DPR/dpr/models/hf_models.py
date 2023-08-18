@@ -445,7 +445,7 @@ class HFAlbertEncoder(AlbertModel):
             return self.encode_proj.out_features
         return self.config.hidden_size
     
-class HFMobileBertEncoder(AlbertModel):
+class HFMobileBertEncoder(MobileBertModel):
     def __init__(self, config, project_dim: int = 0):
         MobileBertModel.__init__(self, config)
         assert config.hidden_size > 0, "Encoder hidden_size can't be zero"
