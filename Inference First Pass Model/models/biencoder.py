@@ -10,7 +10,11 @@ from torch import Tensor as T
 from torch import nn
 
 import sys
-sys.path.append("/Content/")
+import os
+
+current_dir = os.path.dirname(__file__)
+data_utils_path = os.path.join(current_dir, '..')
+sys.path.append(data_utils_path)
 
 from Data_utils_inf import Tensorizer
 from Data_utils_inf import normalize_question

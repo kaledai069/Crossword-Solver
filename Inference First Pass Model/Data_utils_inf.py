@@ -9,7 +9,6 @@ from torch import Tensor as T
 
 logger = logging.getLogger()
 
-
 def read_serialized_data_from_files(paths: List[str]) -> List:
     results = []
     for i, path in enumerate(paths):
@@ -20,7 +19,6 @@ def read_serialized_data_from_files(paths: List[str]) -> List:
             logger.info("Aggregated data size: {}".format(len(results)))
     logger.info("Total data size: {}".format(len(results)))
     return results
-
 
 def read_data_from_json_files(paths: List[str], upsample_rates: List = None) -> List:
     results = []
