@@ -151,8 +151,8 @@ class BPSolver(Solver):
             grid = self.greedy_sequential_word_solution()
             all_grids = []
         grid = self.greedy_sequential_word_solution()
-        print('=====Greedy search grid=====')
-        print_grid(grid)
+        # print('=====Greedy search grid=====')
+        # print_grid(grid)
 
         if iterative_improvement_steps < 1:
             if return_greedy_states or return_ii_states:
@@ -178,7 +178,7 @@ class BPSolver(Solver):
             best_index = best_per_var.index(max([x for x in best_per_var if x is not None]))
             best_var = self.bp_vars[best_index]
             best_word = best_var.words[best_var.log_probs.argmax()]
-            print('greedy filling in', best_word)
+            # print('greedy filling in', best_word)
             for i, cell in enumerate(best_var.ordered_cells):
                 letter = best_word[i]
                 grid[cell.position[0]][cell.position[1]] = letter
