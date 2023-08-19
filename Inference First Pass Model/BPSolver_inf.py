@@ -10,14 +10,6 @@ from tqdm import trange
 from Utils_inf import print_grid, get_word_flips
 from Solver_inf import Solver
 
-# our answer set
-answer_set = set()
-with open('/content/answer_list.tsv', 'r') as rf: 
-    for line in rf:
-        w = ''.join([c.upper() for c in (line.split('\t')[-1]).upper() if c in string.ascii_uppercase])
-        answer_set.add(w)
-
-
 # the probability of each alphabetical character in the crossword
 UNIGRAM_PROBS = [('A', 0.0897379968935765), ('B', 0.02121248877769636), ('C', 0.03482206634145926), ('D', 0.03700942543460491), ('E', 0.1159773210750429), ('F', 0.017257461694024614), ('G', 0.025429024796296124), ('H', 0.033122967601502), ('I', 0.06800036223479956), ('J', 0.00294611331754349), ('K', 0.013860682888259786), ('L', 0.05130800574373874), ('M', 0.027962776827660175), ('N', 0.06631994270448001), ('O', 0.07374646543246745), ('P', 0.026750756212433214), ('Q', 0.001507814175439393), ('R', 0.07080460813737305), ('S', 0.07410988246048224), ('T', 0.07242993582154593), ('U', 0.0289272388037645), ('V', 0.009153522059555467), ('W', 0.01434705167591524), ('X', 0.003096729223103298), ('Y', 0.01749958208224007), ('Z', 0.002659777584995724)]
 
@@ -116,6 +108,13 @@ class BPSolver(Solver):
                          process_id=process_id,
                          **kwargs)
         self.crossword = crossword
+
+        # our answer set
+        self.answer_set = set()
+        with open(ans_tsv_path, 'r') as rf: 
+            for line in rf:
+                w = ''.join([c.upper() for c in (line.split('\t')[-1]).upper() if c in string.ascii_uppercase])
+                self.answer_set.add(w)
         self.reset()
     
     def reset(self):
@@ -244,7 +243,7 @@ class BPSolver(Solver):
         # find uncertain answers
         # right now the heuristic we use is any answer that is not in the answer set
         for clue in original_qa_pairs.keys():
-            if original_qa_pairs[clue] not in answer_set:
+            if original_qa_pairs[clue] not in self.answer_set:
                 uncertain_answers[clue] = original_qa_pairs[clue]
 
         return uncertain_answers
