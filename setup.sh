@@ -10,7 +10,6 @@ pip install wordsegment
 pip install git+https://github.com/alexdej/puzpy.git
 
 
-
 # Download checkpoints
 mkdir -p checkpoints/byt5_reranker
 mkdir -p checkpoints/biencoder/embeddings
