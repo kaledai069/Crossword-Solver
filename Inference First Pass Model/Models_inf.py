@@ -25,12 +25,11 @@ from Model_utils_inf import load_states_from_checkpoint, get_model_obj
 SEGMENTER_CACHE = {}
 RERANKER_CACHE = {}
 
-def setup_closedbook(process_id):
-
+def setup_closedbook(model_path, ans_tsv_path, dense_embd_path, process_id):
     dpr = DPRForCrossword(
-        "/content/drive/MyDrive/First Pass Model/dpr_biencoder_trained_500k.bin",
-        "/content/answer_list.tsv",
-        "/content/embeddings.json_*",
+        model_path,
+        ans_tsv_path,
+        dense_embd_path,
         retrievalmodel = False,
         process_id=process_id
     )

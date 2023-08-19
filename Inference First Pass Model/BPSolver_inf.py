@@ -102,10 +102,16 @@ class BPCell:
 class BPSolver(Solver):
     def __init__(self, 
                  crossword, 
+                 model_path,
+                 ans_tsv_path,
+                 dense_embd_path,
                  max_candidates = 500000,
                  process_id=0,
                  **kwargs):
         super().__init__(crossword, 
+                         model_path,
+                         ans_tsv_path,
+                         dense_embd_path,
                          max_candidates=max_candidates,
                          process_id=process_id,
                          **kwargs)
