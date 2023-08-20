@@ -561,7 +561,7 @@ class HFElectraEncoder(ElectraModel):
         cls, cfg_name: str, projection_dim: int = 0, dropout: float = 0.1, **kwargs
     ) -> ElectraModel:
         print(cfg_name)
-        cfg = ElectraConfig.from_pretrained(cfg_name if cfg_name else "google/electra-large-discriminator")
+        cfg = ElectraConfig.from_pretrained(cfg_name if cfg_name else "google/electra-small-discriminator")
         if dropout != 0:
             cfg.attention_probs_dropout_prob = dropout
             cfg.hidden_dropout_prob = dropout

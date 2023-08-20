@@ -28,4 +28,4 @@ def getGrid(dateStr):
 if __name__ == "__main__":
     
     #mm//dd//yy
-    getGrid("7/17/2023")
+    getGrid("8/19/2023")
