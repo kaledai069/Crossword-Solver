@@ -568,12 +568,14 @@ class BiEncoderTrainer(object):
         if saved_state.optimizer_dict:
             logger.info("Loading saved optimizer state ...")
             self.optimizer.load_state_dict(saved_state.optimizer_dict)
+            self.optimizer.param_groups[0]["lr"] = self.optimizer.param_groups[0]["initial_lr"]
+            self.optimizer.param_groups[1]["lr"] = self.optimizer.param_groups[1]["initial_lr"]
             print(self.optimizer)
 
         if saved_state.scheduler_dict:
             self.scheduler_state = saved_state.scheduler_dict
-            print(self.scheduler_state)
             self.scheduler_state['_last_lr'] = self.scheduler_state['base_lrs']
+            print(self.scheduler_state)
 
 
 def _calc_loss(
