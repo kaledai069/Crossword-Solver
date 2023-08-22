@@ -280,7 +280,7 @@ def get_distilbert_biencoder_components(args, inference_only: bool = False, **kw
         args.fix_ctx_encoder if hasattr(args, "fix_ctx_encoder") else False
     )
     biencoder = BiEncoder(
-        question_encoder, ctx_encoder, fix_ctx_encoder=fix_ctx_encoder
+        question_encoder, ctx_encoder, fix_ctx_encoder = fix_ctx_encoder
     )
 
     optimizer = (
@@ -687,9 +687,8 @@ class HFDistilBertEncoder(DistilBertModel):
         else:
             hidden_states = None
             outputs = super().forward(
-                input_ids=input_ids,
-                token_type_ids=token_type_ids,
-                attention_mask=attention_mask,
+                input_ids = input_ids,
+                attention_mask = attention_mask,
             )
             sequence_output = outputs.last_hidden_state
             pooled_output = outputs.last_hidden_state[:, 0, :]

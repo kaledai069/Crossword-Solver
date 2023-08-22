@@ -91,7 +91,8 @@ class BiEncoder(nn.Module):
             if fix_encoder:
                 with torch.no_grad():
                     sequence_output, pooled_output, hidden_states = sub_model(
-                        ids, segments, attn_mask
+                        # ids, segments, attn_mask
+                        ids, attn_mask
                     )
 
                 if sub_model.training:
@@ -99,7 +100,8 @@ class BiEncoder(nn.Module):
                     pooled_output.requires_grad_(requires_grad=True)
             else:
                 sequence_output, pooled_output, hidden_states = sub_model(
-                    ids, segments, attn_mask
+                    # ids, segments, attn_mask
+                    ids,  attn_mask
                 )
 
         return sequence_output, pooled_output, hidden_states
