@@ -31,7 +31,7 @@ import sys
 sys.path.append("DPR/dpr/utils")
 
 from data_utils import Tensorizer
-from .biencoder import BiEncoder
+from .biencoder import BiEncoder, DistilBertBiEncoder
 from .reader import Reader
 
 logger = logging.getLogger(__name__)
@@ -279,7 +279,7 @@ def get_distilbert_biencoder_components(args, inference_only: bool = False, **kw
     fix_ctx_encoder = (
         args.fix_ctx_encoder if hasattr(args, "fix_ctx_encoder") else False
     )
-    biencoder = BiEncoder(
+    biencoder = DistilBertBiEncoder(
         question_encoder, ctx_encoder, fix_ctx_encoder = fix_ctx_encoder
     )
 
