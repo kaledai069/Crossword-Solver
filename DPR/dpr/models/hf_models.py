@@ -24,6 +24,8 @@ from transformers import RobertaTokenizer
 from transformers import ElectraTokenizer
 from transformers import AlbertModel, AlbertConfig, AlbertTokenizer
 from transformers import MobileBertModel, MobileBertConfig, MobileBertTokenizer
+from transformers import AutoTokenizer, AutoModel, AutoConfig
+from transformers import DistilBertTokenizer, DistilBertModel, DistilBertConfig
 
 import sys
 sys.path.append("DPR/dpr/utils")
@@ -222,6 +224,80 @@ def get_electra_biencoder_components(args, inference_only: bool = False, **kwarg
 
     return tensorizer, biencoder, optimizer
 
+def get_tinybert_biencoder_components(args, inference_only: bool = False, **kwargs):
+    dropout = args.dropout if hasattr(args, "dropout") else 0.0
+    question_encoder = HFTinyBertEncoder.init_encoder(
+        args.pretrained_model_cfg,
+        projection_dim=args.projection_dim,
+        dropout=dropout,
+        **kwargs
+    )
+    ctx_encoder = HFTinyBertEncoder.init_encoder(
+        args.pretrained_model_cfg,
+        projection_dim=args.projection_dim,
+        dropout=dropout,
+        **kwargs
+    )
+
+    fix_ctx_encoder = (
+        args.fix_ctx_encoder if hasattr(args, "fix_ctx_encoder") else False
+    )
+    biencoder = BiEncoder(
+        question_encoder, ctx_encoder, fix_ctx_encoder=fix_ctx_encoder
+    )
+
+    optimizer = (
+        get_optimizer(
+            biencoder,
+            learning_rate=args.learning_rate,
+            adam_eps=args.adam_eps,
+            weight_decay=args.weight_decay,
+        )
+        if not inference_only
+        else None
+    )
+
+    tensorizer = get_tinybert_tensorizer(args)
+
+    return tensorizer, biencoder, optimizer
+
+def get_distilbert_biencoder_components(args, inference_only: bool = False, **kwargs):
+    dropout = args.dropout if hasattr(args, "dropout") else 0.0
+    question_encoder = HFDistilBertEncoder.init_encoder(
+        args.pretrained_model_cfg,
+        projection_dim=args.projection_dim,
+        dropout=dropout,
+        **kwargs
+    )
+    ctx_encoder = HFDistilBertEncoder.init_encoder(
+        args.pretrained_model_cfg,
+        projection_dim=args.projection_dim,
+        dropout=dropout,
+        **kwargs
+    )
+
+    fix_ctx_encoder = (
+        args.fix_ctx_encoder if hasattr(args, "fix_ctx_encoder") else False
+    )
+    biencoder = BiEncoder(
+        question_encoder, ctx_encoder, fix_ctx_encoder=fix_ctx_encoder
+    )
+
+    optimizer = (
+        get_optimizer(
+            biencoder,
+            learning_rate=args.learning_rate,
+            adam_eps=args.adam_eps,
+            weight_decay=args.weight_decay,
+        )
+        if not inference_only
+        else None
+    )
+
+    tensorizer = get_distilbert_tensorizer(args)
+
+    return tensorizer, biencoder, optimizer
+
 def get_bert_reader_components(args, inference_only: bool = False, **kwargs):
     dropout = args.dropout if hasattr(args, "dropout") else 0.0
     encoder = HFBertEncoder.init_encoder(
@@ -283,6 +359,20 @@ def get_electra_tensorizer(args, tokenizer=None):
         )
     return ElectraTensorizer(tokenizer, args.sequence_length)
 
+def get_tinybert_tensorizer(args, tokenizer=None):
+    if not tokenizer:
+        tokenizer = get_tinybert_tokenizer(
+            args.pretrained_model_cfg, do_lower_case=args.do_lower_case
+        )
+    return TinyBertTensorizer(tokenizer, args.sequence_length)
+
+def get_distilbert_tensorizer(args, tokenizer=None):
+    if not tokenizer:
+        tokenizer = get_distilbert_tokenizer(
+            args.pretrained_model_cfg, do_lower_case=args.do_lower_case
+        )
+    return DistilBertTensorizer(tokenizer, args.sequence_length)
+
 def get_optimizer(
     model: nn.Module,
     learning_rate: float = 1e-5,
@@ -338,6 +428,18 @@ def get_roberta_tokenizer(pretrained_cfg_name: str, do_lower_case: bool = True):
 def get_electra_tokenizer(pretrained_cfg_name: str, do_lower_case: bool = True):
     # still uses HF code for tokenizer since they are the same
     return ElectraTokenizer.from_pretrained(
+        pretrained_cfg_name, do_lower_case=do_lower_case
+    )
+
+def get_tinybert_tokenizer(pretrained_cfg_name: str, do_lower_case: bool = True):
+    # still uses HF code for tokenizer since they are the same
+    return AutoTokenizer.from_pretrained(
+        pretrained_cfg_name, do_lower_case=do_lower_case
+    )
+
+def get_distilbert_tokenizer(pretrained_cfg_name: str, do_lower_case: bool = True):
+    # still uses HF code for tokenizer since they are the same
+    return DistilBertTokenizer.from_pretrained(
         pretrained_cfg_name, do_lower_case=do_lower_case
     )
 
@@ -496,7 +598,110 @@ class HFMobileBertEncoder(MobileBertModel):
         if self.encode_proj:
             return self.encode_proj.out_features
         return self.config.hidden_size
+    
+class HFTinyBertEncoder(AutoModel):
+    def __init__(self, config, project_dim: int = 0):
+        AutoModel.__init__(self, config)
+        assert config.hidden_size > 0, "Encoder hidden_size can't be zero"
+        self.encode_proj = (
+            nn.Linear(config.hidden_size, project_dim) if project_dim != 0 else None
+        )
+        self.init_weights()
 
+    @classmethod
+    def init_encoder(
+        cls, cfg_name: str, projection_dim: int = 0, dropout: float = 0.1, **kwargs
+    ) -> AutoModel:
+        cfg = AutoConfig.from_pretrained(cfg_name if cfg_name else "sentence-transformers/paraphrase-TinyBERT-L6-v2")
+        if dropout != 0:
+            cfg.attention_probs_dropout_prob = dropout
+            cfg.hidden_dropout_prob = dropout
+        return cls.from_pretrained(
+            cfg_name, config=cfg, project_dim=projection_dim, **kwargs
+        )
+
+    def forward(
+        self, input_ids: T, token_type_ids: T, attention_mask: T
+    ) -> Tuple[T, ...]:
+        if self.config.output_hidden_states:
+            outputs = super().forward(
+                input_ids=input_ids,
+                token_type_ids=token_type_ids,
+                attention_mask=attention_mask,
+            )
+            sequence_output = outputs.last_hidden_state
+            pooled_output = outputs.pooler_output
+            hidden_states = outputs.hidden_states
+        else:
+            hidden_states = None
+            outputs = super().forward(
+                input_ids=input_ids,
+                token_type_ids=token_type_ids,
+                attention_mask=attention_mask,
+            )
+            sequence_output = outputs.last_hidden_state
+            pooled_output = outputs.pooler_output
+
+        if self.encode_proj:
+            pooled_output = self.encode_proj(pooled_output)
+        return sequence_output, pooled_output, hidden_states
+
+    def get_out_size(self):
+        if self.encode_proj:
+            return self.encode_proj.out_features
+        return self.config.hidden_size
+
+class HFDistilBertEncoder(DistilBertModel):
+    def __init__(self, config, project_dim: int = 0):
+        DistilBertModel.__init__(self, config)
+        assert config.hidden_size > 0, "Encoder hidden_size can't be zero"
+        self.encode_proj = (
+            nn.Linear(config.hidden_size, project_dim) if project_dim != 0 else None
+        )
+        self.init_weights()
+
+    @classmethod
+    def init_encoder(
+        cls, cfg_name: str, projection_dim: int = 0, dropout: float = 0.1, **kwargs
+    ) -> DistilBertModel:
+        cfg = DistilBertConfig.from_pretrained(cfg_name if cfg_name else "distilbert-base-uncased")
+        if dropout != 0:
+            cfg.attention_probs_dropout_prob = dropout
+            cfg.hidden_dropout_prob = dropout
+        return cls.from_pretrained(
+            cfg_name, config=cfg, project_dim=projection_dim, **kwargs
+        )
+
+    def forward(
+        self, input_ids: T, token_type_ids: T, attention_mask: T
+    ) -> Tuple[T, ...]:
+        if self.config.output_hidden_states:
+            outputs = super().forward(
+                input_ids=input_ids,
+                token_type_ids=token_type_ids,
+                attention_mask=attention_mask,
+            )
+            sequence_output = outputs.last_hidden_state
+            pooled_output = outputs.last_hidden_state[:, 0, :]
+            hidden_states = outputs.hidden_states
+        else:
+            hidden_states = None
+            outputs = super().forward(
+                input_ids=input_ids,
+                token_type_ids=token_type_ids,
+                attention_mask=attention_mask,
+            )
+            sequence_output = outputs.last_hidden_state
+            pooled_output = outputs.last_hidden_state[:, 0, :]
+
+        if self.encode_proj:
+            pooled_output = self.encode_proj(pooled_output)
+        return sequence_output, pooled_output, hidden_states
+
+    def get_out_size(self):
+        if self.encode_proj:
+            return self.encode_proj.out_features
+        return self.config.hidden_size
 
 class HFRobertaEncoder(RobertaModel):
     def __init__(self, config, project_dim: int = 0):
@@ -749,6 +954,134 @@ class AlbertTensorizer(Tensorizer):
 class MobileBertTensorizer(Tensorizer):
     def __init__(
         self, tokenizer: MobileBertTokenizer, max_length: int, pad_to_max: bool = True
+    ):
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        self.pad_to_max = pad_to_max
+
+    def text_to_tensor(
+        self, text: str, title: str = None, add_special_tokens: bool = True
+    ):
+        if isinstance(text, float):
+            text = 'nan'
+        text = text.strip()
+
+        # tokenizer automatic padding is explicitly disabled since its inconsistent behavior
+        if title:
+            token_ids = self.tokenizer.encode(
+                title,
+                text_pair = text,
+                add_special_tokens = add_special_tokens,
+                max_length = self.max_length,
+                pad_to_max_length = False,
+                truncation = True,
+            )
+        else:
+            token_ids = self.tokenizer.encode(
+                text,
+                add_special_tokens = add_special_tokens,
+                max_length = self.max_length,
+                pad_to_max_length = False,
+                truncation = True,
+            )
+
+        seq_len = self.max_length
+        if self.pad_to_max and len(token_ids) < seq_len:
+            token_ids = token_ids + [self.tokenizer.pad_token_id] * (
+                seq_len - len(token_ids)
+            )
+        if len(token_ids) > seq_len:
+            token_ids = token_ids[0:seq_len]
+            token_ids[-1] = self.tokenizer.sep_token_id
+
+        return torch.tensor(token_ids)
+
+    def get_pair_separator_ids(self) -> T:
+        return torch.tensor([self.tokenizer.sep_token_id])
+
+    def get_pad_id(self) -> int:
+        return self.tokenizer.pad_token_id
+
+    def get_attn_mask(self, tokens_tensor: T) -> T:
+        return tokens_tensor != self.get_pad_id()
+
+    def is_sub_word_id(self, token_id: int):
+        token = self.tokenizer.convert_ids_to_tokens([token_id])[0]
+        return token.startswith("##") or token.startswith(" ##")
+
+    def to_string(self, token_ids, skip_special_tokens=True):
+        return self.tokenizer.decode(token_ids, skip_special_tokens=True)
+
+    def set_pad_to_max(self, do_pad: bool):
+        self.pad_to_max = do_pad
+
+class TinyBertTensorizer(Tensorizer):
+    def __init__(
+        self, tokenizer: AutoTokenizer, max_length: int, pad_to_max: bool = True
+    ):
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        self.pad_to_max = pad_to_max
+
+    def text_to_tensor(
+        self, text: str, title: str = None, add_special_tokens: bool = True
+    ):
+        if isinstance(text, float):
+            text = 'nan'
+        text = text.strip()
+
+        # tokenizer automatic padding is explicitly disabled since its inconsistent behavior
+        if title:
+            token_ids = self.tokenizer.encode(
+                title,
+                text_pair = text,
+                add_special_tokens = add_special_tokens,
+                max_length = self.max_length,
+                pad_to_max_length = False,
+                truncation = True,
+            )
+        else:
+            token_ids = self.tokenizer.encode(
+                text,
+                add_special_tokens = add_special_tokens,
+                max_length = self.max_length,
+                pad_to_max_length = False,
+                truncation = True,
+            )
+
+        seq_len = self.max_length
+        if self.pad_to_max and len(token_ids) < seq_len:
+            token_ids = token_ids + [self.tokenizer.pad_token_id] * (
+                seq_len - len(token_ids)
+            )
+        if len(token_ids) > seq_len:
+            token_ids = token_ids[0:seq_len]
+            token_ids[-1] = self.tokenizer.sep_token_id
+
+        return torch.tensor(token_ids)
+
+    def get_pair_separator_ids(self) -> T:
+        return torch.tensor([self.tokenizer.sep_token_id])
+
+    def get_pad_id(self) -> int:
+        return self.tokenizer.pad_token_id
+
+    def get_attn_mask(self, tokens_tensor: T) -> T:
+        return tokens_tensor != self.get_pad_id()
+
+    def is_sub_word_id(self, token_id: int):
+        token = self.tokenizer.convert_ids_to_tokens([token_id])[0]
+        return token.startswith("##") or token.startswith(" ##")
+
+    def to_string(self, token_ids, skip_special_tokens=True):
+        return self.tokenizer.decode(token_ids, skip_special_tokens=True)
+
+    def set_pad_to_max(self, do_pad: bool):
+        self.pad_to_max = do_pad
+
+class DistilBertTensorizer(Tensorizer):
+    def __init__(
+        self, tokenizer: DistilBertTokenizer, max_length: int, pad_to_max: bool = True
     ):
         self.tokenizer = tokenizer
         self.max_length = max_length

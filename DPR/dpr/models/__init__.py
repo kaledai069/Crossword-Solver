@@ -32,6 +32,15 @@ def init_hf_electra_biencoder(args, **kwargs):
     from .hf_models import get_electra_biencoder_components
     return get_electra_biencoder_components(args, **kwargs)
 
+def init_hf_tinybert_biencoder(args, **kwargs):
+    from .hf_models import get_tinybert_biencoder_components
+    return get_tinybert_biencoder_components(args, **kwargs)
+
+def init_hf_distilbert_biencoder(args, **kwargs):
+    from .hf_models import get_distilbert_biencoder_components
+    return get_distilbert_biencoder_components(args, **kwargs)
+
+
 def init_hf_bert_reader(args, **kwargs):
     from .hf_models import get_bert_reader_components
     return get_bert_reader_components(args, **kwargs)
@@ -71,6 +80,14 @@ def init_hf_roberta_tenzorizer(args, **kwargs):
     from .hf_models import get_roberta_tensorizer
     return get_roberta_tensorizer(args)
 
+def init_hf_tinybert_tenzorizer(args, **kwargs):
+    from .hf_models import get_tinybert_tensorizer
+    return get_tinybert_tensorizer(args)
+
+def init_hf_distilbert_tenzorizer(args, **kwargs):
+    from .hf_models import get_distilbert_tensorizer
+    return get_distilbert_tensorizer(args)
+
 
 BIENCODER_INITIALIZERS = {
     'hf_bert': init_hf_bert_biencoder,
@@ -79,7 +96,9 @@ BIENCODER_INITIALIZERS = {
     'pytext_bert': init_pytext_bert_biencoder,
     'fairseq_roberta': init_fairseq_roberta_biencoder,
     'hf_albert': init_hf_albert_biencoder,
-    'hf_mobilebert': init_hf_mobilebert_biencoder
+    'hf_mobilebert': init_hf_mobilebert_biencoder, 
+    'hf_tinybert': init_hf_tinybert_biencoder,
+    'hf_distilbert': init_hf_distilbert_biencoder
 }
 
 READER_INITIALIZERS = {
@@ -93,7 +112,9 @@ TENSORIZER_INITIALIZERS = {
     'pytext_bert': init_hf_bert_tenzorizer,  # using HF's code as of now
     'fairseq_roberta': init_hf_roberta_tenzorizer,  # using HF's code as of now
     'hf_albert': init_hf_albert_tenzorizer,
-    'hf_mobilebert': init_hf_mobilebert_tenzorizer
+    'hf_mobilebert': init_hf_mobilebert_tenzorizer, 
+    'hf_tinybert': init_hf_tinybert_tenzorizer,
+    'hf_distilbert': init_hf_distilbert_tenzorizer
 }
 
 def init_comp(initializers_dict, type, args, **kwargs):
