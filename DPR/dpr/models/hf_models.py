@@ -673,12 +673,11 @@ class HFDistilBertEncoder(DistilBertModel):
         )
 
     def forward(
-        self, input_ids: T, token_type_ids: T, attention_mask: T
+        self, input_ids: T, attention_mask: T
     ) -> Tuple[T, ...]:
         if self.config.output_hidden_states:
             outputs = super().forward(
                 input_ids=input_ids,
-                token_type_ids=token_type_ids,
                 attention_mask=attention_mask,
             )
             sequence_output = outputs.last_hidden_state
