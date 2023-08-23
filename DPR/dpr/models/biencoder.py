@@ -235,7 +235,7 @@ class DistilBertBiEncoder(nn.Module):
         fix_q_encoder: bool = False,
         fix_ctx_encoder: bool = False,
     ):
-        super(BiEncoder, self).__init__()
+        super(DistilBertBiEncoder, self).__init__()
         self.question_model = question_model
         self.ctx_model = ctx_model
         self.fix_q_encoder = fix_q_encoder

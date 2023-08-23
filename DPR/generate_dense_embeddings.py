@@ -71,6 +71,7 @@ def gen_ctx_vectors(
         ctx_attn_mask = move_to_device(
             tensorizer.get_attn_mask(ctx_ids_batch), args.device
         )
+        # NOTE: for DistilBERT Dense Embeddings generation take the 'ctx_seg_batch' off the model input arguments
         with torch.no_grad():
             _, out, _ = model(ctx_ids_batch, ctx_seg_batch, ctx_attn_mask)
         out = out.cpu()
