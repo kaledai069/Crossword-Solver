@@ -17,10 +17,11 @@ def batch(iterable, n=1):
 @click.option("--fills", type=click.Path(exists=True), help="jsonl file containing fills")
 @click.option("--clues", type=click.Path(exists=True), help="jsonl file containing clues")
 @click.option("--out", type=click.Path(exists=True), help="directory to put output in")
-@click.option("--k", type=int, default=100, help="number of closest docs to search")
+@click.option("--k", type=int, default = 1000, help="number of closest docs to search")
 @click.option("--len-filter/--no-len-filter", default=True, help="Don't use length filter with negative matching")
-def main(model, fills, clues, out, len_filter, k):
-    os.makedirs(model, exist_ok = True)
+@click.option("--num_negatives", type = int, default = 1, help = "Specify the number of negative answers per clues to have")
+def main(model, fills, clues, out, len_filter, k, num_negatives):
+    os.makedirs(model, exist_ok=True)
     model = os.path.join(model, os.listdir(model)[0])
     ranker = retriever.get_class('tfidf')(tfidf_path=model)
     clues_ = []
@@ -37,35 +38,44 @@ def main(model, fills, clues, out, len_filter, k):
 
     top_negative = []
     print("Finding negative examples")
-    for b in tqdm(list(batch(pairs, n=1000))):
+
+    for b in tqdm(list(batch(pairs, n = 1))):
         clues, fills = list(zip(*b))
         try:
             batch_doc_names, batch_doc_scores = list(zip(*ranker.batch_closest_docs(clues, k))) 
             j = 0
             for i in range(len(clues)):
+                temp_neg_list = []
                 clue, fill = clues[i], fills[i]
-                doc_ids = [int(doc_name[3:]) for doc_name in batch_doc_names[i]]
+                doc_ids = [int(doc_name[4:]) for doc_name in batch_doc_names[i]]
                 found = False
                 for i in doc_ids:
                     pair = pairs[i]
                     if pair[0] != clue and pair[1] != fill:
-                        top_negative.append(pair)
+                        # top_negative.append(pair)
+                        temp_neg_list.append(pair[1])
                         found = True
-                        break
-                if not found:
-                    while True:
-                        cand = random.choice(pairs)
-                        if not len_filter or len(cand[1]) == len(fill):
-                            top_negative.append(cand)
-                            break
-                j +=1
+                        if len(temp_neg_list) == num_negatives:
+                          break
+                # if not found:
+                while len(temp_neg_list) != num_negatives:
+                    cand = random.choice(pairs)
+                    if not len_filter or len(cand[1]) == len(fill):
+                        # top_negative.append(cand)
+                        temp_neg_list.append(cand[1])
+                        # break
+                j += 1
+            
         except Exception as e:
+            temp_neg_list = []
             for c, fill in zip(clues, fills):
-                while True:
+                while len(temp_neg_list) != num_negatives:
                     cand = random.choice(pairs)
                     if len(cand[1]) == len(fill):
-                        top_negative.append(cand)
-                        break
+                        # top_negative.append(cand)
+                        temp_neg_list.append(cand[1])
+                        # break
+        top_negative.append(temp_neg_list)
     print("Building json")
     filename = os.path.join(out, "train.json")
     build_json(pairs, top_negative, filename)
@@ -86,8 +96,8 @@ def build_json(pos_examples, neg_examples, filename):
             "text": pos_examples[i][1],
             "title": ""}]
         example["hard_negative_ctxs"] = [{
-            "text": neg_examples[i][1],
-            "title": ""}]
+            "text": neg_ans,
+            "title": ""} for neg_ans in neg_examples[i]]
         example["negative_ctxs"] = []
         joined_ex.append(example)
     with open(filename, "w") as f:
