@@ -40,6 +40,9 @@ def init_hf_distilbert_biencoder(args, **kwargs):
     from .hf_models import get_distilbert_biencoder_components
     return get_distilbert_biencoder_components(args, **kwargs)
 
+def init_hf_distilroberta_biencoder(args, **kwargs):
+    from .hf_models import get_distilroberta_biencoder_components
+    return get_distilroberta_biencoder_components(args, **kwargs)
 
 def init_hf_bert_reader(args, **kwargs):
     from .hf_models import get_bert_reader_components
@@ -98,7 +101,8 @@ BIENCODER_INITIALIZERS = {
     'hf_albert': init_hf_albert_biencoder,
     'hf_mobilebert': init_hf_mobilebert_biencoder, 
     'hf_tinybert': init_hf_tinybert_biencoder,
-    'hf_distilbert': init_hf_distilbert_biencoder
+    'hf_distilbert': init_hf_distilbert_biencoder, 
+    'hf_distilroberta': init_hf_distilroberta_biencoder
 }
 
 READER_INITIALIZERS = {
@@ -114,7 +118,8 @@ TENSORIZER_INITIALIZERS = {
     'hf_albert': init_hf_albert_tenzorizer,
     'hf_mobilebert': init_hf_mobilebert_tenzorizer, 
     'hf_tinybert': init_hf_tinybert_tenzorizer,
-    'hf_distilbert': init_hf_distilbert_tenzorizer
+    'hf_distilbert': init_hf_distilbert_tenzorizer, 
+    'hf_distilroberta': init_hf_roberta_tenzorizer
 }
 
 def init_comp(initializers_dict, type, args, **kwargs):
