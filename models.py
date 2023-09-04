@@ -31,17 +31,9 @@ SEGMENTER_CACHE = {}
 RERANKER_CACHE = {}
 
 def setup_closedbook(process_id):
-    # dpr = DPRForCrossword(
-    #     "checkpoints/biencoder/dpr_biencoder.bin",
-    #     "checkpoints/biencoder/wordlist.tsv",
-    #     "checkpoints/biencoder/embeddings/embeddings.json_*",
-    #     retrievalmodel=False,
-    #     process_id=process_id
-    # )
-
     dpr = DPRForCrossword(
         "/content/drive/MyDrive/First Pass Model/dpr_biencoder_trained_500k.bin",
-        "/content/answer_list.tsv",
+        "/content/drive/MyDrive/First Pass Model/all_answer_list.tsv",
         "/content/embeddings.json_*",
         retrievalmodel = False,
         process_id=process_id
@@ -238,6 +230,8 @@ class DenseRetriever(object):
                 q_ids_batch = torch.stack(batch_token_tensors, dim=0).to(self.device)
                 q_seg_batch = torch.zeros_like(q_ids_batch).to(self.device)
                 q_attn_mask = self.tensorizer.get_attn_mask(q_ids_batch)
+
+                # Skip 'q_seg_batch' from the next line if the model is 'DistilBERT'
                 _, out, _ = self.question_encoder(q_ids_batch, q_seg_batch, q_attn_mask)
 
                 query_vectors.extend(out.cpu().split(1, dim=0))

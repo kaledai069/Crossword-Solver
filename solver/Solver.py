@@ -65,10 +65,10 @@ class Solver:
  
             # for debugging purposes, print the rank of the gold answer on our candidate list
             # the gold answer is otherwise *not* used in any way during solving
-            if self.crossword.variables[var]["gold"] in words:
-                print(clue, self.crossword.variables[var]["gold"], words.index(self.crossword.variables[var]["gold"]))
-            else:
-                print('not found', clue, self.crossword.variables[var]["gold"])
+            # if self.crossword.variables[var]["gold"] in words:
+            #     print(clue, self.crossword.variables[var]["gold"], words.index(self.crossword.variables[var]["gold"]))
+            # else:
+            #     print('not found', clue, self.crossword.variables[var]["gold"])
 
             # fill up some data structures used later in solving
             for word, score in zip(words, scores):
@@ -106,7 +106,8 @@ class Solver:
             if len(cells) == sum(matching_cells):
                 words_correct += 1
             else:
-                print('evaluation: correct word', ''.join([self.crossword.letter_grid[cell[0]][cell[1]] for cell in cells]), 'our prediction:', ''.join([solution[cell[0]][cell[1]] for cell in cells]))
+                # print('evaluation: correct word', ''.join([self.crossword.letter_grid[cell[0]][cell[1]] for cell in cells]), 'our prediction:', ''.join([solution[cell[0]][cell[1]] for cell in cells]))
+                pass
             words_total += 1
         print("Letters Correct: {}/{} | Words Correct: {}/{}".format(int(letters_correct), int(letters_total), int(words_correct), int(words_total)))
         print("Letters Correct: {}% | Words Correct: {}%".format(float(letters_correct/letters_total*100), float(words_correct/words_total*100)))
