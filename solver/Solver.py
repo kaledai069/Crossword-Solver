@@ -89,7 +89,7 @@ class Solver:
         # cleanup a bit
         del dpr
 
-    def evaluate(self, solution):
+    def evaluate(self, solution, print_log = True):
         # print puzzle accuracy results given a generated solution
         letters_correct = 0
         letters_total = 0
@@ -109,5 +109,12 @@ class Solver:
                 # print('evaluation: correct word', ''.join([self.crossword.letter_grid[cell[0]][cell[1]] for cell in cells]), 'our prediction:', ''.join([solution[cell[0]][cell[1]] for cell in cells]))
                 pass
             words_total += 1
-        print("Letters Correct: {}/{} | Words Correct: {}/{}".format(int(letters_correct), int(letters_total), int(words_correct), int(words_total)))
-        print("Letters Correct: {}% | Words Correct: {}%".format(float(letters_correct/letters_total*100), float(words_correct/words_total*100)))
+
+        letter_frac_log = "Letters Correct: {}/{} | Words Correct: {}/{}".format(int(letters_correct), int(letters_total), int(words_correct), int(words_total))
+        letter_acc_log = "Letters Correct: {}% | Words Correct: {}%".format(float(letters_correct/letters_total*100), float(words_correct/words_total*100))
+
+        if print_log:
+            print(letter_frac_log)
+            print(letter_acc_log)
+        
+        return letter_frac_log, letter_acc_log

@@ -21,11 +21,10 @@ from models import setup_t5_reranker, t5_reranker_score_with_clue
 
 # our answer set
 answer_set = set()
-with open('/content/answer_list.tsv', 'r') as rf: 
+with open('/content/drive/MyDrive/First Pass Model/all_answer_list.tsv', 'r') as rf: 
     for line in rf:
         w = ''.join([c.upper() for c in (line.split('\t')[-1]).upper() if c in string.ascii_uppercase])
         answer_set.add(w)
-
 
 # the probability of each alphabetical character in the crossword
 UNIGRAM_PROBS = [('A', 0.0897379968935765), ('B', 0.02121248877769636), ('C', 0.03482206634145926), ('D', 0.03700942543460491), ('E', 0.1159773210750429), ('F', 0.017257461694024614), ('G', 0.025429024796296124), ('H', 0.033122967601502), ('I', 0.06800036223479956), ('J', 0.00294611331754349), ('K', 0.013860682888259786), ('L', 0.05130800574373874), ('M', 0.027962776827660175), ('N', 0.06631994270448001), ('O', 0.07374646543246745), ('P', 0.026750756212433214), ('Q', 0.001507814175439393), ('R', 0.07080460813737305), ('S', 0.07410988246048224), ('T', 0.07242993582154593), ('U', 0.0289272388037645), ('V', 0.009153522059555467), ('W', 0.01434705167591524), ('X', 0.003096729223103298), ('Y', 0.01749958208224007), ('Z', 0.002659777584995724)]
@@ -35,21 +34,40 @@ UNIGRAM_PROBS = [('A', 0.0897379968935765), ('B', 0.02121248877769636), ('C', 0.
 LETTER_SMOOTHING_FACTOR = [0.0, 0.0, 0.04395604395604396, 0.0001372495196266813, 0.0005752186417796561, 0.0019841824329989103, 0.0048042463338563764, 0.013325257419745608, 0.027154447774285505, 0.06513517299341645, 0.12527790128946198, 0.22003002358996354, 0.23172376584839494, 0.254873006497342, 0.3985086992543496, 0.2764976958525346, 0.672645739910314, 0.6818181818181818, 0.8571428571428571, 0.8245614035087719, 0.8, 0.71900826446281, 0.0]
 
 class BPVar:
-    def __init__(self, name, variable, candidates, cells):
-        self.name = name
+    def __init__(self, name, variable, candidates, cells): 
+        '''
+            name - name of the filling position along with orientation like 1A, 2A, 1D and such
+            variable - crossword.variables.value field which contains as below
+            {'clue': 'Lettuce variety', 'gold': 'BIBB', 'cells': [(0, 0), (0, 1), (0, 2), (0, 3)], 'crossing': ['1D', '2D', '3D', '4D']}
+            candidates - {'words', 'bit_array', 'weights'} --> bit_array is used to create some sort of distribution with the answers generated for that particular clue
+            cells - [BPCell(1A), BPCell(2A), BPCell(3A)]
+        '''
+
+        self.name = name # name of the filling, which goes by 1A, 2A, 1D and such
         cells_by_position = {}
         for cell in cells:
-            cells_by_position[cell.position] = cell
-            cell._connect(self)
-        self.length = len(cells)
-        self.ordered_cells = [cells_by_position[pos] for pos in variable['cells']]
-        self.candidates = candidates
-        self.words = self.candidates['words']
-        self.word_indices = np.array([[string.ascii_uppercase.index(l) for l in fill] for fill in self.candidates['words']]) # words x length of letter indices
+            cells_by_position[cell.position] = cell # this line is for (0, 0) -> 1A (BPCell)
+            cell._connect(self) # this line is for connecting which BPCell is connected to which BPVariable
+
+        self.length = len(cells) # length of the answer for that particular filling or variable
+        self.ordered_cells = [cells_by_position[pos] for pos in variable['cells']] #[(0, 0), (0, 1), (0, 2)] -> [BPCell(1A), BPCell(2A), BPCell(3A)]{Ordered Cells}
+        self.candidates = candidates # [words, bit_array, weights] for each filling produced by the First Pass Model
+        self.words = self.candidates['words'] # all the possible answers that could fit in that particular across or down clue (less than the maximum candidates )
+        
+        self.word_indices = np.array([[string.ascii_uppercase.index(l) for l in fill] for fill in self.words]) # words x length of letter indices
+        '''
+            example: words = ['SUNDAY', 'MONDAY']
+                     word_indices -> array([[18, 20, 13,  3,  0, 24],
+                                           [12, 14, 13,  3,  0, 24]])
+        '''
         self.scores = -np.array([self.candidates['weights'][fill] for fill in self.candidates['words']]) # the incoming 'weights' are costs
         self.prior_log_probs = log_softmax(self.scores)
         self.log_probs = log_softmax(self.scores)
         self.directional_scores = [np.zeros(len(self.log_probs)) for _ in range(len(self.ordered_cells))]
+        '''
+        len(self.ordered_cells) is the length of field of required answer
+        directional_scores zeros "words x length of letter to be filled"
+        '''
     
     def _propagate_to_var(self, other, belief_state):
         assert other in self.ordered_cells
@@ -67,7 +85,7 @@ class BPVar:
     def sync_state(self):
         self.log_probs = log_softmax(sum(self.directional_scores) + self.prior_log_probs)
     
-    def propagate(self):
+    def propagate(self): # very first task in the main loop - applied across all the variables for that particular crossword
         all_letter_probs = []
         for i in range(len(self.ordered_cells)):
             word_scores = self.log_probs - self.directional_scores[i]
@@ -92,7 +110,7 @@ class BPCell:
     def _connect(self, other):
         self.crossing_vars.append(other)
         self.directional_scores.append(None)
-        assert len(self.crossing_vars) <= 2
+        assert len(self.crossing_vars) <= 2 # this particular line is connected to the rules of American Crosswords, as a single cell atmost be part of a across and down clue
 
     def _propagate_to_cell(self, other, belief_state):
         assert other in self.crossing_vars
@@ -121,20 +139,26 @@ class BPSolver(Solver):
         self.crossword = crossword
         self.reset()
     
+    # the first function after solving the crossword using first pass model, begins with the reset local function 
     def reset(self):
         self.bp_cells = []
         self.bp_cells_by_clue = defaultdict(lambda: [])
+
+        # defining every cells (one with letter in it) in the crossword
+        # crossword.grid_cells.items() -> (0, 0): ['1A', '1D'], key -> Position, value -> Clue Positional Info
+
         for position, clue_pair in self.crossword.grid_cells.items():
-            cell = BPCell(position, clue_pair)
+            cell = BPCell(position, clue_pair) # need to seriously check this 
             self.bp_cells.append(cell)
             for clue in clue_pair:
                 self.bp_cells_by_clue[clue].append(cell)
+
         self.bp_vars = []
         for key, value in self.crossword.variables.items():
             var = BPVar(key, value, self.candidates[key], self.bp_cells_by_clue[key])
             self.bp_vars.append(var)
     
-    def solve(self, num_iters=10, iterative_improvement_steps=5, return_greedy_states = False, return_ii_states = False):
+    def solve(self, num_iters = 10, iterative_improvement_steps = 5, return_greedy_states = False, return_ii_states = False):
         # run solving for num_iters iterations
         print('beginning BP iterations')
         for _ in trange(num_iters):
@@ -157,6 +181,9 @@ class BPSolver(Solver):
         grid = self.greedy_sequential_word_solution()
         # print('=====Greedy search grid=====')
         # print_grid(grid)
+        
+        _, accu_log = self.evaluate(grid, False)
+        print(f"Before II with ByT5: {accu_log}")
 
         if iterative_improvement_steps < 1:
             if return_greedy_states or return_ii_states:
@@ -164,19 +191,23 @@ class BPSolver(Solver):
             else:
                 return grid
         
+        #loading the ByT5 reranker model
         self.reranker, self.tokenizer = setup_t5_reranker(self.process_id)
         
         for i in range(iterative_improvement_steps):
-            print('starting iterative improvement step ' + str(i))
-            print("Accuracy if we knew to stop right now")
-            self.evaluate(grid)
+            # print('starting iterative improvement step ' + str(i))
+            # print("Accuracy if we knew to stop right now")
+            # self.evaluate(grid) 
             grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
             if not did_iterative_improvement_make_edit:
                 break
             if return_ii_states:
                 all_grids.append(deepcopy(grid))
-            print('after iterative improvement step ' + str(i))
-            print_grid(grid)
+            # print('after iterative improvement step ' + str(i))
+            # print_grid(grid)
+
+        _, accu_log = self.evaluate(grid, False)
+        print(f"After II with ByT5: {accu_log}")
 
         if return_greedy_states or return_ii_states:
             return grid, all_grids
@@ -319,10 +350,15 @@ class BPSolver(Solver):
             best_var.words = []
             best_var.log_probs = best_var.log_probs[[]]
             best_per_var[best_index] = None
+
         for cell in self.bp_cells:
             if cell.position in unfilled_cells:
                 grid[cell.position[0]][cell.position[1]] = string.ascii_uppercase[cell.log_probs.argmax()]
-        
+                '''
+                some alternative improvement can be done at this point, i think so
+                instead of filling the cell with highest valued letter, what if we find the associated variables or filling with the cell, and insert letter such that the joint probability of occuring the answers, or letters in all the associated filling is maximum
+                '''
+
         for var, (words, log_probs) in zip(self.bp_vars, cache): # restore state
             var.words = words
             var.log_probs = log_probs
@@ -336,7 +372,7 @@ class BPSolver(Solver):
         uncertain_answers = self.get_uncertain_answers(grid) 
         self.candidate_replacements = self.get_candidate_replacements(uncertain_answers, grid)
 
-        print('\nstarting iterative improvement')
+        # print('\nstarting iterative improvement')
         original_grid_score = self.score_grid(grid)
         possible_edits = []
         for replacements in self.candidate_replacements:
@@ -344,20 +380,20 @@ class BPSolver(Solver):
             for cell, letter in replacements:
                 modified_grid[cell.position[0]][cell.position[1]] = letter
             modified_grid_score = self.score_grid(modified_grid)
-            print('candidate edit')
+            # print('candidate edit')
             variables = set(sum([cell.crossing_vars for cell, _ in replacements], []))
             for var in variables:
                 original_fill = ''.join([grid[cell.position[0]][cell.position[1]] for cell in var.ordered_cells])
                 modified_fill = ''.join([modified_grid[cell.position[0]][cell.position[1]] for cell in var.ordered_cells])
                 clue_index = list(set(var.ordered_cells[0].crossing_clues).intersection(*[set(cell.crossing_clues) for cell in var.ordered_cells]))[0]
-                print('original:', original_fill, 'modified:', modified_fill)
-                print('gold answer', self.crossword.variables[clue_index]['gold'])
-                print('clue', self.crossword.variables[clue_index]['clue'])
-            print('original score:', original_grid_score, 'modified score:', modified_grid_score)
+                # print('original:', original_fill, 'modified:', modified_fill)
+                # print('gold answer', self.crossword.variables[clue_index]['gold'])
+                # print('clue', self.crossword.variables[clue_index]['clue'])
+            # print('original score:', original_grid_score, 'modified score:', modified_grid_score)
             if modified_grid_score - original_grid_score > 0.5:
-                print('found a possible edit')
+                # print('found a possible edit')
                 possible_edits.append((modified_grid, modified_grid_score, replacements))
-            print()
+            # print()
         
         if len(possible_edits) > 0:
             variables_modified = set()
@@ -372,7 +408,7 @@ class BPSolver(Solver):
 
             new_grid = deepcopy(grid)
             for edit in selected_edits:
-                print('\nactually applying edit')
+                # print('\nactually applying edit')
                 replacements = edit[2]
                 for cell, letter in replacements:
                     new_grid[cell.position[0]][cell.position[1]] = letter
@@ -380,7 +416,7 @@ class BPSolver(Solver):
                 for var in variables:
                     original_fill = ''.join([grid[cell.position[0]][cell.position[1]] for cell in var.ordered_cells])
                     modified_fill = ''.join([new_grid[cell.position[0]][cell.position[1]] for cell in var.ordered_cells])
-                    print('original:', original_fill, 'modified:', modified_fill)
+                    # print('original:', original_fill, 'modified:', modified_fill)
             return new_grid, True
         else:
             return grid, False

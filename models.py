@@ -32,18 +32,18 @@ RERANKER_CACHE = {}
 
 def setup_closedbook(process_id):
     dpr = DPRForCrossword(
-        "/content/drive/MyDrive/First Pass Model/dpr_biencoder_trained_500k.bin",
+        "/content/drive/MyDrive/First Pass Model/distilbert_EPOCHs_7_COMPLETE.bin",
         "/content/drive/MyDrive/First Pass Model/all_answer_list.tsv",
-        "/content/embeddings.json_*",
+        "/content/drive/MyDrive/First Pass Model/distilbert_7_epochs_embeddings.*",
         retrievalmodel = False,
-        process_id=process_id
+        process_id = process_id
     )
     return dpr
 
 def setup_t5_reranker(process_id):
     tokenizer = AutoTokenizer.from_pretrained('google/byt5-small')
-    model = T5ForConditionalGeneration.from_pretrained('checkpoints/byt5_reranker/')
-    model.eval().to('cuda:'+str(process_id % torch.cuda.device_count()))
+    model = T5ForConditionalGeneration.from_pretrained('/content/drive/MyDrive/First Pass Model/byt5_reranker/')
+    model.eval().to('cuda:'+str(process_id % torch.cuda.device_count())) # .eval() -> Inference Mode
     return model, tokenizer
 
 def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_fills):
@@ -232,7 +232,8 @@ class DenseRetriever(object):
                 q_attn_mask = self.tensorizer.get_attn_mask(q_ids_batch)
 
                 # Skip 'q_seg_batch' from the next line if the model is 'DistilBERT'
-                _, out, _ = self.question_encoder(q_ids_batch, q_seg_batch, q_attn_mask)
+                # _, out, _ = self.question_encoder(q_ids_batch, q_seg_batch, q_attn_mask)
+                _, out, _ = self.question_encoder(q_ids_batch, q_attn_mask)
 
                 query_vectors.extend(out.cpu().split(1, dim=0))
     
@@ -275,7 +276,7 @@ class DPRForCrossword(object):
         model_file,
         ctx_file,
         encoded_ctx_file,
-        batch_size=6000,
+        batch_size = 64,
         retrievalmodel=False,
         process_id=0
     ):
@@ -285,7 +286,8 @@ class DPRForCrossword(object):
         args.ctx_file = ctx_file
         args.encoded_ctx_file = encoded_ctx_file
         args.batch_size = batch_size
-        self.device = torch.device("cuda:"+str(process_id%torch.cuda.device_count()))
+        # self.device = torch.device("cuda:"+str(process_id%torch.cuda.device_count()))
+        self.device = 'cpu'
 
         setup_args_gpu(args)
         print_args(args)
