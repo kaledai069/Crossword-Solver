@@ -8,6 +8,7 @@ We instead using iterative search after the fact by replacing characters one-by-
 """
 import math
 import string
+import re
 from collections import defaultdict
 from copy import deepcopy
 
@@ -21,7 +22,7 @@ from models import setup_t5_reranker, t5_reranker_score_with_clue
 
 # our answer set
 answer_set = set()
-with open('/content/drive/MyDrive/First Pass Model/all_answer_list.tsv', 'r') as rf: 
+with open(r'./checkpoints/all_answer_list.tsv', 'r') as rf: 
     for line in rf:
         w = ''.join([c.upper() for c in (line.split('\t')[-1]).upper() if c in string.ascii_uppercase])
         answer_set.add(w)
@@ -121,9 +122,12 @@ class BPCell:
         self.log_probs = log_softmax(sum(self.directional_scores))
 
     def propagate(self):
-        assert len(self.crossing_vars) == 2
-        for i, v in enumerate(self.crossing_vars):
-            v._propagate_to_var(self, self.directional_scores[1-i])
+        # assert len(self.crossing_vars) == 2
+        try:
+            for i, v in enumerate(self.crossing_vars):
+                v._propagate_to_var(self, self.directional_scores[1-i])
+        except IndexError:
+            pass
 
 
 class BPSolver(Solver):
@@ -157,6 +161,12 @@ class BPSolver(Solver):
         for key, value in self.crossword.variables.items():
             var = BPVar(key, value, self.candidates[key], self.bp_cells_by_clue[key])
             self.bp_vars.append(var)
+
+    def extract_float(self, input_string):
+        pattern = r"\d+\.\d+"
+        matches = re.findall(pattern, input_string)
+        float_numbers = [float(match) for match in matches]
+        return float_numbers
     
     def solve(self, num_iters = 10, iterative_improvement_steps = 5, return_greedy_states = False, return_ii_states = False):
         # run solving for num_iters iterations
@@ -183,7 +193,11 @@ class BPSolver(Solver):
         # print_grid(grid)
         
         _, accu_log = self.evaluate(grid, False)
-        print(f"Before II with ByT5: {accu_log}")
+        [ori_letter_accu, ori_word_accu] = self.extract_float(accu_log)
+
+        original_grid_solution = deepcopy(grid)
+
+        print(f"\nBefore II with T5-small: {accu_log}")
 
         if iterative_improvement_steps < 1:
             if return_greedy_states or return_ii_states:
@@ -198,7 +212,13 @@ class BPSolver(Solver):
             # print('starting iterative improvement step ' + str(i))
             # print("Accuracy if we knew to stop right now")
             # self.evaluate(grid) 
+
             grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
+            _, accu_log = self.evaluate(grid, False)
+            [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
+
+            print(f"{i+1}th iteration: {accu_log}")
+
             if not did_iterative_improvement_make_edit:
                 break
             if return_ii_states:
@@ -207,7 +227,13 @@ class BPSolver(Solver):
             # print_grid(grid)
 
         _, accu_log = self.evaluate(grid, False)
-        print(f"After II with ByT5: {accu_log}")
+        print(f"\nAfter II with ByT5: {accu_log}")
+
+        if temp_letter_accu < ori_letter_accu or temp_word_accu < ori_word_accu:
+            print("\nReverting the changes due to worse output from second pass iterative handle. \n")
+            grid = deepcopy(original_grid_solution)
+            _, accu_log = self.evaluate(grid, False)
+            print(f"\nFinal Accuracy Stat: {accu_log}")
 
         if return_greedy_states or return_ii_states:
             return grid, all_grids
@@ -222,8 +248,11 @@ class BPSolver(Solver):
         # check against dictionaries
         for clue in uncertain_answers.keys():
             initial_word = uncertain_answers[clue]
+            # print("INITIAL WORD: ", initial_word)
             clue_flips = get_word_flips(initial_word, 10) # flip then segment
+            # print(clue_flips)
             clue_positions = [key for key, value in self.crossword.variables.items() if value['clue'] == clue]
+            # print(clue_positions)
             for clue_position in clue_positions:
                 cells = sorted([cell for cell in self.bp_cells if clue_position in cell.crossing_clues], key=lambda c: c.position)
                 if len(cells) == len(initial_word):
@@ -351,7 +380,7 @@ class BPSolver(Solver):
             best_var.log_probs = best_var.log_probs[[]]
             best_per_var[best_index] = None
 
-        for cell in self.bp_cells:
+        for cell in self.bp_cells: 
             if cell.position in unfilled_cells:
                 grid[cell.position[0]][cell.position[1]] = string.ascii_uppercase[cell.log_probs.argmax()]
                 '''
@@ -370,7 +399,10 @@ class BPSolver(Solver):
     def iterative_improvement(self, grid):
         # check the grid for uncertain areas and save those words to be analyzed in local search, aka looking for alternate candidates
         uncertain_answers = self.get_uncertain_answers(grid) 
+        # print(uncertain_answers)
         self.candidate_replacements = self.get_candidate_replacements(uncertain_answers, grid)
+        # print(len(self.candidate_replacements))
+        # print(self.candidate_replacements[:10])
 
         # print('\nstarting iterative improvement')
         original_grid_score = self.score_grid(grid)
@@ -382,6 +414,8 @@ class BPSolver(Solver):
             modified_grid_score = self.score_grid(modified_grid)
             # print('candidate edit')
             variables = set(sum([cell.crossing_vars for cell, _ in replacements], []))
+
+            # just to who the original answer, score and modified scores
             for var in variables:
                 original_fill = ''.join([grid[cell.position[0]][cell.position[1]] for cell in var.ordered_cells])
                 modified_fill = ''.join([modified_grid[cell.position[0]][cell.position[1]] for cell in var.ordered_cells])
@@ -390,6 +424,7 @@ class BPSolver(Solver):
                 # print('gold answer', self.crossword.variables[clue_index]['gold'])
                 # print('clue', self.crossword.variables[clue_index]['clue'])
             # print('original score:', original_grid_score, 'modified score:', modified_grid_score)
+                
             if modified_grid_score - original_grid_score > 0.5:
                 # print('found a possible edit')
                 possible_edits.append((modified_grid, modified_grid_score, replacements))

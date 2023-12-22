@@ -32,18 +32,18 @@ RERANKER_CACHE = {}
 
 def setup_closedbook(process_id):
     dpr = DPRForCrossword(
-        "/content/drive/MyDrive/First Pass Model/distilbert_EPOCHs_7_COMPLETE.bin",
-        "/content/drive/MyDrive/First Pass Model/all_answer_list.tsv",
-        "/content/drive/MyDrive/First Pass Model/distilbert_7_epochs_embeddings.*",
+        "./checkpoints/distilbert_EPOCHs_7_COMPLETE.bin",
+        "./checkpoints/all_answer_list.tsv",
+        "./checkpoints/distilbert_7_epochs_embeddings.*",
         retrievalmodel = False,
         process_id = process_id
     )
     return dpr
 
 def setup_t5_reranker(process_id):
-    tokenizer = AutoTokenizer.from_pretrained('google/byt5-small')
-    model = T5ForConditionalGeneration.from_pretrained('/content/drive/MyDrive/First Pass Model/byt5_reranker/')
-    model.eval().to('cuda:'+str(process_id % torch.cuda.device_count())) # .eval() -> Inference Mode
+    tokenizer = AutoTokenizer.from_pretrained('t5-small')
+    model = T5ForConditionalGeneration.from_pretrained('./checkpoints/t5_small_32_seq_epoch_1/')
+    model.eval().to(torch.device('cuda' if torch.cuda.is_available() else 'cpu')) # .eval() -> Inference Mode
     return model, tokenizer
 
 def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_fills):
@@ -67,14 +67,13 @@ def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_
             continue
         else:
             with torch.inference_mode():
-                inputs = tokenizer(['Q: ' + clue], return_tensors='pt')['input_ids'].to(model.device)
+                inputs = tokenizer([clue], return_tensors='pt')['input_ids'].to(model.device)
                 labels = tokenizer([possibly_ungrammatical_fill], return_tensors='pt')['input_ids'].to(model.device)
-                loss = model(inputs, labels=labels)
+                loss = model(inputs, labels = labels)
                 answer_length = labels.shape[1]
                 logprob = -loss[0].item() * answer_length
                 results.append(logprob)
                 RERANKER_CACHE[clue + possibly_ungrammatical_fill] = logprob
-
     return results
 
 def preprocess_clue_fn(clue):

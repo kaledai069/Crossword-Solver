@@ -17,7 +17,7 @@ def num_words(fill):
         prob += math.log(wordsegment.UNIGRAMS[word])
     return (len(segmented), prob)
 
-def get_word_flips(fill, num_candidates=10):
+def get_word_flips(fill, num_candidates = 10):
     '''
     We take as input a word/phrase that is probably mispelled, something like iluveyou. We then try flipping each one of the letters
     to all other letters. We then segment those texts into multiple words using num_words, e.g., iloveyou -> i love you. We return the candidates
