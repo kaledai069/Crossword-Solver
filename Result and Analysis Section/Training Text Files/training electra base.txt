@@ -1,0 +1,1628 @@
+***** Training *****
+***** Epoch 0 *****
+0it [00:00, ?it/s]Epoch: 0: Step: 1/7002, loss=33.763851, lr=0.000000
+99it [01:00,  1.70it/s]Train batch 100
+Avg. loss per last 100 batches: 31.028061
+100it [01:01,  1.70it/s]Epoch: 0: Step: 101/7002, loss=20.636631, lr=0.000002
+199it [01:59,  1.69it/s]Train batch 200
+Avg. loss per last 100 batches: 12.829537
+200it [01:59,  1.70it/s]Epoch: 0: Step: 201/7002, loss=6.848611, lr=0.000003
+299it [02:58,  1.70it/s]Train batch 300
+Avg. loss per last 100 batches: 5.574218
+300it [02:58,  1.70it/s]Epoch: 0: Step: 301/7002, loss=5.001602, lr=0.000005
+399it [03:56,  1.69it/s]Train batch 400
+Avg. loss per last 100 batches: 5.029312
+400it [03:57,  1.69it/s]Epoch: 0: Step: 401/7002, loss=4.869281, lr=0.000006
+499it [04:55,  1.70it/s]Train batch 500
+Avg. loss per last 100 batches: 4.959920
+500it [04:56,  1.70it/s]Epoch: 0: Step: 501/7002, loss=4.922014, lr=0.000008
+599it [05:54,  1.70it/s]Train batch 600
+Avg. loss per last 100 batches: 4.925522
+600it [05:55,  1.70it/s]Epoch: 0: Step: 601/7002, loss=4.864307, lr=0.000010
+699it [06:53,  1.70it/s]Train batch 700
+Avg. loss per last 100 batches: 4.901114
+700it [06:54,  1.70it/s]Epoch: 0: Step: 701/7002, loss=4.924694, lr=0.000011
+799it [07:52,  1.70it/s]Train batch 800
+Avg. loss per last 100 batches: 4.836374
+800it [07:52,  1.70it/s]Epoch: 0: Step: 801/7002, loss=4.698860, lr=0.000013
+899it [08:51,  1.70it/s]Train batch 900
+Avg. loss per last 100 batches: 4.709349
+900it [08:52,  1.68it/s]Epoch: 0: Step: 901/7002, loss=4.757399, lr=0.000015
+999it [09:50,  1.70it/s]Train batch 1000
+Avg. loss per last 100 batches: 4.598624
+1000it [09:50,  1.70it/s]Epoch: 0: Step: 1001/7002, loss=4.526851, lr=0.000016
+1099it [10:49,  1.68it/s]Train batch 1100
+Avg. loss per last 100 batches: 4.431423
+1100it [10:49,  1.68it/s]Epoch: 0: Step: 1101/7002, loss=4.357228, lr=0.000018
+1166it [11:28,  1.70it/s]Validation: Epoch: 0 Step: 1167/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.172860 sec., loss=3.451691 
+Eval step: 199 , used_time=28.540584 sec., loss=3.383988 
+Eval step: 299 , used_time=42.746164 sec., loss=3.603920 
+Eval step: 399 , used_time=57.067208 sec., loss=3.438133 
+Eval step: 499 , used_time=71.213066 sec., loss=3.345761 
+Eval step: 599 , used_time=85.658632 sec., loss=3.387161 
+Eval step: 699 , used_time=99.862678 sec., loss=3.177481 
+Eval step: 799 , used_time=114.263111 sec., loss=3.233135 
+NLL Validation: loss = 3.374379. correct prediction ratio  7654/52032 ~  0.147102
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+1199it [13:54,  1.69it/s]Train batch 1200
+Avg. loss per last 100 batches: 4.296636
+1200it [13:55,  1.69it/s]Epoch: 0: Step: 1201/7002, loss=4.081147, lr=0.000019
+1299it [14:54,  1.70it/s]Train batch 1300
+Avg. loss per last 100 batches: 4.159663
+1300it [14:55,  1.70it/s]Epoch: 0: Step: 1301/7002, loss=4.023278, lr=0.000020
+1399it [15:53,  1.69it/s]Train batch 1400
+Avg. loss per last 100 batches: 4.062206
+1400it [15:54,  1.69it/s]Epoch: 0: Step: 1401/7002, loss=4.002258, lr=0.000020
+1499it [16:52,  1.68it/s]Train batch 1500
+Avg. loss per last 100 batches: 3.925087
+1500it [16:53,  1.68it/s]Epoch: 0: Step: 1501/7002, loss=4.054098, lr=0.000020
+1599it [17:51,  1.70it/s]Train batch 1600
+Avg. loss per last 100 batches: 3.869745
+1600it [17:52,  1.69it/s]Epoch: 0: Step: 1601/7002, loss=3.941402, lr=0.000020
+1699it [18:50,  1.70it/s]Train batch 1700
+Avg. loss per last 100 batches: 3.796355
+1700it [18:51,  1.70it/s]Epoch: 0: Step: 1701/7002, loss=3.646186, lr=0.000020
+1799it [19:49,  1.69it/s]Train batch 1800
+Avg. loss per last 100 batches: 3.729203
+1800it [19:50,  1.70it/s]Epoch: 0: Step: 1801/7002, loss=3.377429, lr=0.000020
+1899it [20:48,  1.67it/s]Train batch 1900
+Avg. loss per last 100 batches: 3.671296
+1900it [20:49,  1.64it/s]Epoch: 0: Step: 1901/7002, loss=3.421041, lr=0.000020
+1999it [21:47,  1.70it/s]Train batch 2000
+Avg. loss per last 100 batches: 3.629199
+2000it [21:48,  1.70it/s]Epoch: 0: Step: 2001/7002, loss=3.693778, lr=0.000020
+2099it [22:46,  1.70it/s]Train batch 2100
+Avg. loss per last 100 batches: 3.572929
+2100it [22:47,  1.70it/s]Epoch: 0: Step: 2101/7002, loss=2.889337, lr=0.000020
+2199it [23:45,  1.70it/s]Train batch 2200
+Avg. loss per last 100 batches: 3.542522
+2200it [23:46,  1.70it/s]Epoch: 0: Step: 2201/7002, loss=3.468366, lr=0.000020
+2299it [24:44,  1.70it/s]Train batch 2300
+Avg. loss per last 100 batches: 3.504612
+2300it [24:45,  1.70it/s]Epoch: 0: Step: 2301/7002, loss=2.849458, lr=0.000020
+2333it [25:04,  1.68it/s]Validation: Epoch: 0 Step: 2334/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.126652 sec., loss=2.681991 
+Eval step: 199 , used_time=28.349944 sec., loss=2.445447 
+Eval step: 299 , used_time=42.625816 sec., loss=2.645167 
+Eval step: 399 , used_time=56.876913 sec., loss=2.826560 
+Eval step: 499 , used_time=71.174201 sec., loss=2.791483 
+Eval step: 599 , used_time=85.300454 sec., loss=2.657478 
+Eval step: 699 , used_time=99.716570 sec., loss=2.484931 
+Eval step: 799 , used_time=113.869532 sec., loss=2.319309 
+NLL Validation: loss = 2.563602. correct prediction ratio  18094/52032 ~  0.347748
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+2399it [27:52,  1.70it/s]Train batch 2400
+Avg. loss per last 100 batches: 3.425640
+2400it [27:53,  1.70it/s]Epoch: 0: Step: 2401/7002, loss=3.310216, lr=0.000020
+2499it [28:51,  1.70it/s]Train batch 2500
+Avg. loss per last 100 batches: 3.376437
+2500it [28:52,  1.70it/s]Epoch: 0: Step: 2501/7002, loss=3.430785, lr=0.000019
+2599it [29:50,  1.69it/s]Train batch 2600
+Avg. loss per last 100 batches: 3.398336
+2600it [29:51,  1.69it/s]Epoch: 0: Step: 2601/7002, loss=3.433534, lr=0.000019
+2699it [30:49,  1.70it/s]Train batch 2700
+Avg. loss per last 100 batches: 3.343182
+2700it [30:49,  1.69it/s]Epoch: 0: Step: 2701/7002, loss=3.296750, lr=0.000019
+2799it [31:48,  1.70it/s]Train batch 2800
+Avg. loss per last 100 batches: 3.302778
+2800it [31:48,  1.70it/s]Epoch: 0: Step: 2801/7002, loss=3.299704, lr=0.000019
+2899it [32:46,  1.71it/s]Train batch 2900
+Avg. loss per last 100 batches: 3.278816
+2900it [32:47,  1.70it/s]Epoch: 0: Step: 2901/7002, loss=3.434177, lr=0.000019
+2999it [33:45,  1.70it/s]Train batch 3000
+Avg. loss per last 100 batches: 3.208228
+3000it [33:46,  1.70it/s]Epoch: 0: Step: 3001/7002, loss=3.368297, lr=0.000019
+3099it [34:44,  1.70it/s]Train batch 3100
+Avg. loss per last 100 batches: 3.187869
+3100it [34:45,  1.70it/s]Epoch: 0: Step: 3101/7002, loss=3.626107, lr=0.000019
+3199it [35:43,  1.70it/s]Train batch 3200
+Avg. loss per last 100 batches: 3.180785
+3200it [35:44,  1.70it/s]Epoch: 0: Step: 3201/7002, loss=2.846573, lr=0.000019
+3299it [36:42,  1.69it/s]Train batch 3300
+Avg. loss per last 100 batches: 3.152169
+3300it [36:43,  1.70it/s]Epoch: 0: Step: 3301/7002, loss=3.043320, lr=0.000019
+3399it [37:41,  1.70it/s]Train batch 3400
+Avg. loss per last 100 batches: 3.114332
+3400it [37:42,  1.65it/s]Epoch: 0: Step: 3401/7002, loss=2.744191, lr=0.000019
+3499it [38:40,  1.70it/s]Train batch 3500
+Avg. loss per last 100 batches: 3.113604
+3500it [38:41,  1.70it/s]Epoch: 0: Step: 3501/7002, loss=2.900035, lr=0.000019
+Validation: Epoch: 0 Step: 3501/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.379835 sec., loss=2.385346 
+Eval step: 199 , used_time=28.510774 sec., loss=2.336818 
+Eval step: 299 , used_time=42.862453 sec., loss=2.518611 
+Eval step: 399 , used_time=56.985355 sec., loss=2.602705 
+Eval step: 499 , used_time=71.339732 sec., loss=2.365786 
+Eval step: 599 , used_time=85.553885 sec., loss=2.348055 
+Eval step: 699 , used_time=99.865580 sec., loss=2.323063 
+Eval step: 799 , used_time=114.026689 sec., loss=2.033096 
+NLL Validation: loss = 2.286107. correct prediction ratio  22244/52032 ~  0.427506
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+3599it [41:48,  1.70it/s]Train batch 3600
+Avg. loss per last 100 batches: 3.125768
+3600it [41:49,  1.70it/s]Epoch: 0: Step: 3601/7002, loss=3.175216, lr=0.000019
+3699it [42:47,  1.70it/s]Train batch 3700
+Avg. loss per last 100 batches: 3.077828
+3700it [42:48,  1.70it/s]Epoch: 0: Step: 3701/7002, loss=2.967482, lr=0.000019
+3799it [43:48,  1.70it/s]Train batch 3800
+Avg. loss per last 100 batches: 3.063414
+3800it [43:49,  1.70it/s]Epoch: 0: Step: 3801/7002, loss=2.743041, lr=0.000019
+3899it [44:47,  1.71it/s]Train batch 3900
+Avg. loss per last 100 batches: 3.058353
+3900it [44:48,  1.71it/s]Epoch: 0: Step: 3901/7002, loss=3.181154, lr=0.000019
+3999it [45:46,  1.69it/s]Train batch 4000
+Avg. loss per last 100 batches: 2.993301
+4000it [45:47,  1.69it/s]Epoch: 0: Step: 4001/7002, loss=3.433729, lr=0.000019
+4099it [46:45,  1.69it/s]Train batch 4100
+Avg. loss per last 100 batches: 2.982876
+4100it [46:45,  1.70it/s]Epoch: 0: Step: 4101/7002, loss=2.636344, lr=0.000019
+4199it [47:44,  1.70it/s]Train batch 4200
+Avg. loss per last 100 batches: 2.955577
+4200it [47:44,  1.67it/s]Epoch: 0: Step: 4201/7002, loss=3.064683, lr=0.000019
+4299it [48:43,  1.70it/s]Train batch 4300
+Avg. loss per last 100 batches: 2.943188
+4300it [48:43,  1.70it/s]Epoch: 0: Step: 4301/7002, loss=3.023273, lr=0.000019
+4399it [49:42,  1.69it/s]Train batch 4400
+Avg. loss per last 100 batches: 2.956614
+4400it [49:42,  1.69it/s]Epoch: 0: Step: 4401/7002, loss=3.075277, lr=0.000019
+4499it [50:41,  1.70it/s]Train batch 4500
+Avg. loss per last 100 batches: 2.928673
+4500it [50:41,  1.70it/s]Epoch: 0: Step: 4501/7002, loss=3.454274, lr=0.000019
+4599it [51:39,  1.70it/s]Train batch 4600
+Avg. loss per last 100 batches: 2.955221
+4600it [51:40,  1.70it/s]Epoch: 0: Step: 4601/7002, loss=2.904827, lr=0.000019
+4667it [52:19,  1.70it/s]Validation: Epoch: 0 Step: 4668/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.403337 sec., loss=2.237330 
+Eval step: 199 , used_time=28.667949 sec., loss=1.968697 
+Eval step: 299 , used_time=43.096632 sec., loss=2.469199 
+Eval step: 399 , used_time=57.248756 sec., loss=2.595924 
+Eval step: 499 , used_time=71.480859 sec., loss=2.093718 
+Eval step: 599 , used_time=85.828117 sec., loss=2.184507 
+Eval step: 699 , used_time=100.109069 sec., loss=2.114438 
+Eval step: 799 , used_time=114.459655 sec., loss=1.827916 
+NLL Validation: loss = 2.108670. correct prediction ratio  24493/52032 ~  0.470730
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+4699it [54:48,  1.70it/s]Train batch 4700
+Avg. loss per last 100 batches: 2.891600
+4700it [54:49,  1.70it/s]Epoch: 0: Step: 4701/7002, loss=2.493428, lr=0.000019
+4799it [55:47,  1.70it/s]Train batch 4800
+Avg. loss per last 100 batches: 2.866330
+4800it [55:48,  1.70it/s]Epoch: 0: Step: 4801/7002, loss=3.206511, lr=0.000019
+4899it [56:46,  1.69it/s]Train batch 4900
+Avg. loss per last 100 batches: 2.851119
+4900it [56:47,  1.70it/s]Epoch: 0: Step: 4901/7002, loss=2.888306, lr=0.000018
+4999it [57:45,  1.70it/s]Train batch 5000
+Avg. loss per last 100 batches: 2.855812
+5000it [57:46,  1.68it/s]Epoch: 0: Step: 5001/7002, loss=2.867291, lr=0.000018
+5099it [58:44,  1.70it/s]Train batch 5100
+Avg. loss per last 100 batches: 2.841707
+5100it [58:45,  1.70it/s]Epoch: 0: Step: 5101/7002, loss=2.576155, lr=0.000018
+5199it [59:43,  1.70it/s]Train batch 5200
+Avg. loss per last 100 batches: 2.835989
+5200it [59:44,  1.71it/s]Epoch: 0: Step: 5201/7002, loss=2.954293, lr=0.000018
+5299it [1:00:42,  1.67it/s]Train batch 5300
+Avg. loss per last 100 batches: 2.832872
+5300it [1:00:43,  1.68it/s]Epoch: 0: Step: 5301/7002, loss=2.428674, lr=0.000018
+5399it [1:01:41,  1.70it/s]Train batch 5400
+Avg. loss per last 100 batches: 2.801799
+5400it [1:01:42,  1.70it/s]Epoch: 0: Step: 5401/7002, loss=2.971621, lr=0.000018
+5499it [1:02:40,  1.70it/s]Train batch 5500
+Avg. loss per last 100 batches: 2.758634
+5500it [1:02:41,  1.70it/s]Epoch: 0: Step: 5501/7002, loss=2.912290, lr=0.000018
+5599it [1:03:39,  1.69it/s]Train batch 5600
+Avg. loss per last 100 batches: 2.828328
+5600it [1:03:40,  1.69it/s]Epoch: 0: Step: 5601/7002, loss=3.060711, lr=0.000018
+5699it [1:04:38,  1.69it/s]Train batch 5700
+Avg. loss per last 100 batches: 2.766697
+5700it [1:04:39,  1.67it/s]Epoch: 0: Step: 5701/7002, loss=3.063389, lr=0.000018
+5799it [1:05:37,  1.70it/s]Train batch 5800
+Avg. loss per last 100 batches: 2.697313
+5800it [1:05:38,  1.70it/s]Epoch: 0: Step: 5801/7002, loss=2.691062, lr=0.000018
+5834it [1:05:58,  1.70it/s]Validation: Epoch: 0 Step: 5835/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.214493 sec., loss=1.887606 
+Eval step: 199 , used_time=28.535878 sec., loss=1.936109 
+Eval step: 299 , used_time=42.709895 sec., loss=2.357361 
+Eval step: 399 , used_time=57.172311 sec., loss=2.587993 
+Eval step: 499 , used_time=71.412763 sec., loss=1.937104 
+Eval step: 599 , used_time=85.777563 sec., loss=2.116123 
+Eval step: 699 , used_time=99.965688 sec., loss=2.036042 
+Eval step: 799 , used_time=114.437460 sec., loss=1.703477 
+NLL Validation: loss = 1.980664. correct prediction ratio  26079/52032 ~  0.501211
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+5899it [1:08:46,  1.70it/s]Train batch 5900
+Avg. loss per last 100 batches: 2.719908
+5900it [1:08:46,  1.70it/s]Epoch: 0: Step: 5901/7002, loss=2.420496, lr=0.000018
+5999it [1:09:45,  1.70it/s]Train batch 6000
+Avg. loss per last 100 batches: 2.773427
+6000it [1:09:45,  1.70it/s]Epoch: 0: Step: 6001/7002, loss=2.620497, lr=0.000018
+6099it [1:10:44,  1.70it/s]Train batch 6100
+Avg. loss per last 100 batches: 2.712737
+6100it [1:10:44,  1.69it/s]Epoch: 0: Step: 6101/7002, loss=1.989349, lr=0.000018
+6199it [1:11:43,  1.68it/s]Train batch 6200
+Avg. loss per last 100 batches: 2.695710
+6200it [1:11:43,  1.69it/s]Epoch: 0: Step: 6201/7002, loss=3.091635, lr=0.000018
+6299it [1:12:42,  1.69it/s]Train batch 6300
+Avg. loss per last 100 batches: 2.694198
+6300it [1:12:42,  1.70it/s]Epoch: 0: Step: 6301/7002, loss=2.504124, lr=0.000018
+6399it [1:13:41,  1.68it/s]Train batch 6400
+Avg. loss per last 100 batches: 2.738205
+6400it [1:13:41,  1.69it/s]Epoch: 0: Step: 6401/7002, loss=2.597034, lr=0.000018
+6499it [1:14:39,  1.71it/s]Train batch 6500
+Avg. loss per last 100 batches: 2.654562
+6500it [1:14:40,  1.70it/s]Epoch: 0: Step: 6501/7002, loss=3.157952, lr=0.000018
+6599it [1:15:39,  1.70it/s]Train batch 6600
+Avg. loss per last 100 batches: 2.666847
+6600it [1:15:39,  1.70it/s]Epoch: 0: Step: 6601/7002, loss=2.768129, lr=0.000018
+6699it [1:16:37,  1.71it/s]Train batch 6700
+Avg. loss per last 100 batches: 2.652855
+6700it [1:16:38,  1.70it/s]Epoch: 0: Step: 6701/7002, loss=2.835123, lr=0.000018
+6799it [1:17:39,  1.70it/s]Train batch 6800
+Avg. loss per last 100 batches: 2.696351
+6800it [1:17:39,  1.69it/s]Epoch: 0: Step: 6801/7002, loss=2.363411, lr=0.000018
+6899it [1:18:38,  1.70it/s]Train batch 6900
+Avg. loss per last 100 batches: 2.629129
+6900it [1:18:38,  1.70it/s]Epoch: 0: Step: 6901/7002, loss=2.826531, lr=0.000018
+6999it [1:19:37,  1.71it/s]Train batch 7000
+Avg. loss per last 100 batches: 2.620683
+7000it [1:19:37,  1.71it/s]Epoch: 0: Step: 7001/7002, loss=2.874437, lr=0.000018
+7001it [1:19:38,  1.71it/s]Validation: Epoch: 0 Step: 7002/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.210204 sec., loss=1.925169 
+Eval step: 199 , used_time=28.518312 sec., loss=1.942224 
+Eval step: 299 , used_time=42.600284 sec., loss=2.375833 
+Eval step: 399 , used_time=56.885463 sec., loss=2.578625 
+Eval step: 499 , used_time=71.011676 sec., loss=1.784134 
+Eval step: 599 , used_time=85.445306 sec., loss=2.066824 
+Eval step: 699 , used_time=99.529969 sec., loss=1.772355 
+Eval step: 799 , used_time=113.595465 sec., loss=1.663851 
+NLL Validation: loss = 1.888351. correct prediction ratio  26935/52032 ~  0.517662
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+7002it [1:21:47,  1.43it/s]
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.313979 sec., loss=1.925169 
+Eval step: 199 , used_time=28.665239 sec., loss=1.942224 
+Eval step: 299 , used_time=42.812928 sec., loss=2.375833 
+Eval step: 399 , used_time=57.132476 sec., loss=2.578625 
+Eval step: 499 , used_time=71.392302 sec., loss=1.784134 
+Eval step: 599 , used_time=85.714211 sec., loss=2.066824 
+Eval step: 699 , used_time=99.802439 sec., loss=1.772355 
+Eval step: 799 , used_time=114.096190 sec., loss=1.663851 
+NLL Validation: loss = 1.888351. correct prediction ratio  26935/52032 ~  0.517662
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+Av Loss per epoch=3.882365
+epoch total correct predictions=104112
+***** Epoch 1 *****
+0it [00:00, ?it/s]Epoch: 1: Step: 1/7002, loss=2.810784, lr=0.000018
+99it [00:58,  1.70it/s]Train batch 100
+Avg. loss per last 100 batches: 2.469880
+100it [00:59,  1.70it/s]Epoch: 1: Step: 101/7002, loss=2.502100, lr=0.000018
+199it [01:57,  1.70it/s]Train batch 200
+Avg. loss per last 100 batches: 2.458443
+200it [01:58,  1.70it/s]Epoch: 1: Step: 201/7002, loss=2.188473, lr=0.000018
+299it [02:56,  1.69it/s]Train batch 300
+Avg. loss per last 100 batches: 2.452291
+300it [02:56,  1.69it/s]Epoch: 1: Step: 301/7002, loss=2.539511, lr=0.000017
+399it [03:55,  1.69it/s]Train batch 400
+Avg. loss per last 100 batches: 2.464379
+400it [03:55,  1.69it/s]Epoch: 1: Step: 401/7002, loss=2.409095, lr=0.000017
+499it [04:54,  1.69it/s]Train batch 500
+Avg. loss per last 100 batches: 2.395384
+500it [04:54,  1.70it/s]Epoch: 1: Step: 501/7002, loss=2.391906, lr=0.000017
+599it [05:52,  1.70it/s]Train batch 600
+Avg. loss per last 100 batches: 2.501168
+600it [05:53,  1.70it/s]Epoch: 1: Step: 601/7002, loss=2.676170, lr=0.000017
+699it [06:51,  1.70it/s]Train batch 700
+Avg. loss per last 100 batches: 2.425732
+700it [06:52,  1.70it/s]Epoch: 1: Step: 701/7002, loss=1.855722, lr=0.000017
+799it [07:50,  1.70it/s]Train batch 800
+Avg. loss per last 100 batches: 2.408724
+800it [07:51,  1.70it/s]Epoch: 1: Step: 801/7002, loss=2.442429, lr=0.000017
+899it [08:49,  1.71it/s]Train batch 900
+Avg. loss per last 100 batches: 2.389631
+900it [08:49,  1.71it/s]Epoch: 1: Step: 901/7002, loss=2.027037, lr=0.000017
+999it [09:48,  1.70it/s]Train batch 1000
+Avg. loss per last 100 batches: 2.411846
+1000it [09:48,  1.70it/s]Epoch: 1: Step: 1001/7002, loss=2.648083, lr=0.000017
+1099it [10:46,  1.71it/s]Train batch 1100
+Avg. loss per last 100 batches: 2.392105
+1100it [10:47,  1.71it/s]Epoch: 1: Step: 1101/7002, loss=2.790681, lr=0.000017
+1166it [11:26,  1.70it/s]Validation: Epoch: 1 Step: 1167/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.115213 sec., loss=1.882681 
+Eval step: 199 , used_time=28.549756 sec., loss=1.863797 
+Eval step: 299 , used_time=42.706532 sec., loss=2.377156 
+Eval step: 399 , used_time=56.970983 sec., loss=2.431598 
+Eval step: 499 , used_time=71.089938 sec., loss=1.634516 
+Eval step: 599 , used_time=85.327277 sec., loss=2.082687 
+Eval step: 699 , used_time=99.649377 sec., loss=1.691309 
+Eval step: 799 , used_time=113.711883 sec., loss=1.552678 
+NLL Validation: loss = 1.857558. correct prediction ratio  27881/52032 ~  0.535843
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+1199it [13:57,  1.70it/s]Train batch 1200
+Avg. loss per last 100 batches: 2.405205
+1200it [13:57,  1.70it/s]Epoch: 1: Step: 1201/7002, loss=2.229613, lr=0.000017
+1299it [14:55,  1.70it/s]Train batch 1300
+Avg. loss per last 100 batches: 2.351123
+1300it [14:56,  1.70it/s]Epoch: 1: Step: 1301/7002, loss=2.033661, lr=0.000017
+1399it [15:54,  1.69it/s]Train batch 1400
+Avg. loss per last 100 batches: 2.372496
+1400it [15:55,  1.69it/s]Epoch: 1: Step: 1401/7002, loss=2.291526, lr=0.000017
+1499it [16:53,  1.70it/s]Train batch 1500
+Avg. loss per last 100 batches: 2.437381
+1500it [16:54,  1.70it/s]Epoch: 1: Step: 1501/7002, loss=2.563128, lr=0.000017
+1599it [17:52,  1.70it/s]Train batch 1600
+Avg. loss per last 100 batches: 2.337728
+1600it [17:53,  1.70it/s]Epoch: 1: Step: 1601/7002, loss=2.489340, lr=0.000017
+1699it [18:51,  1.70it/s]Train batch 1700
+Avg. loss per last 100 batches: 2.353426
+1700it [18:52,  1.70it/s]Epoch: 1: Step: 1701/7002, loss=2.406972, lr=0.000017
+1799it [19:50,  1.69it/s]Train batch 1800
+Avg. loss per last 100 batches: 2.375391
+1800it [19:51,  1.69it/s]Epoch: 1: Step: 1801/7002, loss=2.292124, lr=0.000017
+1899it [20:49,  1.70it/s]Train batch 1900
+Avg. loss per last 100 batches: 2.382429
+1900it [20:49,  1.70it/s]Epoch: 1: Step: 1901/7002, loss=2.508720, lr=0.000017
+1999it [21:48,  1.70it/s]Train batch 2000
+Avg. loss per last 100 batches: 2.327238
+2000it [21:48,  1.70it/s]Epoch: 1: Step: 2001/7002, loss=2.089057, lr=0.000017
+2099it [22:46,  1.71it/s]Train batch 2100
+Avg. loss per last 100 batches: 2.376221
+2100it [22:47,  1.71it/s]Epoch: 1: Step: 2101/7002, loss=2.175495, lr=0.000017
+2199it [23:45,  1.71it/s]Train batch 2200
+Avg. loss per last 100 batches: 2.302632
+2200it [23:46,  1.71it/s]Epoch: 1: Step: 2201/7002, loss=2.336215, lr=0.000017
+2299it [24:44,  1.71it/s]Train batch 2300
+Avg. loss per last 100 batches: 2.347892
+2300it [24:45,  1.71it/s]Epoch: 1: Step: 2301/7002, loss=2.088317, lr=0.000017
+2333it [25:04,  1.68it/s]Validation: Epoch: 1 Step: 2334/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.087414 sec., loss=1.824698 
+Eval step: 199 , used_time=28.185867 sec., loss=1.758703 
+Eval step: 299 , used_time=42.487476 sec., loss=2.240176 
+Eval step: 399 , used_time=56.780875 sec., loss=2.478493 
+Eval step: 499 , used_time=71.121153 sec., loss=1.583095 
+Eval step: 599 , used_time=85.213620 sec., loss=2.022911 
+Eval step: 699 , used_time=99.511875 sec., loss=1.583005 
+Eval step: 799 , used_time=113.759096 sec., loss=1.580536 
+NLL Validation: loss = 1.814284. correct prediction ratio  28566/52032 ~  0.549008
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+2399it [27:52,  1.70it/s]Train batch 2400
+Avg. loss per last 100 batches: 2.346901
+2400it [27:53,  1.70it/s]Epoch: 1: Step: 2401/7002, loss=2.161529, lr=0.000017
+2499it [28:51,  1.70it/s]Train batch 2500
+Avg. loss per last 100 batches: 2.356827
+2500it [28:51,  1.70it/s]Epoch: 1: Step: 2501/7002, loss=2.178993, lr=0.000017
+2599it [29:50,  1.67it/s]Train batch 2600
+Avg. loss per last 100 batches: 2.350671
+2600it [29:50,  1.68it/s]Epoch: 1: Step: 2601/7002, loss=2.156445, lr=0.000016
+2699it [30:48,  1.71it/s]Train batch 2700
+Avg. loss per last 100 batches: 2.301043
+2700it [30:49,  1.71it/s]Epoch: 1: Step: 2701/7002, loss=2.398831, lr=0.000016
+2799it [31:47,  1.70it/s]Train batch 2800
+Avg. loss per last 100 batches: 2.325186
+2800it [31:48,  1.70it/s]Epoch: 1: Step: 2801/7002, loss=2.270150, lr=0.000016
+2899it [32:46,  1.70it/s]Train batch 2900
+Avg. loss per last 100 batches: 2.307582
+2900it [32:47,  1.70it/s]Epoch: 1: Step: 2901/7002, loss=2.486515, lr=0.000016
+2999it [33:45,  1.70it/s]Train batch 3000
+Avg. loss per last 100 batches: 2.355034
+3000it [33:46,  1.71it/s]Epoch: 1: Step: 3001/7002, loss=2.265707, lr=0.000016
+3099it [34:44,  1.71it/s]Train batch 3100
+Avg. loss per last 100 batches: 2.332244
+3100it [34:45,  1.71it/s]Epoch: 1: Step: 3101/7002, loss=2.224063, lr=0.000016
+3199it [35:43,  1.70it/s]Train batch 3200
+Avg. loss per last 100 batches: 2.316600
+3200it [35:44,  1.70it/s]Epoch: 1: Step: 3201/7002, loss=2.531074, lr=0.000016
+3299it [36:42,  1.65it/s]Train batch 3300
+Avg. loss per last 100 batches: 2.312606
+3300it [36:42,  1.67it/s]Epoch: 1: Step: 3301/7002, loss=2.009455, lr=0.000016
+3399it [37:41,  1.70it/s]Train batch 3400
+Avg. loss per last 100 batches: 2.268147
+3400it [37:41,  1.70it/s]Epoch: 1: Step: 3401/7002, loss=1.995906, lr=0.000016
+3499it [38:39,  1.71it/s]Train batch 3500
+Avg. loss per last 100 batches: 2.272230
+3500it [38:40,  1.71it/s]Epoch: 1: Step: 3501/7002, loss=2.315368, lr=0.000016
+Validation: Epoch: 1 Step: 3501/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.387762 sec., loss=1.717705 
+Eval step: 199 , used_time=28.498334 sec., loss=1.614101 
+Eval step: 299 , used_time=42.800359 sec., loss=2.147578 
+Eval step: 399 , used_time=56.890463 sec., loss=2.255087 
+Eval step: 499 , used_time=71.232278 sec., loss=1.482263 
+Eval step: 599 , used_time=85.392655 sec., loss=1.849169 
+Eval step: 699 , used_time=99.669096 sec., loss=1.555528 
+Eval step: 799 , used_time=113.776522 sec., loss=1.366508 
+NLL Validation: loss = 1.722142. correct prediction ratio  29524/52032 ~  0.567420
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+3599it [41:51,  1.69it/s]Train batch 3600
+Avg. loss per last 100 batches: 2.290661
+3600it [41:52,  1.69it/s]Epoch: 1: Step: 3601/7002, loss=2.615925, lr=0.000016
+3699it [42:50,  1.70it/s]Train batch 3700
+Avg. loss per last 100 batches: 2.254016
+3700it [42:51,  1.70it/s]Epoch: 1: Step: 3701/7002, loss=2.163828, lr=0.000016
+3799it [43:49,  1.70it/s]Train batch 3800
+Avg. loss per last 100 batches: 2.283083
+3800it [43:50,  1.70it/s]Epoch: 1: Step: 3801/7002, loss=1.903195, lr=0.000016
+3899it [44:48,  1.71it/s]Train batch 3900
+Avg. loss per last 100 batches: 2.210043
+3900it [44:48,  1.71it/s]Epoch: 1: Step: 3901/7002, loss=2.316279, lr=0.000016
+3999it [45:47,  1.71it/s]Train batch 4000
+Avg. loss per last 100 batches: 2.242600
+4000it [45:47,  1.71it/s]Epoch: 1: Step: 4001/7002, loss=2.225040, lr=0.000016
+4099it [46:46,  1.69it/s]Train batch 4100
+Avg. loss per last 100 batches: 2.266662
+4100it [46:46,  1.70it/s]Epoch: 1: Step: 4101/7002, loss=2.292323, lr=0.000016
+4199it [47:45,  1.68it/s]Train batch 4200
+Avg. loss per last 100 batches: 2.252513
+4200it [47:45,  1.69it/s]Epoch: 1: Step: 4201/7002, loss=2.170750, lr=0.000016
+4299it [48:43,  1.70it/s]Train batch 4300
+Avg. loss per last 100 batches: 2.260243
+4300it [48:44,  1.69it/s]Epoch: 1: Step: 4301/7002, loss=2.244279, lr=0.000016
+4399it [49:42,  1.71it/s]Train batch 4400
+Avg. loss per last 100 batches: 2.257953
+4400it [49:43,  1.71it/s]Epoch: 1: Step: 4401/7002, loss=2.390105, lr=0.000016
+4499it [50:41,  1.71it/s]Train batch 4500
+Avg. loss per last 100 batches: 2.233638
+4500it [50:42,  1.71it/s]Epoch: 1: Step: 4501/7002, loss=2.468888, lr=0.000016
+4599it [51:40,  1.70it/s]Train batch 4600
+Avg. loss per last 100 batches: 2.249324
+4600it [51:41,  1.70it/s]Epoch: 1: Step: 4601/7002, loss=2.736911, lr=0.000016
+4667it [52:20,  1.70it/s]Validation: Epoch: 1 Step: 4668/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.296147 sec., loss=1.732365 
+Eval step: 199 , used_time=28.424196 sec., loss=1.704500 
+Eval step: 299 , used_time=42.754096 sec., loss=2.165905 
+Eval step: 399 , used_time=56.904214 sec., loss=2.195354 
+Eval step: 499 , used_time=71.029966 sec., loss=1.387348 
+Eval step: 599 , used_time=85.319238 sec., loss=1.820782 
+Eval step: 699 , used_time=99.522931 sec., loss=1.610351 
+Eval step: 799 , used_time=113.911295 sec., loss=1.304215 
+NLL Validation: loss = 1.700721. correct prediction ratio  29916/52032 ~  0.574954
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+4699it [54:48,  1.70it/s]Train batch 4700
+Avg. loss per last 100 batches: 2.274833
+4700it [54:49,  1.70it/s]Epoch: 1: Step: 4701/7002, loss=2.363359, lr=0.000016
+4799it [55:47,  1.69it/s]Train batch 4800
+Avg. loss per last 100 batches: 2.234748
+4800it [55:47,  1.70it/s]Epoch: 1: Step: 4801/7002, loss=2.645411, lr=0.000016
+4899it [56:46,  1.65it/s]Train batch 4900
+Avg. loss per last 100 batches: 2.230510
+4900it [56:46,  1.65it/s]Epoch: 1: Step: 4901/7002, loss=2.162589, lr=0.000016
+4999it [57:45,  1.70it/s]Train batch 5000
+Avg. loss per last 100 batches: 2.239233
+5000it [57:45,  1.70it/s]Epoch: 1: Step: 5001/7002, loss=1.834409, lr=0.000015
+5099it [58:43,  1.71it/s]Train batch 5100
+Avg. loss per last 100 batches: 2.203944
+5100it [58:44,  1.70it/s]Epoch: 1: Step: 5101/7002, loss=1.913126, lr=0.000015
+5199it [59:42,  1.71it/s]Train batch 5200
+Avg. loss per last 100 batches: 2.239802
+5200it [59:43,  1.71it/s]Epoch: 1: Step: 5201/7002, loss=2.097865, lr=0.000015
+5299it [1:00:41,  1.70it/s]Train batch 5300
+Avg. loss per last 100 batches: 2.225963
+5300it [1:00:42,  1.70it/s]Epoch: 1: Step: 5301/7002, loss=1.844049, lr=0.000015
+5399it [1:01:40,  1.71it/s]Train batch 5400
+Avg. loss per last 100 batches: 2.184327
+5400it [1:01:41,  1.70it/s]Epoch: 1: Step: 5401/7002, loss=2.419400, lr=0.000015
+5499it [1:02:39,  1.70it/s]Train batch 5500
+Avg. loss per last 100 batches: 2.233146
+5500it [1:02:39,  1.70it/s]Epoch: 1: Step: 5501/7002, loss=1.644832, lr=0.000015
+5599it [1:03:38,  1.66it/s]Train batch 5600
+Avg. loss per last 100 batches: 2.206381
+5600it [1:03:38,  1.66it/s]Epoch: 1: Step: 5601/7002, loss=2.226266, lr=0.000015
+5699it [1:04:36,  1.71it/s]Train batch 5700
+Avg. loss per last 100 batches: 2.237691
+5700it [1:04:37,  1.71it/s]Epoch: 1: Step: 5701/7002, loss=1.986863, lr=0.000015
+5799it [1:05:35,  1.71it/s]Train batch 5800
+Avg. loss per last 100 batches: 2.202480
+5800it [1:05:36,  1.71it/s]Epoch: 1: Step: 5801/7002, loss=1.807638, lr=0.000015
+5834it [1:05:56,  1.69it/s]Validation: Epoch: 1 Step: 5835/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.171594 sec., loss=1.662590 
+Eval step: 199 , used_time=28.460061 sec., loss=1.621551 
+Eval step: 299 , used_time=42.578104 sec., loss=2.128423 
+Eval step: 399 , used_time=57.004476 sec., loss=2.015099 
+Eval step: 499 , used_time=71.241073 sec., loss=1.308878 
+Eval step: 599 , used_time=85.498003 sec., loss=1.723387 
+Eval step: 699 , used_time=99.617676 sec., loss=1.556234 
+Eval step: 799 , used_time=113.911821 sec., loss=1.190980 
+NLL Validation: loss = 1.635490. correct prediction ratio  30405/52032 ~  0.584352
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+5899it [1:08:46,  1.71it/s]Train batch 5900
+Avg. loss per last 100 batches: 2.178690
+5900it [1:08:46,  1.70it/s]Epoch: 1: Step: 5901/7002, loss=2.512641, lr=0.000015
+5999it [1:09:45,  1.71it/s]Train batch 6000
+Avg. loss per last 100 batches: 2.203981
+6000it [1:09:45,  1.71it/s]Epoch: 1: Step: 6001/7002, loss=2.224281, lr=0.000015
+6099it [1:10:44,  1.70it/s]Train batch 6100
+Avg. loss per last 100 batches: 2.210664
+6100it [1:10:44,  1.70it/s]Epoch: 1: Step: 6101/7002, loss=2.337362, lr=0.000015
+6199it [1:11:42,  1.70it/s]Train batch 6200
+Avg. loss per last 100 batches: 2.189006
+6200it [1:11:43,  1.70it/s]Epoch: 1: Step: 6201/7002, loss=2.465021, lr=0.000015
+6299it [1:12:41,  1.70it/s]Train batch 6300
+Avg. loss per last 100 batches: 2.201368
+6300it [1:12:42,  1.70it/s]Epoch: 1: Step: 6301/7002, loss=2.385035, lr=0.000015
+6399it [1:13:40,  1.65it/s]Train batch 6400
+Avg. loss per last 100 batches: 2.179236
+6400it [1:13:41,  1.67it/s]Epoch: 1: Step: 6401/7002, loss=2.537396, lr=0.000015
+6499it [1:14:39,  1.69it/s]Train batch 6500
+Avg. loss per last 100 batches: 2.218153
+6500it [1:14:40,  1.70it/s]Epoch: 1: Step: 6501/7002, loss=2.091568, lr=0.000015
+6599it [1:15:38,  1.70it/s]Train batch 6600
+Avg. loss per last 100 batches: 2.197866
+6600it [1:15:39,  1.70it/s]Epoch: 1: Step: 6601/7002, loss=2.450270, lr=0.000015
+6699it [1:16:37,  1.70it/s]Train batch 6700
+Avg. loss per last 100 batches: 2.165827
+6700it [1:16:38,  1.70it/s]Epoch: 1: Step: 6701/7002, loss=1.953753, lr=0.000015
+6799it [1:17:36,  1.70it/s]Train batch 6800
+Avg. loss per last 100 batches: 2.138958
+6800it [1:17:37,  1.70it/s]Epoch: 1: Step: 6801/7002, loss=1.771105, lr=0.000015
+6899it [1:18:35,  1.70it/s]Train batch 6900
+Avg. loss per last 100 batches: 2.185651
+6900it [1:18:36,  1.70it/s]Epoch: 1: Step: 6901/7002, loss=2.224143, lr=0.000015
+6999it [1:19:34,  1.70it/s]Train batch 7000
+Avg. loss per last 100 batches: 2.189598
+7000it [1:19:35,  1.70it/s]Epoch: 1: Step: 7001/7002, loss=1.993858, lr=0.000015
+7001it [1:19:36,  1.70it/s]Validation: Epoch: 1 Step: 7002/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.256962 sec., loss=1.718247 
+Eval step: 199 , used_time=28.710506 sec., loss=1.628741 
+Eval step: 299 , used_time=42.913262 sec., loss=2.041187 
+Eval step: 399 , used_time=57.225658 sec., loss=2.110847 
+Eval step: 499 , used_time=71.401994 sec., loss=1.298288 
+Eval step: 599 , used_time=85.699192 sec., loss=1.865946 
+Eval step: 699 , used_time=100.108389 sec., loss=1.530468 
+Eval step: 799 , used_time=114.257767 sec., loss=1.326382 
+NLL Validation: loss = 1.626095. correct prediction ratio  30872/52032 ~  0.593327
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+7002it [1:21:46,  1.43it/s]
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.328518 sec., loss=1.718247 
+Eval step: 199 , used_time=28.638334 sec., loss=1.628741 
+Eval step: 299 , used_time=42.808015 sec., loss=2.041187 
+Eval step: 399 , used_time=57.142594 sec., loss=2.110847 
+Eval step: 499 , used_time=71.424400 sec., loss=1.298288 
+Eval step: 599 , used_time=85.802496 sec., loss=1.865946 
+Eval step: 699 , used_time=100.015679 sec., loss=1.530468 
+Eval step: 799 , used_time=114.169349 sec., loss=1.326382 
+NLL Validation: loss = 1.626095. correct prediction ratio  30872/52032 ~  0.593327
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+Av Loss per epoch=2.296516
+epoch total correct predictions=198377
+***** Epoch 2 *****
+0it [00:00, ?it/s]Epoch: 2: Step: 1/7002, loss=1.967204, lr=0.000015
+99it [00:58,  1.69it/s]Train batch 100
+Avg. loss per last 100 batches: 1.898932
+100it [00:59,  1.69it/s]Epoch: 2: Step: 101/7002, loss=2.033426, lr=0.000015
+199it [01:57,  1.70it/s]Train batch 200
+Avg. loss per last 100 batches: 1.921271
+200it [01:58,  1.70it/s]Epoch: 2: Step: 201/7002, loss=1.966288, lr=0.000015
+299it [02:56,  1.67it/s]Train batch 300
+Avg. loss per last 100 batches: 1.904010
+300it [02:57,  1.65it/s]Epoch: 2: Step: 301/7002, loss=1.730178, lr=0.000015
+399it [03:55,  1.70it/s]Train batch 400
+Avg. loss per last 100 batches: 1.915326
+400it [03:56,  1.70it/s]Epoch: 2: Step: 401/7002, loss=1.793011, lr=0.000014
+499it [04:54,  1.70it/s]Train batch 500
+Avg. loss per last 100 batches: 1.970632
+500it [04:55,  1.70it/s]Epoch: 2: Step: 501/7002, loss=1.831486, lr=0.000014
+599it [05:53,  1.70it/s]Train batch 600
+Avg. loss per last 100 batches: 1.933057
+600it [05:54,  1.70it/s]Epoch: 2: Step: 601/7002, loss=1.767664, lr=0.000014
+699it [06:52,  1.70it/s]Train batch 700
+Avg. loss per last 100 batches: 1.946739
+700it [06:53,  1.70it/s]Epoch: 2: Step: 701/7002, loss=2.071722, lr=0.000014
+799it [07:52,  1.69it/s]Train batch 800
+Avg. loss per last 100 batches: 1.920473
+800it [07:52,  1.69it/s]Epoch: 2: Step: 801/7002, loss=1.898244, lr=0.000014
+899it [08:51,  1.70it/s]Train batch 900
+Avg. loss per last 100 batches: 1.951119
+900it [08:51,  1.70it/s]Epoch: 2: Step: 901/7002, loss=1.912417, lr=0.000014
+999it [09:50,  1.65it/s]Train batch 1000
+Avg. loss per last 100 batches: 1.913875
+1000it [09:50,  1.67it/s]Epoch: 2: Step: 1001/7002, loss=1.956102, lr=0.000014
+1099it [10:49,  1.70it/s]Train batch 1100
+Avg. loss per last 100 batches: 1.933409
+1100it [10:49,  1.70it/s]Epoch: 2: Step: 1101/7002, loss=2.244820, lr=0.000014
+1166it [11:28,  1.70it/s]Validation: Epoch: 2 Step: 1167/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.171139 sec., loss=1.634838 
+Eval step: 199 , used_time=28.668425 sec., loss=1.573424 
+Eval step: 299 , used_time=42.895581 sec., loss=2.132797 
+Eval step: 399 , used_time=57.266873 sec., loss=2.189858 
+Eval step: 499 , used_time=71.377612 sec., loss=1.221632 
+Eval step: 599 , used_time=85.598354 sec., loss=1.814242 
+Eval step: 699 , used_time=100.022146 sec., loss=1.505203 
+Eval step: 799 , used_time=114.275594 sec., loss=1.233686 
+NLL Validation: loss = 1.633356. correct prediction ratio  31353/52032 ~  0.602571
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+1199it [13:59,  1.69it/s]Train batch 1200
+Avg. loss per last 100 batches: 1.921011
+1200it [14:00,  1.69it/s]Epoch: 2: Step: 1201/7002, loss=1.889511, lr=0.000014
+1299it [14:58,  1.67it/s]Train batch 1300
+Avg. loss per last 100 batches: 1.948188
+1300it [14:59,  1.68it/s]Epoch: 2: Step: 1301/7002, loss=1.906194, lr=0.000014
+1399it [15:57,  1.70it/s]Train batch 1400
+Avg. loss per last 100 batches: 1.950285
+1400it [15:58,  1.69it/s]Epoch: 2: Step: 1401/7002, loss=1.807804, lr=0.000014
+1499it [16:56,  1.70it/s]Train batch 1500
+Avg. loss per last 100 batches: 1.913044
+1500it [16:57,  1.69it/s]Epoch: 2: Step: 1501/7002, loss=1.584115, lr=0.000014
+1599it [17:55,  1.69it/s]Train batch 1600
+Avg. loss per last 100 batches: 1.894243
+1600it [17:56,  1.69it/s]Epoch: 2: Step: 1601/7002, loss=1.845062, lr=0.000014
+1699it [18:54,  1.70it/s]Train batch 1700
+Avg. loss per last 100 batches: 1.921142
+1700it [18:55,  1.70it/s]Epoch: 2: Step: 1701/7002, loss=1.411877, lr=0.000014
+1799it [19:53,  1.66it/s]Train batch 1800
+Avg. loss per last 100 batches: 1.872853
+1800it [19:53,  1.67it/s]Epoch: 2: Step: 1801/7002, loss=1.836852, lr=0.000014
+1899it [20:52,  1.70it/s]Train batch 1900
+Avg. loss per last 100 batches: 1.909340
+1900it [20:52,  1.70it/s]Epoch: 2: Step: 1901/7002, loss=1.929345, lr=0.000014
+1999it [21:51,  1.70it/s]Train batch 2000
+Avg. loss per last 100 batches: 1.914644
+2000it [21:51,  1.70it/s]Epoch: 2: Step: 2001/7002, loss=2.046545, lr=0.000014
+2099it [22:50,  1.70it/s]Train batch 2100
+Avg. loss per last 100 batches: 1.917594
+2100it [22:50,  1.70it/s]Epoch: 2: Step: 2101/7002, loss=2.121540, lr=0.000014
+2199it [23:49,  1.70it/s]Train batch 2200
+Avg. loss per last 100 batches: 1.909246
+2200it [23:49,  1.70it/s]Epoch: 2: Step: 2201/7002, loss=1.695333, lr=0.000014
+2299it [24:48,  1.70it/s]Train batch 2300
+Avg. loss per last 100 batches: 1.906361
+2300it [24:48,  1.70it/s]Epoch: 2: Step: 2301/7002, loss=1.724860, lr=0.000014
+2333it [25:08,  1.70it/s]Validation: Epoch: 2 Step: 2334/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.235351 sec., loss=1.533281 
+Eval step: 199 , used_time=28.360138 sec., loss=1.661070 
+Eval step: 299 , used_time=42.716325 sec., loss=2.117198 
+Eval step: 399 , used_time=56.924871 sec., loss=2.170244 
+Eval step: 499 , used_time=71.334946 sec., loss=1.111549 
+Eval step: 599 , used_time=85.501919 sec., loss=1.760697 
+Eval step: 699 , used_time=99.887688 sec., loss=1.411983 
+Eval step: 799 , used_time=114.071949 sec., loss=1.250811 
+NLL Validation: loss = 1.587917. correct prediction ratio  31429/52032 ~  0.604032
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+2399it [27:56,  1.70it/s]Train batch 2400
+Avg. loss per last 100 batches: 1.915723
+2400it [27:57,  1.70it/s]Epoch: 2: Step: 2401/7002, loss=1.968044, lr=0.000014
+2499it [28:55,  1.70it/s]Train batch 2500
+Avg. loss per last 100 batches: 1.909923
+2500it [28:56,  1.70it/s]Epoch: 2: Step: 2501/7002, loss=1.813013, lr=0.000014
+2599it [29:54,  1.67it/s]Train batch 2600
+Avg. loss per last 100 batches: 1.934251
+2600it [29:54,  1.68it/s]Epoch: 2: Step: 2601/7002, loss=1.843360, lr=0.000014
+2699it [30:53,  1.70it/s]Train batch 2700
+Avg. loss per last 100 batches: 1.927480
+2700it [30:53,  1.70it/s]Epoch: 2: Step: 2701/7002, loss=1.760826, lr=0.000014
+2799it [31:52,  1.70it/s]Train batch 2800
+Avg. loss per last 100 batches: 1.860453
+2800it [31:52,  1.70it/s]Epoch: 2: Step: 2801/7002, loss=1.916910, lr=0.000013
+2899it [32:51,  1.69it/s]Train batch 2900
+Avg. loss per last 100 batches: 1.901462
+2900it [32:51,  1.70it/s]Epoch: 2: Step: 2901/7002, loss=2.046847, lr=0.000013
+2999it [33:50,  1.69it/s]Train batch 3000
+Avg. loss per last 100 batches: 1.878310
+3000it [33:50,  1.69it/s]Epoch: 2: Step: 3001/7002, loss=1.959523, lr=0.000013
+3099it [34:49,  1.70it/s]Train batch 3100
+Avg. loss per last 100 batches: 1.894516
+3100it [34:49,  1.70it/s]Epoch: 2: Step: 3101/7002, loss=1.761126, lr=0.000013
+3199it [35:47,  1.70it/s]Train batch 3200
+Avg. loss per last 100 batches: 1.862872
+3200it [35:48,  1.70it/s]Epoch: 2: Step: 3201/7002, loss=1.656844, lr=0.000013
+3299it [36:46,  1.68it/s]Train batch 3300
+Avg. loss per last 100 batches: 1.852737
+3300it [36:47,  1.69it/s]Epoch: 2: Step: 3301/7002, loss=2.015937, lr=0.000013
+3399it [37:45,  1.71it/s]Train batch 3400
+Avg. loss per last 100 batches: 1.905320
+3400it [37:45,  1.70it/s]Epoch: 2: Step: 3401/7002, loss=1.604620, lr=0.000013
+3499it [38:44,  1.71it/s]Train batch 3500
+Avg. loss per last 100 batches: 1.862821
+3500it [38:44,  1.71it/s]Epoch: 2: Step: 3501/7002, loss=1.807624, lr=0.000013
+Validation: Epoch: 2 Step: 3501/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.441885 sec., loss=1.534021 
+Eval step: 199 , used_time=28.607596 sec., loss=1.623018 
+Eval step: 299 , used_time=42.860367 sec., loss=2.029862 
+Eval step: 399 , used_time=56.990493 sec., loss=2.036722 
+Eval step: 499 , used_time=71.315958 sec., loss=1.142560 
+Eval step: 599 , used_time=85.540141 sec., loss=1.806597 
+Eval step: 699 , used_time=99.809015 sec., loss=1.520667 
+Eval step: 799 , used_time=113.950276 sec., loss=1.228042 
+NLL Validation: loss = 1.573335. correct prediction ratio  31799/52032 ~  0.611143
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+3599it [41:54,  1.70it/s]Train batch 3600
+Avg. loss per last 100 batches: 1.865096
+3600it [41:55,  1.70it/s]Epoch: 2: Step: 3601/7002, loss=2.056666, lr=0.000013
+3699it [42:53,  1.71it/s]Train batch 3700
+Avg. loss per last 100 batches: 1.871499
+3700it [42:54,  1.71it/s]Epoch: 2: Step: 3701/7002, loss=1.826643, lr=0.000013
+3799it [43:52,  1.71it/s]Train batch 3800
+Avg. loss per last 100 batches: 1.863325
+3800it [43:53,  1.71it/s]Epoch: 2: Step: 3801/7002, loss=1.811529, lr=0.000013
+3899it [44:51,  1.70it/s]Train batch 3900
+Avg. loss per last 100 batches: 1.892813
+3900it [44:51,  1.71it/s]Epoch: 2: Step: 3901/7002, loss=1.728774, lr=0.000013
+3999it [45:50,  1.70it/s]Train batch 4000
+Avg. loss per last 100 batches: 1.875965
+4000it [45:50,  1.70it/s]Epoch: 2: Step: 4001/7002, loss=2.430679, lr=0.000013
+4099it [46:48,  1.68it/s]Train batch 4100
+Avg. loss per last 100 batches: 1.891507
+4100it [46:49,  1.69it/s]Epoch: 2: Step: 4101/7002, loss=1.855705, lr=0.000013
+4199it [47:48,  1.69it/s]Train batch 4200
+Avg. loss per last 100 batches: 1.813530
+4200it [47:48,  1.69it/s]Epoch: 2: Step: 4201/7002, loss=1.948573, lr=0.000013
+4299it [48:47,  1.70it/s]Train batch 4300
+Avg. loss per last 100 batches: 1.881993
+4300it [48:47,  1.70it/s]Epoch: 2: Step: 4301/7002, loss=1.610901, lr=0.000013
+4399it [49:46,  1.70it/s]Train batch 4400
+Avg. loss per last 100 batches: 1.845577
+4400it [49:46,  1.70it/s]Epoch: 2: Step: 4401/7002, loss=2.467663, lr=0.000013
+4499it [50:44,  1.71it/s]Train batch 4500
+Avg. loss per last 100 batches: 1.850885
+4500it [50:45,  1.70it/s]Epoch: 2: Step: 4501/7002, loss=1.717236, lr=0.000013
+4599it [51:43,  1.70it/s]Train batch 4600
+Avg. loss per last 100 batches: 1.839899
+4600it [51:44,  1.70it/s]Epoch: 2: Step: 4601/7002, loss=2.082719, lr=0.000013
+4667it [52:23,  1.70it/s]Validation: Epoch: 2 Step: 4668/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.367543 sec., loss=1.528897 
+Eval step: 199 , used_time=28.496560 sec., loss=1.562018 
+Eval step: 299 , used_time=42.806748 sec., loss=1.883085 
+Eval step: 399 , used_time=57.097165 sec., loss=1.958160 
+Eval step: 499 , used_time=71.286449 sec., loss=1.153847 
+Eval step: 599 , used_time=85.640053 sec., loss=1.815345 
+Eval step: 699 , used_time=99.923154 sec., loss=1.537327 
+Eval step: 799 , used_time=114.258559 sec., loss=1.076879 
+NLL Validation: loss = 1.511879. correct prediction ratio  32101/52032 ~  0.616947
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+4699it [54:52,  1.70it/s]Train batch 4700
+Avg. loss per last 100 batches: 1.899267
+4700it [54:52,  1.70it/s]Epoch: 2: Step: 4701/7002, loss=1.844191, lr=0.000013
+4799it [55:51,  1.69it/s]Train batch 4800
+Avg. loss per last 100 batches: 1.862167
+4800it [55:51,  1.69it/s]Epoch: 2: Step: 4801/7002, loss=1.930856, lr=0.000013
+4899it [56:50,  1.67it/s]Train batch 4900
+Avg. loss per last 100 batches: 1.862450
+4900it [56:50,  1.66it/s]Epoch: 2: Step: 4901/7002, loss=1.647029, lr=0.000013
+4999it [57:48,  1.70it/s]Train batch 5000
+Avg. loss per last 100 batches: 1.878833
+5000it [57:49,  1.70it/s]Epoch: 2: Step: 5001/7002, loss=1.810061, lr=0.000013
+5099it [58:48,  1.69it/s]Train batch 5100
+Avg. loss per last 100 batches: 1.937112
+5100it [58:48,  1.67it/s]Epoch: 2: Step: 5101/7002, loss=1.758349, lr=0.000013
+5199it [59:47,  1.70it/s]Train batch 5200
+Avg. loss per last 100 batches: 1.857517
+5200it [59:47,  1.70it/s]Epoch: 2: Step: 5201/7002, loss=2.061941, lr=0.000012
+5299it [1:00:46,  1.70it/s]Train batch 5300
+Avg. loss per last 100 batches: 1.825865
+5300it [1:00:46,  1.70it/s]Epoch: 2: Step: 5301/7002, loss=1.516775, lr=0.000012
+5399it [1:01:45,  1.71it/s]Train batch 5400
+Avg. loss per last 100 batches: 1.826895
+5400it [1:01:46,  1.71it/s]Epoch: 2: Step: 5401/7002, loss=2.170126, lr=0.000012
+5499it [1:02:44,  1.70it/s]Train batch 5500
+Avg. loss per last 100 batches: 1.878243
+5500it [1:02:44,  1.70it/s]Epoch: 2: Step: 5501/7002, loss=1.809619, lr=0.000012
+5599it [1:03:43,  1.68it/s]Train batch 5600
+Avg. loss per last 100 batches: 1.895987
+5600it [1:03:43,  1.68it/s]Epoch: 2: Step: 5601/7002, loss=1.719790, lr=0.000012
+5699it [1:04:41,  1.70it/s]Train batch 5700
+Avg. loss per last 100 batches: 1.845532
+5700it [1:04:42,  1.70it/s]Epoch: 2: Step: 5701/7002, loss=2.003641, lr=0.000012
+5799it [1:05:40,  1.70it/s]Train batch 5800
+Avg. loss per last 100 batches: 1.846414
+5800it [1:05:41,  1.70it/s]Epoch: 2: Step: 5801/7002, loss=1.927133, lr=0.000012
+5834it [1:06:01,  1.70it/s]Validation: Epoch: 2 Step: 5835/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.207534 sec., loss=1.583103 
+Eval step: 199 , used_time=28.488656 sec., loss=1.724854 
+Eval step: 299 , used_time=42.607987 sec., loss=1.958842 
+Eval step: 399 , used_time=56.973650 sec., loss=1.977506 
+Eval step: 499 , used_time=71.154402 sec., loss=1.170999 
+Eval step: 599 , used_time=85.520862 sec., loss=1.898246 
+Eval step: 699 , used_time=99.657648 sec., loss=1.615604 
+Eval step: 799 , used_time=114.049931 sec., loss=1.157654 
+NLL Validation: loss = 1.538006. correct prediction ratio  32384/52032 ~  0.622386
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+5899it [1:08:51,  1.70it/s]Train batch 5900
+Avg. loss per last 100 batches: 1.828668
+5900it [1:08:52,  1.69it/s]Epoch: 2: Step: 5901/7002, loss=1.702851, lr=0.000012
+5999it [1:09:50,  1.70it/s]Train batch 6000
+Avg. loss per last 100 batches: 1.808159
+6000it [1:09:51,  1.70it/s]Epoch: 2: Step: 6001/7002, loss=2.262185, lr=0.000012
+6099it [1:10:49,  1.70it/s]Train batch 6100
+Avg. loss per last 100 batches: 1.824504
+6100it [1:10:50,  1.70it/s]Epoch: 2: Step: 6101/7002, loss=1.758847, lr=0.000012
+6199it [1:11:48,  1.70it/s]Train batch 6200
+Avg. loss per last 100 batches: 1.848271
+6200it [1:11:49,  1.70it/s]Epoch: 2: Step: 6201/7002, loss=1.781793, lr=0.000012
+6299it [1:12:47,  1.70it/s]Train batch 6300
+Avg. loss per last 100 batches: 1.866276
+6300it [1:12:48,  1.70it/s]Epoch: 2: Step: 6301/7002, loss=1.827812, lr=0.000012
+6399it [1:13:46,  1.69it/s]Train batch 6400
+Avg. loss per last 100 batches: 1.891547
+6400it [1:13:47,  1.69it/s]Epoch: 2: Step: 6401/7002, loss=1.731089, lr=0.000012
+6499it [1:14:45,  1.70it/s]Train batch 6500
+Avg. loss per last 100 batches: 1.843974
+6500it [1:14:45,  1.70it/s]Epoch: 2: Step: 6501/7002, loss=1.873006, lr=0.000012
+6599it [1:15:44,  1.70it/s]Train batch 6600
+Avg. loss per last 100 batches: 1.826621
+6600it [1:15:44,  1.70it/s]Epoch: 2: Step: 6601/7002, loss=1.581530, lr=0.000012
+6699it [1:16:44,  1.70it/s]Train batch 6700
+Avg. loss per last 100 batches: 1.807548
+6700it [1:16:44,  1.70it/s]Epoch: 2: Step: 6701/7002, loss=2.168692, lr=0.000012
+6799it [1:17:42,  1.70it/s]Train batch 6800
+Avg. loss per last 100 batches: 1.866766
+6800it [1:17:43,  1.70it/s]Epoch: 2: Step: 6801/7002, loss=1.884312, lr=0.000012
+6899it [1:18:41,  1.71it/s]Train batch 6900
+Avg. loss per last 100 batches: 1.833527
+6900it [1:18:42,  1.71it/s]Epoch: 2: Step: 6901/7002, loss=1.619100, lr=0.000012
+6999it [1:19:40,  1.70it/s]Train batch 7000
+Avg. loss per last 100 batches: 1.855565
+7000it [1:19:41,  1.70it/s]Epoch: 2: Step: 7001/7002, loss=2.591178, lr=0.000012
+7001it [1:19:41,  1.70it/s]Validation: Epoch: 2 Step: 7002/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.147668 sec., loss=1.579437 
+Eval step: 199 , used_time=28.519138 sec., loss=1.663973 
+Eval step: 299 , used_time=42.652711 sec., loss=1.866232 
+Eval step: 399 , used_time=57.040834 sec., loss=1.925606 
+Eval step: 499 , used_time=71.189985 sec., loss=1.168249 
+Eval step: 599 , used_time=85.579106 sec., loss=1.708518 
+Eval step: 699 , used_time=99.766924 sec., loss=1.538053 
+Eval step: 799 , used_time=113.865956 sec., loss=1.260979 
+NLL Validation: loss = 1.504837. correct prediction ratio  32654/52032 ~  0.627575
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+7002it [1:21:51,  1.43it/s]
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.304381 sec., loss=1.579437 
+Eval step: 199 , used_time=28.667874 sec., loss=1.663973 
+Eval step: 299 , used_time=42.829645 sec., loss=1.866232 
+Eval step: 399 , used_time=57.221476 sec., loss=1.925606 
+Eval step: 499 , used_time=71.504578 sec., loss=1.168249 
+Eval step: 599 , used_time=85.844176 sec., loss=1.708518 
+Eval step: 699 , used_time=100.059077 sec., loss=1.538053 
+Eval step: 799 , used_time=114.446894 sec., loss=1.260979 
+NLL Validation: loss = 1.504837. correct prediction ratio  32654/52032 ~  0.627575
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+Av Loss per epoch=1.884359
+epoch total correct predictions=237255
+***** Epoch 3 *****
+0it [00:00, ?it/s]Epoch: 3: Step: 1/7002, loss=1.419987, lr=0.000012
+99it [00:58,  1.70it/s]Train batch 100
+Avg. loss per last 100 batches: 1.609522
+100it [00:59,  1.69it/s]Epoch: 3: Step: 101/7002, loss=1.696690, lr=0.000012
+199it [01:57,  1.70it/s]Train batch 200
+Avg. loss per last 100 batches: 1.601777
+200it [01:58,  1.70it/s]Epoch: 3: Step: 201/7002, loss=1.542328, lr=0.000012
+299it [02:56,  1.69it/s]Train batch 300
+Avg. loss per last 100 batches: 1.610433
+300it [02:57,  1.69it/s]Epoch: 3: Step: 301/7002, loss=1.010115, lr=0.000012
+399it [03:55,  1.69it/s]Train batch 400
+Avg. loss per last 100 batches: 1.599057
+400it [03:56,  1.66it/s]Epoch: 3: Step: 401/7002, loss=1.011772, lr=0.000012
+499it [04:54,  1.70it/s]Train batch 500
+Avg. loss per last 100 batches: 1.615383
+500it [04:54,  1.70it/s]Epoch: 3: Step: 501/7002, loss=1.600695, lr=0.000012
+599it [05:53,  1.70it/s]Train batch 600
+Avg. loss per last 100 batches: 1.624136
+600it [05:53,  1.70it/s]Epoch: 3: Step: 601/7002, loss=1.563281, lr=0.000011
+699it [06:52,  1.70it/s]Train batch 700
+Avg. loss per last 100 batches: 1.605660
+700it [06:52,  1.70it/s]Epoch: 3: Step: 701/7002, loss=1.642839, lr=0.000011
+799it [07:51,  1.70it/s]Train batch 800
+Avg. loss per last 100 batches: 1.634486
+800it [07:51,  1.70it/s]Epoch: 3: Step: 801/7002, loss=2.094519, lr=0.000011
+899it [08:50,  1.70it/s]Train batch 900
+Avg. loss per last 100 batches: 1.624194
+900it [08:50,  1.70it/s]Epoch: 3: Step: 901/7002, loss=1.658286, lr=0.000011
+999it [09:48,  1.70it/s]Train batch 1000
+Avg. loss per last 100 batches: 1.649759
+1000it [09:49,  1.70it/s]Epoch: 3: Step: 1001/7002, loss=1.472811, lr=0.000011
+1099it [10:47,  1.67it/s]Train batch 1100
+Avg. loss per last 100 batches: 1.593651
+1100it [10:48,  1.66it/s]Epoch: 3: Step: 1101/7002, loss=1.955212, lr=0.000011
+1166it [11:27,  1.70it/s]Validation: Epoch: 3 Step: 1167/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.189723 sec., loss=1.681853 
+Eval step: 199 , used_time=28.543025 sec., loss=1.673489 
+Eval step: 299 , used_time=42.745320 sec., loss=1.898125 
+Eval step: 399 , used_time=57.036854 sec., loss=1.984384 
+Eval step: 499 , used_time=71.220336 sec., loss=1.118946 
+Eval step: 599 , used_time=85.356779 sec., loss=1.893782 
+Eval step: 699 , used_time=99.802581 sec., loss=1.464241 
+Eval step: 799 , used_time=113.914081 sec., loss=1.193211 
+NLL Validation: loss = 1.542459. correct prediction ratio  32697/52032 ~  0.628402
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+1199it [13:55,  1.70it/s]Train batch 1200
+Avg. loss per last 100 batches: 1.615749
+1200it [13:56,  1.70it/s]Epoch: 3: Step: 1201/7002, loss=1.573701, lr=0.000011
+1299it [14:54,  1.69it/s]Train batch 1300
+Avg. loss per last 100 batches: 1.606594
+1300it [14:55,  1.70it/s]Epoch: 3: Step: 1301/7002, loss=1.751981, lr=0.000011
+1399it [15:53,  1.70it/s]Train batch 1400
+Avg. loss per last 100 batches: 1.630683
+1400it [15:54,  1.70it/s]Epoch: 3: Step: 1401/7002, loss=1.680427, lr=0.000011
+1499it [16:52,  1.71it/s]Train batch 1500
+Avg. loss per last 100 batches: 1.628357
+1500it [16:53,  1.70it/s]Epoch: 3: Step: 1501/7002, loss=1.462052, lr=0.000011
+1599it [17:51,  1.70it/s]Train batch 1600
+Avg. loss per last 100 batches: 1.609767
+1600it [17:52,  1.70it/s]Epoch: 3: Step: 1601/7002, loss=1.975453, lr=0.000011
+1699it [18:50,  1.70it/s]Train batch 1700
+Avg. loss per last 100 batches: 1.637665
+1700it [18:51,  1.69it/s]Epoch: 3: Step: 1701/7002, loss=1.565617, lr=0.000011
+1799it [19:49,  1.69it/s]Train batch 1800
+Avg. loss per last 100 batches: 1.656769
+1800it [19:50,  1.69it/s]Epoch: 3: Step: 1801/7002, loss=1.778262, lr=0.000011
+1899it [20:48,  1.70it/s]Train batch 1900
+Avg. loss per last 100 batches: 1.603280
+1900it [20:48,  1.70it/s]Epoch: 3: Step: 1901/7002, loss=1.921903, lr=0.000011
+1999it [21:47,  1.70it/s]Train batch 2000
+Avg. loss per last 100 batches: 1.629016
+2000it [21:47,  1.70it/s]Epoch: 3: Step: 2001/7002, loss=1.405766, lr=0.000011
+2099it [22:46,  1.70it/s]Train batch 2100
+Avg. loss per last 100 batches: 1.603633
+2100it [22:47,  1.70it/s]Epoch: 3: Step: 2101/7002, loss=1.260838, lr=0.000011
+2199it [23:46,  1.47it/s]Train batch 2200
+Avg. loss per last 100 batches: 1.583575
+2200it [23:47,  1.53it/s]Epoch: 3: Step: 2201/7002, loss=1.207284, lr=0.000011
+2299it [24:45,  1.71it/s]Train batch 2300
+Avg. loss per last 100 batches: 1.620911
+2300it [24:46,  1.71it/s]Epoch: 3: Step: 2301/7002, loss=1.680101, lr=0.000011
+2333it [25:05,  1.66it/s]Validation: Epoch: 3 Step: 2334/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.150733 sec., loss=1.816269 
+Eval step: 199 , used_time=28.313296 sec., loss=1.683284 
+Eval step: 299 , used_time=42.608389 sec., loss=1.900248 
+Eval step: 399 , used_time=56.858245 sec., loss=1.952750 
+Eval step: 499 , used_time=71.172510 sec., loss=1.187623 
+Eval step: 599 , used_time=85.362054 sec., loss=1.884883 
+Eval step: 699 , used_time=99.720445 sec., loss=1.567634 
+Eval step: 799 , used_time=113.942458 sec., loss=1.168081 
+NLL Validation: loss = 1.544901. correct prediction ratio  32835/52032 ~  0.631054
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+2399it [27:53,  1.70it/s]Train batch 2400
+Avg. loss per last 100 batches: 1.589030
+2400it [27:54,  1.70it/s]Epoch: 3: Step: 2401/7002, loss=1.357580, lr=0.000011
+2499it [28:52,  1.70it/s]Train batch 2500
+Avg. loss per last 100 batches: 1.622025
+2500it [28:53,  1.70it/s]Epoch: 3: Step: 2501/7002, loss=1.392292, lr=0.000011
+2599it [29:51,  1.69it/s]Train batch 2600
+Avg. loss per last 100 batches: 1.628043
+2600it [29:52,  1.69it/s]Epoch: 3: Step: 2601/7002, loss=1.753850, lr=0.000011
+2699it [30:50,  1.71it/s]Train batch 2700
+Avg. loss per last 100 batches: 1.624947
+2700it [30:51,  1.68it/s]Epoch: 3: Step: 2701/7002, loss=1.253563, lr=0.000011
+2799it [31:49,  1.70it/s]Train batch 2800
+Avg. loss per last 100 batches: 1.630738
+2800it [31:50,  1.70it/s]Epoch: 3: Step: 2801/7002, loss=1.925273, lr=0.000011
+2899it [32:48,  1.71it/s]Train batch 2900
+Avg. loss per last 100 batches: 1.634907
+2900it [32:48,  1.71it/s]Epoch: 3: Step: 2901/7002, loss=1.872967, lr=0.000011
+2999it [33:47,  1.70it/s]Train batch 3000
+Avg. loss per last 100 batches: 1.606538
+3000it [33:47,  1.70it/s]Epoch: 3: Step: 3001/7002, loss=1.354198, lr=0.000010
+3099it [34:46,  1.71it/s]Train batch 3100
+Avg. loss per last 100 batches: 1.638754
+3100it [34:46,  1.71it/s]Epoch: 3: Step: 3101/7002, loss=1.756711, lr=0.000010
+3199it [35:45,  1.70it/s]Train batch 3200
+Avg. loss per last 100 batches: 1.602367
+3200it [35:45,  1.70it/s]Epoch: 3: Step: 3201/7002, loss=1.380047, lr=0.000010
+3299it [36:44,  1.69it/s]Train batch 3300
+Avg. loss per last 100 batches: 1.655856
+3300it [36:44,  1.69it/s]Epoch: 3: Step: 3301/7002, loss=1.362456, lr=0.000010
+3399it [37:43,  1.69it/s]Train batch 3400
+Avg. loss per last 100 batches: 1.617847
+3400it [37:43,  1.69it/s]Epoch: 3: Step: 3401/7002, loss=1.521158, lr=0.000010
+3499it [38:42,  1.70it/s]Train batch 3500
+Avg. loss per last 100 batches: 1.618344
+3500it [38:42,  1.70it/s]Epoch: 3: Step: 3501/7002, loss=1.763916, lr=0.000010
+Validation: Epoch: 3 Step: 3501/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.401904 sec., loss=1.669454 
+Eval step: 199 , used_time=28.564050 sec., loss=1.563918 
+Eval step: 299 , used_time=42.898591 sec., loss=1.936566 
+Eval step: 399 , used_time=57.053555 sec., loss=1.840510 
+Eval step: 499 , used_time=71.426107 sec., loss=1.087635 
+Eval step: 599 , used_time=85.615502 sec., loss=1.906252 
+Eval step: 699 , used_time=99.972142 sec., loss=1.500046 
+Eval step: 799 , used_time=114.078213 sec., loss=1.102831 
+NLL Validation: loss = 1.514165. correct prediction ratio  33040/52032 ~  0.634994
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+3599it [41:52,  1.69it/s]Train batch 3600
+Avg. loss per last 100 batches: 1.601268
+3600it [41:53,  1.69it/s]Epoch: 3: Step: 3601/7002, loss=1.845266, lr=0.000010
+3699it [42:51,  1.70it/s]Train batch 3700
+Avg. loss per last 100 batches: 1.590537
+3700it [42:52,  1.69it/s]Epoch: 3: Step: 3701/7002, loss=1.980198, lr=0.000010
+3799it [43:50,  1.70it/s]Train batch 3800
+Avg. loss per last 100 batches: 1.623490
+3800it [43:51,  1.69it/s]Epoch: 3: Step: 3801/7002, loss=1.634058, lr=0.000010
+3899it [44:49,  1.70it/s]Train batch 3900
+Avg. loss per last 100 batches: 1.608374
+3900it [44:50,  1.70it/s]Epoch: 3: Step: 3901/7002, loss=1.509687, lr=0.000010
+3999it [45:48,  1.71it/s]Train batch 4000
+Avg. loss per last 100 batches: 1.635073
+4000it [45:49,  1.70it/s]Epoch: 3: Step: 4001/7002, loss=1.367194, lr=0.000010
+4099it [46:47,  1.70it/s]Train batch 4100
+Avg. loss per last 100 batches: 1.613217
+4100it [46:48,  1.70it/s]Epoch: 3: Step: 4101/7002, loss=1.596650, lr=0.000010
+4199it [47:46,  1.68it/s]Train batch 4200
+Avg. loss per last 100 batches: 1.616812
+4200it [47:46,  1.67it/s]Epoch: 3: Step: 4201/7002, loss=1.336361, lr=0.000010
+4299it [48:45,  1.70it/s]Train batch 4300
+Avg. loss per last 100 batches: 1.607559
+4300it [48:45,  1.70it/s]Epoch: 3: Step: 4301/7002, loss=1.477008, lr=0.000010
+4399it [49:44,  1.71it/s]Train batch 4400
+Avg. loss per last 100 batches: 1.613818
+4400it [49:44,  1.71it/s]Epoch: 3: Step: 4401/7002, loss=2.026008, lr=0.000010
+4499it [50:43,  1.70it/s]Train batch 4500
+Avg. loss per last 100 batches: 1.649602
+4500it [50:43,  1.70it/s]Epoch: 3: Step: 4501/7002, loss=1.952180, lr=0.000010
+4599it [51:41,  1.71it/s]Train batch 4600
+Avg. loss per last 100 batches: 1.640009
+4600it [51:42,  1.71it/s]Epoch: 3: Step: 4601/7002, loss=1.296056, lr=0.000010
+4667it [52:22,  1.70it/s]Validation: Epoch: 3 Step: 4668/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.308720 sec., loss=1.544027 
+Eval step: 199 , used_time=28.453345 sec., loss=1.638315 
+Eval step: 299 , used_time=42.879839 sec., loss=1.932646 
+Eval step: 399 , used_time=57.032282 sec., loss=1.799554 
+Eval step: 499 , used_time=71.277799 sec., loss=1.050889 
+Eval step: 599 , used_time=85.611752 sec., loss=1.821390 
+Eval step: 699 , used_time=99.867751 sec., loss=1.509455 
+Eval step: 799 , used_time=114.217930 sec., loss=1.192854 
+NLL Validation: loss = 1.492726. correct prediction ratio  33165/52032 ~  0.637396
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+4699it [54:50,  1.70it/s]Train batch 4700
+Avg. loss per last 100 batches: 1.585425
+4700it [54:50,  1.70it/s]Epoch: 3: Step: 4701/7002, loss=1.653776, lr=0.000010
+4799it [55:49,  1.71it/s]Train batch 4800
+Avg. loss per last 100 batches: 1.613787
+4800it [55:49,  1.71it/s]Epoch: 3: Step: 4801/7002, loss=1.823800, lr=0.000010
+4899it [56:48,  1.68it/s]Train batch 4900
+Avg. loss per last 100 batches: 1.651254
+4900it [56:48,  1.69it/s]Epoch: 3: Step: 4901/7002, loss=1.884904, lr=0.000010
+4999it [57:47,  1.70it/s]Train batch 5000
+Avg. loss per last 100 batches: 1.612451
+5000it [57:47,  1.70it/s]Epoch: 3: Step: 5001/7002, loss=2.088401, lr=0.000010
+5099it [58:45,  1.71it/s]Train batch 5100
+Avg. loss per last 100 batches: 1.624320
+5100it [58:46,  1.71it/s]Epoch: 3: Step: 5101/7002, loss=1.612489, lr=0.000010
+5199it [59:44,  1.71it/s]Train batch 5200
+Avg. loss per last 100 batches: 1.600586
+5200it [59:45,  1.71it/s]Epoch: 3: Step: 5201/7002, loss=1.504468, lr=0.000010
+5299it [1:00:43,  1.70it/s]Train batch 5300
+Avg. loss per last 100 batches: 1.600532
+5300it [1:00:44,  1.70it/s]Epoch: 3: Step: 5301/7002, loss=1.515970, lr=0.000010
+5399it [1:01:42,  1.71it/s]Train batch 5400
+Avg. loss per last 100 batches: 1.604096
+5400it [1:01:43,  1.70it/s]Epoch: 3: Step: 5401/7002, loss=1.452684, lr=0.000009
+5499it [1:02:41,  1.71it/s]Train batch 5500
+Avg. loss per last 100 batches: 1.621108
+5500it [1:02:41,  1.71it/s]Epoch: 3: Step: 5501/7002, loss=1.462296, lr=0.000009
+5599it [1:03:40,  1.69it/s]Train batch 5600
+Avg. loss per last 100 batches: 1.642091
+5600it [1:03:40,  1.70it/s]Epoch: 3: Step: 5601/7002, loss=1.279700, lr=0.000009
+5699it [1:04:39,  1.70it/s]Train batch 5700
+Avg. loss per last 100 batches: 1.619821
+5700it [1:04:39,  1.65it/s]Epoch: 3: Step: 5701/7002, loss=1.306458, lr=0.000009
+5799it [1:05:38,  1.70it/s]Train batch 5800
+Avg. loss per last 100 batches: 1.597256
+5800it [1:05:38,  1.70it/s]Epoch: 3: Step: 5801/7002, loss=1.143523, lr=0.000009
+5834it [1:05:58,  1.70it/s]Validation: Epoch: 3 Step: 5835/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.357032 sec., loss=1.554429 
+Eval step: 199 , used_time=28.499356 sec., loss=1.603893 
+Eval step: 299 , used_time=42.636954 sec., loss=1.966673 
+Eval step: 399 , used_time=57.004729 sec., loss=1.775903 
+Eval step: 499 , used_time=71.197992 sec., loss=1.101714 
+Eval step: 599 , used_time=85.471964 sec., loss=1.733828 
+Eval step: 699 , used_time=99.609035 sec., loss=1.443136 
+Eval step: 799 , used_time=114.006405 sec., loss=1.144746 
+NLL Validation: loss = 1.464298. correct prediction ratio  33432/52032 ~  0.642528
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+5899it [1:08:48,  1.69it/s]Train batch 5900
+Avg. loss per last 100 batches: 1.595548
+5900it [1:08:49,  1.70it/s]Epoch: 3: Step: 5901/7002, loss=0.942114, lr=0.000009
+5999it [1:09:47,  1.71it/s]Train batch 6000
+Avg. loss per last 100 batches: 1.596565
+6000it [1:09:48,  1.71it/s]Epoch: 3: Step: 6001/7002, loss=1.771732, lr=0.000009
+6099it [1:10:46,  1.70it/s]Train batch 6100
+Avg. loss per last 100 batches: 1.597506
+6100it [1:10:47,  1.70it/s]Epoch: 3: Step: 6101/7002, loss=1.513806, lr=0.000009
+6199it [1:11:46,  1.70it/s]Train batch 6200
+Avg. loss per last 100 batches: 1.610866
+6200it [1:11:46,  1.70it/s]Epoch: 3: Step: 6201/7002, loss=1.732826, lr=0.000009
+6299it [1:12:44,  1.70it/s]Train batch 6300
+Avg. loss per last 100 batches: 1.576523
+6300it [1:12:45,  1.70it/s]Epoch: 3: Step: 6301/7002, loss=2.202676, lr=0.000009
+6399it [1:13:43,  1.70it/s]Train batch 6400
+Avg. loss per last 100 batches: 1.587924
+6400it [1:13:44,  1.70it/s]Epoch: 3: Step: 6401/7002, loss=1.496492, lr=0.000009
+6499it [1:14:42,  1.67it/s]Train batch 6500
+Avg. loss per last 100 batches: 1.573255
+6500it [1:14:43,  1.68it/s]Epoch: 3: Step: 6501/7002, loss=1.786586, lr=0.000009
+6599it [1:15:41,  1.71it/s]Train batch 6600
+Avg. loss per last 100 batches: 1.588285
+6600it [1:15:42,  1.70it/s]Epoch: 3: Step: 6601/7002, loss=1.516197, lr=0.000009
+6699it [1:16:40,  1.71it/s]Train batch 6700
+Avg. loss per last 100 batches: 1.601781
+6700it [1:16:41,  1.71it/s]Epoch: 3: Step: 6701/7002, loss=1.427306, lr=0.000009
+6799it [1:17:39,  1.70it/s]Train batch 6800
+Avg. loss per last 100 batches: 1.577522
+6800it [1:17:40,  1.71it/s]Epoch: 3: Step: 6801/7002, loss=1.790753, lr=0.000009
+6899it [1:18:38,  1.70it/s]Train batch 6900
+Avg. loss per last 100 batches: 1.589703
+6900it [1:18:39,  1.71it/s]Epoch: 3: Step: 6901/7002, loss=1.324811, lr=0.000009
+6999it [1:19:37,  1.70it/s]Train batch 7000
+Avg. loss per last 100 batches: 1.601464
+7000it [1:19:38,  1.70it/s]Epoch: 3: Step: 7001/7002, loss=1.755511, lr=0.000009
+7001it [1:19:38,  1.70it/s]Validation: Epoch: 3 Step: 7002/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.127760 sec., loss=1.531546 
+Eval step: 199 , used_time=28.564991 sec., loss=1.488611 
+Eval step: 299 , used_time=42.680207 sec., loss=1.835536 
+Eval step: 399 , used_time=57.012764 sec., loss=1.820715 
+Eval step: 499 , used_time=71.113535 sec., loss=1.096294 
+Eval step: 599 , used_time=85.532762 sec., loss=1.713022 
+Eval step: 699 , used_time=99.690390 sec., loss=1.330399 
+Eval step: 799 , used_time=113.834697 sec., loss=1.076180 
+NLL Validation: loss = 1.456206. correct prediction ratio  33522/52032 ~  0.644257
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+7002it [1:21:48,  1.43it/s]
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.386863 sec., loss=1.531546 
+Eval step: 199 , used_time=28.636603 sec., loss=1.488611 
+Eval step: 299 , used_time=42.802950 sec., loss=1.835536 
+Eval step: 399 , used_time=57.106999 sec., loss=1.820715 
+Eval step: 499 , used_time=71.337276 sec., loss=1.096294 
+Eval step: 599 , used_time=85.685575 sec., loss=1.713022 
+Eval step: 699 , used_time=99.831451 sec., loss=1.330399 
+Eval step: 799 , used_time=114.161229 sec., loss=1.076180 
+NLL Validation: loss = 1.456206. correct prediction ratio  33522/52032 ~  0.644257
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+Av Loss per epoch=1.613290
+epoch total correct predictions=262887
+***** Epoch 4 *****
+0it [00:00, ?it/s]Epoch: 4: Step: 1/7002, loss=1.175805, lr=0.000009
+99it [00:58,  1.70it/s]Train batch 100
+Avg. loss per last 100 batches: 1.398891
+100it [00:59,  1.69it/s]Epoch: 4: Step: 101/7002, loss=1.195298, lr=0.000009
+199it [01:57,  1.70it/s]Train batch 200
+Avg. loss per last 100 batches: 1.424623
+200it [01:58,  1.70it/s]Epoch: 4: Step: 201/7002, loss=1.459005, lr=0.000009
+299it [02:56,  1.70it/s]Train batch 300
+Avg. loss per last 100 batches: 1.400634
+300it [02:57,  1.70it/s]Epoch: 4: Step: 301/7002, loss=1.234178, lr=0.000009
+399it [03:55,  1.67it/s]Train batch 400
+Avg. loss per last 100 batches: 1.421498
+400it [03:56,  1.68it/s]Epoch: 4: Step: 401/7002, loss=1.578389, lr=0.000009
+499it [04:54,  1.70it/s]Train batch 500
+Avg. loss per last 100 batches: 1.433865
+500it [04:55,  1.69it/s]Epoch: 4: Step: 501/7002, loss=1.535944, lr=0.000009
+599it [05:53,  1.70it/s]Train batch 600
+Avg. loss per last 100 batches: 1.443769
+600it [05:53,  1.70it/s]Epoch: 4: Step: 601/7002, loss=1.174576, lr=0.000009
+699it [06:52,  1.70it/s]Train batch 700
+Avg. loss per last 100 batches: 1.417288
+700it [06:52,  1.70it/s]Epoch: 4: Step: 701/7002, loss=1.051398, lr=0.000008
+799it [07:51,  1.70it/s]Train batch 800
+Avg. loss per last 100 batches: 1.408572
+800it [07:51,  1.70it/s]Epoch: 4: Step: 801/7002, loss=1.635460, lr=0.000008
+899it [08:50,  1.71it/s]Train batch 900
+Avg. loss per last 100 batches: 1.399563
+900it [08:50,  1.70it/s]Epoch: 4: Step: 901/7002, loss=1.375940, lr=0.000008
+999it [09:49,  1.70it/s]Train batch 1000
+Avg. loss per last 100 batches: 1.447741
+1000it [09:49,  1.70it/s]Epoch: 4: Step: 1001/7002, loss=1.585320, lr=0.000008
+1099it [10:47,  1.67it/s]Train batch 1100
+Avg. loss per last 100 batches: 1.411241
+1100it [10:48,  1.67it/s]Epoch: 4: Step: 1101/7002, loss=1.578206, lr=0.000008
+1166it [11:27,  1.70it/s]Validation: Epoch: 4 Step: 1167/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.132284 sec., loss=1.649727 
+Eval step: 199 , used_time=28.573621 sec., loss=1.516167 
+Eval step: 299 , used_time=42.762349 sec., loss=1.815940 
+Eval step: 399 , used_time=57.118158 sec., loss=1.818623 
+Eval step: 499 , used_time=71.262215 sec., loss=1.070468 
+Eval step: 599 , used_time=85.640038 sec., loss=1.664957 
+Eval step: 699 , used_time=99.843770 sec., loss=1.410256 
+Eval step: 799 , used_time=113.960732 sec., loss=1.096718 
+NLL Validation: loss = 1.478246. correct prediction ratio  33679/52032 ~  0.647275
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+1199it [13:56,  1.69it/s]Train batch 1200
+Avg. loss per last 100 batches: 1.435416
+1200it [13:56,  1.66it/s]Epoch: 4: Step: 1201/7002, loss=1.524188, lr=0.000008
+1299it [14:55,  1.70it/s]Train batch 1300
+Avg. loss per last 100 batches: 1.416170
+1300it [14:55,  1.70it/s]Epoch: 4: Step: 1301/7002, loss=1.424176, lr=0.000008
+1399it [15:54,  1.70it/s]Train batch 1400
+Avg. loss per last 100 batches: 1.420509
+1400it [15:54,  1.69it/s]Epoch: 4: Step: 1401/7002, loss=1.137810, lr=0.000008
+1499it [16:53,  1.70it/s]Train batch 1500
+Avg. loss per last 100 batches: 1.386155
+1500it [16:53,  1.70it/s]Epoch: 4: Step: 1501/7002, loss=1.202969, lr=0.000008
+1599it [17:51,  1.70it/s]Train batch 1600
+Avg. loss per last 100 batches: 1.421700
+1600it [17:52,  1.70it/s]Epoch: 4: Step: 1601/7002, loss=1.534283, lr=0.000008
+1699it [18:50,  1.70it/s]Train batch 1700
+Avg. loss per last 100 batches: 1.456001
+1700it [18:51,  1.70it/s]Epoch: 4: Step: 1701/7002, loss=1.258896, lr=0.000008
+1799it [19:49,  1.69it/s]Train batch 1800
+Avg. loss per last 100 batches: 1.394821
+1800it [19:50,  1.69it/s]Epoch: 4: Step: 1801/7002, loss=1.649258, lr=0.000008
+1899it [20:48,  1.67it/s]Train batch 1900
+Avg. loss per last 100 batches: 1.442437
+1900it [20:49,  1.66it/s]Epoch: 4: Step: 1901/7002, loss=1.387615, lr=0.000008
+1999it [21:47,  1.71it/s]Train batch 2000
+Avg. loss per last 100 batches: 1.443240
+2000it [21:48,  1.71it/s]Epoch: 4: Step: 2001/7002, loss=1.142330, lr=0.000008
+2099it [22:46,  1.70it/s]Train batch 2100
+Avg. loss per last 100 batches: 1.399624
+2100it [22:47,  1.70it/s]Epoch: 4: Step: 2101/7002, loss=1.125832, lr=0.000008
+2199it [23:45,  1.70it/s]Train batch 2200
+Avg. loss per last 100 batches: 1.419381
+2200it [23:45,  1.70it/s]Epoch: 4: Step: 2201/7002, loss=2.174512, lr=0.000008
+2299it [24:44,  1.70it/s]Train batch 2300
+Avg. loss per last 100 batches: 1.459074
+2300it [24:44,  1.69it/s]Epoch: 4: Step: 2301/7002, loss=1.436372, lr=0.000008
+2333it [25:04,  1.69it/s]Validation: Epoch: 4 Step: 2334/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.143389 sec., loss=1.652021 
+Eval step: 199 , used_time=28.358062 sec., loss=1.616639 
+Eval step: 299 , used_time=42.701035 sec., loss=1.754083 
+Eval step: 399 , used_time=56.952013 sec., loss=1.830258 
+Eval step: 499 , used_time=71.355091 sec., loss=1.061114 
+Eval step: 599 , used_time=85.519909 sec., loss=1.709944 
+Eval step: 699 , used_time=99.845272 sec., loss=1.559197 
+Eval step: 799 , used_time=114.045862 sec., loss=1.170363 
+NLL Validation: loss = 1.482665. correct prediction ratio  33847/52032 ~  0.650504
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+2399it [27:54,  1.65it/s]Train batch 2400
+Avg. loss per last 100 batches: 1.419249
+2400it [27:55,  1.66it/s]Epoch: 4: Step: 2401/7002, loss=1.490898, lr=0.000008
+2499it [28:53,  1.70it/s]Train batch 2500
+Avg. loss per last 100 batches: 1.403900
+2500it [28:54,  1.70it/s]Epoch: 4: Step: 2501/7002, loss=1.354041, lr=0.000008
+2599it [29:52,  1.69it/s]Train batch 2600
+Avg. loss per last 100 batches: 1.441283
+2600it [29:53,  1.69it/s]Epoch: 4: Step: 2601/7002, loss=1.466404, lr=0.000008
+2699it [30:51,  1.66it/s]Train batch 2700
+Avg. loss per last 100 batches: 1.424489
+2700it [30:52,  1.67it/s]Epoch: 4: Step: 2701/7002, loss=1.508845, lr=0.000008
+2799it [31:50,  1.70it/s]Train batch 2800
+Avg. loss per last 100 batches: 1.423038
+2800it [31:50,  1.70it/s]Epoch: 4: Step: 2801/7002, loss=1.406806, lr=0.000008
+2899it [32:49,  1.70it/s]Train batch 2900
+Avg. loss per last 100 batches: 1.403482
+2900it [32:49,  1.70it/s]Epoch: 4: Step: 2901/7002, loss=1.985219, lr=0.000008
+2999it [33:48,  1.70it/s]Train batch 3000
+Avg. loss per last 100 batches: 1.436538
+3000it [33:48,  1.71it/s]Epoch: 4: Step: 3001/7002, loss=1.325882, lr=0.000008
+3099it [34:47,  1.71it/s]Train batch 3100
+Avg. loss per last 100 batches: 1.459120
+3100it [34:47,  1.71it/s]Epoch: 4: Step: 3101/7002, loss=1.665700, lr=0.000007
+3199it [35:45,  1.70it/s]Train batch 3200
+Avg. loss per last 100 batches: 1.444309
+3200it [35:46,  1.70it/s]Epoch: 4: Step: 3201/7002, loss=1.161955, lr=0.000007
+3299it [36:44,  1.70it/s]Train batch 3300
+Avg. loss per last 100 batches: 1.442849
+3300it [36:45,  1.70it/s]Epoch: 4: Step: 3301/7002, loss=1.484155, lr=0.000007
+3399it [37:43,  1.68it/s]Train batch 3400
+Avg. loss per last 100 batches: 1.445710
+3400it [37:44,  1.69it/s]Epoch: 4: Step: 3401/7002, loss=1.275631, lr=0.000007
+3499it [38:42,  1.70it/s]Train batch 3500
+Avg. loss per last 100 batches: 1.443820
+3500it [38:43,  1.70it/s]Epoch: 4: Step: 3501/7002, loss=1.587129, lr=0.000007
+Validation: Epoch: 4 Step: 3501/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.366688 sec., loss=1.468202 
+Eval step: 199 , used_time=28.604560 sec., loss=1.557947 
+Eval step: 299 , used_time=42.953736 sec., loss=1.766241 
+Eval step: 399 , used_time=57.144722 sec., loss=1.791133 
+Eval step: 499 , used_time=71.547820 sec., loss=0.977569 
+Eval step: 599 , used_time=85.787098 sec., loss=1.654114 
+Eval step: 699 , used_time=100.113281 sec., loss=1.359550 
+Eval step: 799 , used_time=114.245998 sec., loss=1.090280 
+NLL Validation: loss = 1.465160. correct prediction ratio  33908/52032 ~  0.651676
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+3599it [41:51,  1.70it/s]Train batch 3600
+Avg. loss per last 100 batches: 1.423865
+3600it [41:51,  1.70it/s]Epoch: 4: Step: 3601/7002, loss=1.174525, lr=0.000007
+3699it [42:50,  1.70it/s]Train batch 3700
+Avg. loss per last 100 batches: 1.423977
+3700it [42:50,  1.70it/s]Epoch: 4: Step: 3701/7002, loss=1.416545, lr=0.000007
+3799it [43:49,  1.71it/s]Train batch 3800
+Avg. loss per last 100 batches: 1.431443
+3800it [43:49,  1.71it/s]Epoch: 4: Step: 3801/7002, loss=1.358967, lr=0.000007
+3899it [44:47,  1.70it/s]Train batch 3900
+Avg. loss per last 100 batches: 1.431620
+3900it [44:48,  1.70it/s]Epoch: 4: Step: 3901/7002, loss=1.498519, lr=0.000007
+3999it [45:46,  1.70it/s]Train batch 4000
+Avg. loss per last 100 batches: 1.399687
+4000it [45:47,  1.70it/s]Epoch: 4: Step: 4001/7002, loss=1.564999, lr=0.000007
+4099it [46:46,  1.70it/s]Train batch 4100
+Avg. loss per last 100 batches: 1.434496
+4100it [46:47,  1.70it/s]Epoch: 4: Step: 4101/7002, loss=1.004054, lr=0.000007
+4199it [47:45,  1.68it/s]Train batch 4200
+Avg. loss per last 100 batches: 1.414446
+4200it [47:45,  1.68it/s]Epoch: 4: Step: 4201/7002, loss=1.344736, lr=0.000007
+4299it [48:44,  1.71it/s]Train batch 4300
+Avg. loss per last 100 batches: 1.439773
+4300it [48:44,  1.70it/s]Epoch: 4: Step: 4301/7002, loss=1.508171, lr=0.000007
+4399it [49:43,  1.71it/s]Train batch 4400
+Avg. loss per last 100 batches: 1.442057
+4400it [49:43,  1.71it/s]Epoch: 4: Step: 4401/7002, loss=1.615235, lr=0.000007
+4499it [50:41,  1.70it/s]Train batch 4500
+Avg. loss per last 100 batches: 1.387157
+4500it [50:42,  1.71it/s]Epoch: 4: Step: 4501/7002, loss=1.236861, lr=0.000007
+4599it [51:40,  1.71it/s]Train batch 4600
+Avg. loss per last 100 batches: 1.401759
+4600it [51:41,  1.70it/s]Epoch: 4: Step: 4601/7002, loss=1.763487, lr=0.000007
+4667it [52:20,  1.71it/s]Validation: Epoch: 4 Step: 4668/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.304637 sec., loss=1.399155 
+Eval step: 199 , used_time=28.398460 sec., loss=1.486875 
+Eval step: 299 , used_time=42.753058 sec., loss=1.754133 
+Eval step: 399 , used_time=56.863670 sec., loss=1.858439 
+Eval step: 499 , used_time=71.100963 sec., loss=1.054085 
+Eval step: 599 , used_time=85.281020 sec., loss=1.726094 
+Eval step: 699 , used_time=99.543960 sec., loss=1.401776 
+Eval step: 799 , used_time=113.897443 sec., loss=1.010066 
+NLL Validation: loss = 1.449990. correct prediction ratio  33871/52032 ~  0.650965
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+4699it [54:49,  1.70it/s]Train batch 4700
+Avg. loss per last 100 batches: 1.448799
+4700it [54:49,  1.70it/s]Epoch: 4: Step: 4701/7002, loss=1.168335, lr=0.000007
+4799it [55:47,  1.70it/s]Train batch 4800
+Avg. loss per last 100 batches: 1.405138
+4800it [55:48,  1.70it/s]Epoch: 4: Step: 4801/7002, loss=1.462598, lr=0.000007
+4899it [56:46,  1.70it/s]Train batch 4900
+Avg. loss per last 100 batches: 1.418262
+4900it [56:47,  1.70it/s]Epoch: 4: Step: 4901/7002, loss=1.589324, lr=0.000007
+4999it [57:45,  1.70it/s]Train batch 5000
+Avg. loss per last 100 batches: 1.409397
+5000it [57:46,  1.70it/s]Epoch: 4: Step: 5001/7002, loss=2.001108, lr=0.000007
+5099it [58:44,  1.71it/s]Train batch 5100
+Avg. loss per last 100 batches: 1.408064
+5100it [58:44,  1.71it/s]Epoch: 4: Step: 5101/7002, loss=1.448564, lr=0.000007
+5199it [59:43,  1.70it/s]Train batch 5200
+Avg. loss per last 100 batches: 1.444380
+5200it [59:43,  1.71it/s]Epoch: 4: Step: 5201/7002, loss=1.370233, lr=0.000007
+5299it [1:00:44,  1.71it/s]Train batch 5300
+Avg. loss per last 100 batches: 1.392111
+5300it [1:00:44,  1.70it/s]Epoch: 4: Step: 5301/7002, loss=1.254167, lr=0.000007
+5399it [1:01:43,  1.70it/s]Train batch 5400
+Avg. loss per last 100 batches: 1.452308
+5400it [1:01:43,  1.70it/s]Epoch: 4: Step: 5401/7002, loss=1.432191, lr=0.000007
+5499it [1:02:41,  1.71it/s]Train batch 5500
+Avg. loss per last 100 batches: 1.464524
+5500it [1:02:42,  1.70it/s]Epoch: 4: Step: 5501/7002, loss=1.687902, lr=0.000006
+5599it [1:03:40,  1.70it/s]Train batch 5600
+Avg. loss per last 100 batches: 1.417133
+5600it [1:03:41,  1.70it/s]Epoch: 4: Step: 5601/7002, loss=1.452993, lr=0.000006
+5699it [1:04:39,  1.68it/s]Train batch 5700
+Avg. loss per last 100 batches: 1.444950
+5700it [1:04:40,  1.69it/s]Epoch: 4: Step: 5701/7002, loss=1.638725, lr=0.000006
+5799it [1:05:38,  1.71it/s]Train batch 5800
+Avg. loss per last 100 batches: 1.449659
+5800it [1:05:38,  1.71it/s]Epoch: 4: Step: 5801/7002, loss=1.443313, lr=0.000006
+5834it [1:05:59,  1.70it/s]Validation: Epoch: 4 Step: 5835/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.332456 sec., loss=1.502980 
+Eval step: 199 , used_time=28.511577 sec., loss=1.556255 
+Eval step: 299 , used_time=42.621184 sec., loss=1.787440 
+Eval step: 399 , used_time=57.004016 sec., loss=1.794052 
+Eval step: 499 , used_time=71.165339 sec., loss=1.052141 
+Eval step: 599 , used_time=85.434651 sec., loss=1.703220 
+Eval step: 699 , used_time=99.553630 sec., loss=1.415610 
+Eval step: 799 , used_time=113.904385 sec., loss=1.053497 
+NLL Validation: loss = 1.449017. correct prediction ratio  34058/52032 ~  0.654559
+Saved checkpoint at checkpoints/biencoder/dpr_biencoder_trained.bin
+Saved checkpoint to checkpoints/biencoder/dpr_biencoder_trained.bin
+New Best validation checkpoint checkpoints/biencoder/dpr_biencoder_trained.bin
+5899it [1:08:46,  1.69it/s]Train batch 5900
+Avg. loss per last 100 batches: 1.426220
+5900it [1:08:47,  1.70it/s]Epoch: 4: Step: 5901/7002, loss=1.478318, lr=0.000006
+5999it [1:09:45,  1.70it/s]Train batch 6000
+Avg. loss per last 100 batches: 1.399552
+6000it [1:09:45,  1.71it/s]Epoch: 4: Step: 6001/7002, loss=1.479628, lr=0.000006
+6099it [1:10:44,  1.71it/s]Train batch 6100
+Avg. loss per last 100 batches: 1.404303
+6100it [1:10:44,  1.70it/s]Epoch: 4: Step: 6101/7002, loss=1.505091, lr=0.000006
+6199it [1:11:43,  1.70it/s]Train batch 6200
+Avg. loss per last 100 batches: 1.411417
+6200it [1:11:43,  1.70it/s]Epoch: 4: Step: 6201/7002, loss=1.349012, lr=0.000006
+6299it [1:12:42,  1.71it/s]Train batch 6300
+Avg. loss per last 100 batches: 1.423477
+6300it [1:12:42,  1.71it/s]Epoch: 4: Step: 6301/7002, loss=1.410162, lr=0.000006
+6399it [1:13:41,  1.70it/s]Train batch 6400
+Avg. loss per last 100 batches: 1.409006
+6400it [1:13:41,  1.70it/s]Epoch: 4: Step: 6401/7002, loss=1.243346, lr=0.000006
+6499it [1:14:40,  1.68it/s]Train batch 6500
+Avg. loss per last 100 batches: 1.436285
+6500it [1:14:40,  1.67it/s]Epoch: 4: Step: 6501/7002, loss=1.488162, lr=0.000006
+6599it [1:15:38,  1.70it/s]Train batch 6600
+Avg. loss per last 100 batches: 1.401989
+6600it [1:15:39,  1.70it/s]Epoch: 4: Step: 6601/7002, loss=1.415159, lr=0.000006
+6699it [1:16:37,  1.70it/s]Train batch 6700
+Avg. loss per last 100 batches: 1.429233
+6700it [1:16:38,  1.70it/s]Epoch: 4: Step: 6701/7002, loss=1.347209, lr=0.000006
+6799it [1:17:36,  1.71it/s]Train batch 6800
+Avg. loss per last 100 batches: 1.418272
+6800it [1:17:37,  1.71it/s]Epoch: 4: Step: 6801/7002, loss=1.926945, lr=0.000006
+6899it [1:18:35,  1.70it/s]Train batch 6900
+Avg. loss per last 100 batches: 1.378647
+6900it [1:18:36,  1.70it/s]Epoch: 4: Step: 6901/7002, loss=1.283681, lr=0.000006
+6999it [1:19:34,  1.70it/s]Train batch 7000
+Avg. loss per last 100 batches: 1.395920
+7000it [1:19:35,  1.67it/s]Epoch: 4: Step: 7001/7002, loss=1.420750, lr=0.000006
+7001it [1:19:35,  1.68it/s]Validation: Epoch: 4 Step: 7002/7002
+NLL validation ...
+Reading file ./data/dataset/valid.json
+Aggregated data size: 52020
+Total cleaned data size: 52020
+Eval step: 99 , used_time=14.206437 sec., loss=1.481775 
+Eval step: 199 , used_time=28.615407 sec., loss=1.542794 
+Eval step: 299 , used_time=42.770509 sec., loss=1.759467 
+Eval step: 399 , used_time=57.052954 sec., loss=1.824453 
+Eval step: 499 , used_time=71.252459 sec., loss=1.020074 

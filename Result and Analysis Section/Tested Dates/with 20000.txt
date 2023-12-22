@@ -1,0 +1,180 @@
+07/20/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:05<00:00, 11.24it/s]
+done BP iterations
+Letters Correct: 173/183 | Words Correct: 63/78
+Letters Correct: 94.53551912568307% | Words Correct: 80.76923076923077%
+07/27/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:06<00:00,  9.31it/s]
+done BP iterations
+Letters Correct: 171/185 | Words Correct: 65/78
+Letters Correct: 92.43243243243244% | Words Correct: 83.33333333333334%
+07/28/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:08<00:00,  7.04it/s]
+done BP iterations
+Letters Correct: 192/193 | Words Correct: 66/68
+Letters Correct: 99.48186528497409% | Words Correct: 97.05882352941177%
+07/29/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:05<00:00, 10.18it/s]
+done BP iterations
+Letters Correct: 176/197 | Words Correct: 52/70
+Letters Correct: 89.34010152284264% | Words Correct: 74.28571428571429%
+08/03/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:07<00:00,  8.28it/s]
+done BP iterations
+Letters Correct: 189/190 | Words Correct: 74/76
+Letters Correct: 99.47368421052632% | Words Correct: 97.36842105263158%
+08/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:07<00:00,  7.71it/s]
+done BP iterations
+Letters Correct: 195/196 | Words Correct: 68/70
+Letters Correct: 99.48979591836735% | Words Correct: 97.14285714285714%
+08/05/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:06<00:00,  8.77it/s]
+done BP iterations
+Letters Correct: 183/195 | Words Correct: 59/70
+Letters Correct: 93.84615384615384% | Words Correct: 84.28571428571429%
+08/26/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:08<00:00,  6.97it/s]
+done BP iterations
+Letters Correct: 180/193 | Words Correct: 52/64
+Letters Correct: 93.26424870466322% | Words Correct: 81.25%
+08/13/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:13<00:00,  4.44it/s]
+done BP iterations
+Letters Correct: 346/361 | Words Correct: 116/134
+Letters Correct: 95.84487534626038% | Words Correct: 86.56716417910447%
+08/17/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:06<00:00,  9.82it/s]
+done BP iterations
+Letters Correct: 179/186 | Words Correct: 68/78
+Letters Correct: 96.23655913978494% | Words Correct: 87.17948717948718%
+08/18/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:05<00:00, 10.09it/s]
+done BP iterations
+Letters Correct: 180/189 | Words Correct: 63/72
+Letters Correct: 95.23809523809523% | Words Correct: 87.5%
+08/30/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:07<00:00,  8.17it/s]
+done BP iterations
+Letters Correct: 175/186 | Words Correct: 62/78
+Letters Correct: 94.08602150537635% | Words Correct: 79.48717948717949%
+09/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:06<00:00,  9.31it/s]
+done BP iterations
+Letters Correct: 184/195 | Words Correct: 59/72
+Letters Correct: 94.35897435897435% | Words Correct: 81.94444444444444%
+09/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:06<00:00,  9.57it/s]
+done BP iterations
+Letters Correct: 184/195 | Words Correct: 60/72
+Letters Correct: 94.35897435897435% | Words Correct: 83.33333333333334%
+09/15/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:08<00:00,  7.20it/s]
+done BP iterations
+Letters Correct: 182/190 | Words Correct: 53/62
+Letters Correct: 95.78947368421052% | Words Correct: 85.48387096774194%
+09/16/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:07<00:00,  8.30it/s]
+done BP iterations
+Letters Correct: 190/193 | Words Correct: 61/66
+Letters Correct: 98.44559585492227% | Words Correct: 92.42424242424242%
+09/28/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:06<00:00,  9.11it/s]
+done BP iterations
+Letters Correct: 187/190 | Words Correct: 69/74
+Letters Correct: 98.42105263157895% | Words Correct: 93.24324324324324%
+10/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:06<00:00,  8.69it/s]
+done BP iterations
+Letters Correct: 175/184 | Words Correct: 65/78
+Letters Correct: 95.1086956521739% | Words Correct: 83.33333333333334%

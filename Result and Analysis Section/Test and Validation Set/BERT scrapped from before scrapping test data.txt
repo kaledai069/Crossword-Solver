@@ -1,0 +1,869 @@
+01/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:19<00:00,  3.13it/s]
+done BP iterations
+Letters Correct: 369/370 | Words Correct: 138/140
+Letters Correct: 99.72972972972973% | Words Correct: 98.57142857142858%
+Total Time Taken:  72.5028223991394
+01/02/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.13it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 74/74
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  55.32097768783569
+01/03/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.18it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 74/74
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  57.64245939254761
+01/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  6.00it/s]
+done BP iterations
+Letters Correct: 185/185 | Words Correct: 78/78
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  55.91647243499756
+01/05/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  01/05/2023
+01/06/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.70it/s]
+done BP iterations
+Letters Correct: 187/189 | Words Correct: 67/70
+Letters Correct: 98.94179894179894% | Words Correct: 95.71428571428572%
+Total Time Taken:  55.71788263320923
+01/07/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.74it/s]
+done BP iterations
+Letters Correct: 189/191 | Words Correct: 64/68
+Letters Correct: 98.95287958115183% | Words Correct: 94.11764705882352%
+Total Time Taken:  57.3273069858551
+01/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:23<00:00,  2.54it/s]
+done BP iterations
+Letters Correct: 365/372 | Words Correct: 128/140
+Letters Correct: 98.11827956989248% | Words Correct: 91.42857142857143%
+Total Time Taken:  74.83786129951477
+01/09/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.98it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 78/78
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  57.22917413711548
+01/10/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  01/10/2023
+01/11/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.49it/s]
+done BP iterations
+Letters Correct: 184/187 | Words Correct: 75/80
+Letters Correct: 98.3957219251337% | Words Correct: 93.75%
+Total Time Taken:  57.13150954246521
+01/12/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:15<00:00,  3.92it/s]
+done BP iterations
+Letters Correct: 185/188 | Words Correct: 70/74
+Letters Correct: 98.40425531914893% | Words Correct: 94.5945945945946%
+Total Time Taken:  61.11394953727722
+01/13/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.59it/s]
+done BP iterations
+Letters Correct: 188/188 | Words Correct: 72/72
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  57.14694166183472
+01/14/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.82it/s]
+done BP iterations
+Letters Correct: 186/186 | Words Correct: 66/66
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  57.56733846664429
+01/15/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:18<00:00,  3.25it/s]
+done BP iterations
+Letters Correct: 362/366 | Words Correct: 133/140
+Letters Correct: 98.90710382513662% | Words Correct: 95.0%
+Total Time Taken:  69.2892837524414
+01/16/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.85it/s]
+done BP iterations
+Letters Correct: 185/185 | Words Correct: 74/74
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  57.59874105453491
+01/17/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.84it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 74/74
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  58.59485840797424
+01/18/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.65it/s]
+done BP iterations
+Letters Correct: 177/183 | Words Correct: 68/74
+Letters Correct: 96.72131147540983% | Words Correct: 91.8918918918919%
+Total Time Taken:  55.70237135887146
+01/19/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  01/19/2023
+01/20/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.26it/s]
+done BP iterations
+Letters Correct: 191/191 | Words Correct: 68/68
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  59.073400020599365
+01/21/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.14it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 70/70
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  53.562278509140015
+01/22/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:22<00:00,  2.70it/s]
+done BP iterations
+Letters Correct: 363/365 | Words Correct: 137/140
+Letters Correct: 99.45205479452055% | Words Correct: 97.85714285714285%
+Total Time Taken:  74.87336134910583
+01/23/2023
+ERROR has occured.
+Error Occured for date:  01/23/2023
+01/24/2023
+ERROR has occured.
+Error Occured for date:  01/24/2023
+01/25/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:15<00:00,  3.89it/s]
+done BP iterations
+Letters Correct: 188/189 | Words Correct: 74/76
+Letters Correct: 99.47089947089947% | Words Correct: 97.36842105263158%
+Total Time Taken:  62.0871524810791
+01/26/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  01/26/2023
+01/27/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  01/27/2023
+01/28/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.84it/s]
+done BP iterations
+Letters Correct: 197/197 | Words Correct: 72/72
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  56.88046097755432
+01/29/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:24<00:00,  2.42it/s]
+done BP iterations
+Letters Correct: 357/367 | Words Correct: 125/140
+Letters Correct: 97.27520435967303% | Words Correct: 89.28571428571429%
+Total Time Taken:  81.37363505363464
+01/30/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.43it/s]
+done BP iterations
+Letters Correct: 179/185 | Words Correct: 71/78
+Letters Correct: 96.75675675675676% | Words Correct: 91.02564102564102%
+Total Time Taken:  59.43669867515564
+01/31/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.63it/s]
+done BP iterations
+Letters Correct: 180/183 | Words Correct: 65/70
+Letters Correct: 98.36065573770492% | Words Correct: 92.85714285714286%
+Total Time Taken:  60.30079102516174
+02/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  02/01/2023
+02/02/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+  0%|          | 0/60 [00:00<?, ?it/s]
+Error Occured for date:  02/02/2023
+02/03/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:14<00:00,  4.20it/s]
+done BP iterations
+Letters Correct: 196/197 | Words Correct: 68/70
+Letters Correct: 99.49238578680203% | Words Correct: 97.14285714285714%
+Total Time Taken:  59.018089294433594
+02/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.92it/s]
+done BP iterations
+Letters Correct: 193/193 | Words Correct: 70/70
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  58.23350811004639
+02/05/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:21<00:00,  2.81it/s]
+done BP iterations
+Letters Correct: 357/361 | Words Correct: 130/138
+Letters Correct: 98.89196675900277% | Words Correct: 94.20289855072464%
+Total Time Taken:  76.15516662597656
+02/06/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:13<00:00,  4.42it/s]
+done BP iterations
+Letters Correct: 188/189 | Words Correct: 76/78
+Letters Correct: 99.47089947089947% | Words Correct: 97.43589743589743%
+Total Time Taken:  60.388574838638306
+02/07/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.83it/s]
+done BP iterations
+Letters Correct: 185/187 | Words Correct: 74/78
+Letters Correct: 98.93048128342245% | Words Correct: 94.87179487179486%
+Total Time Taken:  61.035717725753784
+02/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.02it/s]
+done BP iterations
+Letters Correct: 189/189 | Words Correct: 78/78
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  59.521483421325684
+02/09/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  02/09/2023
+02/10/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.74it/s]
+done BP iterations
+Letters Correct: 180/188 | Words Correct: 56/66
+Letters Correct: 95.74468085106383% | Words Correct: 84.84848484848484%
+Total Time Taken:  55.868677854537964
+02/11/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  02/11/2023
+02/12/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  02/12/2023
+02/13/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.66it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 78/78
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  61.03874182701111
+02/14/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:13<00:00,  4.53it/s]
+done BP iterations
+Letters Correct: 189/189 | Words Correct: 78/78
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  62.77897548675537
+02/15/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+  0%|          | 0/60 [00:00<?, ?it/s]Error Occured for date:  02/15/2023
+02/16/2023
+
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  02/16/2023
+02/17/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.03it/s]
+done BP iterations
+Letters Correct: 186/187 | Words Correct: 66/68
+Letters Correct: 99.46524064171123% | Words Correct: 97.05882352941177%
+Total Time Taken:  58.324583292007446
+02/18/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.83it/s]
+done BP iterations
+Letters Correct: 192/192 | Words Correct: 70/70
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  57.56262254714966
+02/19/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  02/19/2023
+02/20/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.89it/s]
+done BP iterations
+Letters Correct: 189/189 | Words Correct: 74/74
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  57.39387226104736
+02/21/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  02/21/2023
+02/22/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.90it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 76/76
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  62.610963106155396
+02/23/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.04it/s]
+done BP iterations
+Letters Correct: 189/191 | Words Correct: 70/74
+Letters Correct: 98.95287958115183% | Words Correct: 94.5945945945946%
+Total Time Taken:  55.22540855407715
+02/24/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.39it/s]
+done BP iterations
+Letters Correct: 186/186 | Words Correct: 68/68
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  56.15891766548157
+02/25/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.13it/s]
+done BP iterations
+Letters Correct: 190/191 | Words Correct: 66/68
+Letters Correct: 99.47643979057592% | Words Correct: 97.05882352941177%
+Total Time Taken:  59.61422276496887
+02/26/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:22<00:00,  2.69it/s]
+done BP iterations
+Letters Correct: 371/371 | Words Correct: 136/136
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  82.0866379737854
+02/27/2023
+ERROR has occured.
+Error Occured for date:  02/27/2023
+02/28/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:13<00:00,  4.48it/s]
+done BP iterations
+Letters Correct: 188/189 | Words Correct: 76/78
+Letters Correct: 99.47089947089947% | Words Correct: 97.43589743589743%
+Total Time Taken:  62.59654402732849
+03/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.64it/s]
+done BP iterations
+Letters Correct: 177/187 | Words Correct: 62/74
+Letters Correct: 94.6524064171123% | Words Correct: 83.78378378378379%
+Total Time Taken:  62.99501991271973
+03/02/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  03/02/2023
+03/03/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:13<00:00,  4.56it/s]
+done BP iterations
+Letters Correct: 198/199 | Words Correct: 66/68
+Letters Correct: 99.49748743718592% | Words Correct: 97.05882352941177%
+Total Time Taken:  61.248778343200684
+03/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.74it/s]
+done BP iterations
+Letters Correct: 190/193 | Words Correct: 61/66
+Letters Correct: 98.44559585492227% | Words Correct: 92.42424242424242%
+Total Time Taken:  61.34645485877991
+03/05/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:21<00:00,  2.76it/s]
+done BP iterations
+Letters Correct: 365/365 | Words Correct: 140/140
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  76.39129686355591
+03/06/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.72it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 74/74
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  64.5636682510376
+03/07/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  03/07/2023
+03/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.93it/s]
+done BP iterations
+Letters Correct: 185/185 | Words Correct: 80/80
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  62.45892071723938
+03/09/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.79it/s]
+done BP iterations
+Letters Correct: 183/191 | Words Correct: 67/76
+Letters Correct: 95.81151832460732% | Words Correct: 88.1578947368421%
+Total Time Taken:  60.085779428482056
+03/10/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:13<00:00,  4.32it/s]
+done BP iterations
+Letters Correct: 193/193 | Words Correct: 72/72
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  63.41852593421936
+03/11/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.12it/s]
+done BP iterations
+Letters Correct: 186/187 | Words Correct: 64/66
+Letters Correct: 99.46524064171123% | Words Correct: 96.96969696969697%
+Total Time Taken:  58.54496383666992
+03/12/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:20<00:00,  2.98it/s]
+done BP iterations
+Letters Correct: 363/369 | Words Correct: 134/140
+Letters Correct: 98.3739837398374% | Words Correct: 95.71428571428572%
+Total Time Taken:  74.72834920883179
+03/13/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:13<00:00,  4.58it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 76/76
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  58.51553440093994
+03/14/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.45it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 74/74
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  58.405380725860596
+03/15/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.06it/s]
+done BP iterations
+Letters Correct: 186/187 | Words Correct: 76/78
+Letters Correct: 99.46524064171123% | Words Correct: 97.43589743589743%
+Total Time Taken:  56.4484498500824
+03/16/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  03/16/2023
+03/17/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.05it/s]
+done BP iterations
+Letters Correct: 195/197 | Words Correct: 66/70
+Letters Correct: 98.98477157360406% | Words Correct: 94.28571428571428%
+Total Time Taken:  58.81409311294556
+03/18/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:13<00:00,  4.53it/s]
+done BP iterations
+Letters Correct: 191/191 | Words Correct: 70/70
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  58.681373596191406
+03/19/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:24<00:00,  2.47it/s]
+done BP iterations
+Letters Correct: 364/373 | Words Correct: 127/140
+Letters Correct: 97.58713136729223% | Words Correct: 90.71428571428571%
+Total Time Taken:  79.58347344398499
+03/20/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.52it/s]
+done BP iterations
+Letters Correct: 184/187 | Words Correct: 68/74
+Letters Correct: 98.3957219251337% | Words Correct: 91.8918918918919%
+Total Time Taken:  58.600751876831055
+03/21/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:16<00:00,  3.62it/s]
+done BP iterations
+Letters Correct: 189/190 | Words Correct: 74/76
+Letters Correct: 99.47368421052632% | Words Correct: 97.36842105263158%
+Total Time Taken:  63.72137808799744
+03/22/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.18it/s]
+done BP iterations
+Letters Correct: 188/189 | Words Correct: 70/72
+Letters Correct: 99.47089947089947% | Words Correct: 97.22222222222221%
+Total Time Taken:  57.873846769332886
+03/23/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+Error Occured for date:  03/23/2023
+03/24/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.92it/s]
+done BP iterations
+Letters Correct: 184/187 | Words Correct: 61/66
+Letters Correct: 98.3957219251337% | Words Correct: 92.42424242424242%
+Total Time Taken:  58.037004232406616
+03/25/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.51it/s]
+done BP iterations
+Letters Correct: 191/191 | Words Correct: 72/72
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  56.15249180793762
+03/26/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:23<00:00,  2.56it/s]
+done BP iterations
+Letters Correct: 365/369 | Words Correct: 134/140
+Letters Correct: 98.91598915989161% | Words Correct: 95.71428571428572%
+Total Time Taken:  74.98244667053223
+03/27/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.90it/s]
+done BP iterations
+Letters Correct: 187/187 | Words Correct: 78/78
+Letters Correct: 100.0% | Words Correct: 100.0%
+Total Time Taken:  58.44129800796509
+03/28/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.63it/s]
+done BP iterations
+Letters Correct: 190/191 | Words Correct: 76/78
+Letters Correct: 99.47643979057592% | Words Correct: 97.43589743589743%
+Total Time Taken:  57.756988525390625
+03/29/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:14<00:00,  4.19it/s]
+done BP iterations
+Letters Correct: 191/193 | Words Correct: 70/74
+Letters Correct: 98.96373056994818% | Words Correct: 94.5945945945946%
+Total Time Taken:  64.08636474609375
+03/30/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = bert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_bert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:12<00:00,  4.90it/s]
+done BP iterations
+Letters Correct: 188/191 | Words Correct: 71/76
+Letters Correct: 98.42931937172776% | Words Correct: 93.42105263157895%
+Total Time Taken:  59.356412172317505
