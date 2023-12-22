@@ -1,0 +1,470 @@
+07/20/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+config.json: 100%
+483/483 [00:00<00:00, 19.9kB/s]
+model.safetensors: 100%
+268M/268M [00:01<00:00, 191MB/s]
+tokenizer_config.json: 100%
+28.0/28.0 [00:00<00:00, 1.30kB/s]
+vocab.txt: 100%
+232k/232k [00:00<00:00, 14.1MB/s]
+tokenizer.json: 100%
+466k/466k [00:00<00:00, 7.12MB/s]
+beginning BP iterations
+100%|██████████| 60/60 [00:09<00:00,  6.34it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 95.08196721311475% | Words Correct: 82.05128205128204%
+tokenizer_config.json: 100%
+2.32k/2.32k [00:00<00:00, 159kB/s]
+spiece.model: 100%
+792k/792k [00:00<00:00, 8.25MB/s]
+tokenizer.json: 100%
+1.39M/1.39M [00:00<00:00, 42.6MB/s]
+1th iteration: Letters Correct: 91.2568306010929% | Words Correct: 74.35897435897436%
+2th iteration: Letters Correct: 88.52459016393442% | Words Correct: 69.23076923076923%
+3th iteration: Letters Correct: 88.52459016393442% | Words Correct: 69.23076923076923%
+4th iteration: Letters Correct: 87.97814207650273% | Words Correct: 69.23076923076923%
+5th iteration: Letters Correct: 87.97814207650273% | Words Correct: 69.23076923076923%
+
+After II with ByT5: Letters Correct: 87.97814207650273% | Words Correct: 69.23076923076923%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 95.08196721311475% | Words Correct: 82.05128205128204%
+Total time taken:  234.3866319656372
+07/27/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:09<00:00,  6.51it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 97.83783783783784% | Words Correct: 92.3076923076923%
+1th iteration: Letters Correct: 98.37837837837839% | Words Correct: 92.3076923076923%
+2th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.87179487179486%
+3th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.87179487179486%
+
+After II with ByT5: Letters Correct: 98.91891891891892% | Words Correct: 94.87179487179486%
+Total time taken:  61.020217418670654
+07/29/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:09<00:00,  6.17it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 92.38578680203045% | Words Correct: 77.14285714285715%
+1th iteration: Letters Correct: 92.38578680203045% | Words Correct: 77.14285714285715%
+2th iteration: Letters Correct: 91.37055837563452% | Words Correct: 72.85714285714285%
+3th iteration: Letters Correct: 92.38578680203045% | Words Correct: 77.14285714285715%
+4th iteration: Letters Correct: 91.37055837563452% | Words Correct: 75.71428571428571%
+5th iteration: Letters Correct: 91.37055837563452% | Words Correct: 75.71428571428571%
+
+After II with ByT5: Letters Correct: 91.37055837563452% | Words Correct: 75.71428571428571%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 92.38578680203045% | Words Correct: 77.14285714285715%
+Total time taken:  309.4808964729309
+08/05/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.98it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 95.38461538461539% | Words Correct: 85.71428571428571%
+1th iteration: Letters Correct: 95.38461538461539% | Words Correct: 87.14285714285714%
+2th iteration: Letters Correct: 93.84615384615384% | Words Correct: 80.0%
+3th iteration: Letters Correct: 93.33333333333333% | Words Correct: 78.57142857142857%
+4th iteration: Letters Correct: 92.82051282051282% | Words Correct: 77.14285714285715%
+5th iteration: Letters Correct: 92.82051282051282% | Words Correct: 77.14285714285715%
+
+After II with ByT5: Letters Correct: 92.82051282051282% | Words Correct: 77.14285714285715%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 95.38461538461539% | Words Correct: 85.71428571428571%
+Total time taken:  141.0998649597168
+08/13/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:18<00:00,  3.25it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 97.22991689750693% | Words Correct: 90.29850746268657%
+1th iteration: Letters Correct: 98.33795013850416% | Words Correct: 94.02985074626866%
+2th iteration: Letters Correct: 98.06094182825484% | Words Correct: 93.28358208955224%
+3th iteration: Letters Correct: 97.50692520775624% | Words Correct: 91.7910447761194%
+4th iteration: Letters Correct: 97.22991689750693% | Words Correct: 91.04477611940298%
+5th iteration: Letters Correct: 96.95290858725761% | Words Correct: 90.29850746268657%
+6th iteration: Letters Correct: 96.95290858725761% | Words Correct: 90.29850746268657%
+7th iteration: Letters Correct: 96.67590027700831% | Words Correct: 89.55223880597015%
+8th iteration: Letters Correct: 96.67590027700831% | Words Correct: 89.55223880597015%
+
+After II with ByT5: Letters Correct: 96.67590027700831% | Words Correct: 89.55223880597015%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 97.22991689750693% | Words Correct: 90.29850746268657%
+Total time taken:  243.31753659248352
+08/17/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.60it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 97.84946236559139% | Words Correct: 91.02564102564102%
+1th iteration: Letters Correct: 98.9247311827957% | Words Correct: 96.15384615384616%
+2th iteration: Letters Correct: 98.9247311827957% | Words Correct: 96.15384615384616%
+
+After II with ByT5: Letters Correct: 98.9247311827957% | Words Correct: 96.15384615384616%
+Total time taken:  95.6830997467041
+08/18/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:09<00:00,  6.58it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 96.29629629629629% | Words Correct: 90.27777777777779%
+1th iteration: Letters Correct: 96.82539682539682% | Words Correct: 87.5%
+2th iteration: Letters Correct: 96.82539682539682% | Words Correct: 87.5%
+3th iteration: Letters Correct: 96.82539682539682% | Words Correct: 87.5%
+4th iteration: Letters Correct: 96.82539682539682% | Words Correct: 87.5%
+
+After II with ByT5: Letters Correct: 96.82539682539682% | Words Correct: 87.5%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 96.29629629629629% | Words Correct: 90.27777777777779%
+Total time taken:  84.37792181968689
+08/30/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:08<00:00,  6.77it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 95.6989247311828% | Words Correct: 82.05128205128204%
+1th iteration: Letters Correct: 97.84946236559139% | Words Correct: 89.74358974358975%
+2th iteration: Letters Correct: 97.84946236559139% | Words Correct: 89.74358974358975%
+
+After II with ByT5: Letters Correct: 97.84946236559139% | Words Correct: 89.74358974358975%
+Total time taken:  68.30501055717468
+09/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.43it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 94.87179487179486% | Words Correct: 83.33333333333334%
+1th iteration: Letters Correct: 95.8974358974359% | Words Correct: 87.5%
+2th iteration: Letters Correct: 95.8974358974359% | Words Correct: 87.5%
+3th iteration: Letters Correct: 96.41025641025641% | Words Correct: 87.5%
+4th iteration: Letters Correct: 96.92307692307692% | Words Correct: 88.88888888888889%
+5th iteration: Letters Correct: 96.41025641025641% | Words Correct: 87.5%
+6th iteration: Letters Correct: 95.38461538461539% | Words Correct: 84.72222222222221%
+7th iteration: Letters Correct: 95.38461538461539% | Words Correct: 84.72222222222221%
+
+After II with ByT5: Letters Correct: 95.38461538461539% | Words Correct: 84.72222222222221%
+Total time taken:  267.3729681968689
+09/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.81it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 96.92307692307692% | Words Correct: 84.72222222222221%
+1th iteration: Letters Correct: 95.38461538461539% | Words Correct: 81.94444444444444%
+2th iteration: Letters Correct: 93.84615384615384% | Words Correct: 79.16666666666666%
+3th iteration: Letters Correct: 94.87179487179486% | Words Correct: 80.55555555555556%
+4th iteration: Letters Correct: 94.35897435897435% | Words Correct: 79.16666666666666%
+5th iteration: Letters Correct: 93.84615384615384% | Words Correct: 77.77777777777779%
+6th iteration: Letters Correct: 93.33333333333333% | Words Correct: 77.77777777777779%
+7th iteration: Letters Correct: 93.33333333333333% | Words Correct: 77.77777777777779%
+
+After II with ByT5: Letters Correct: 93.33333333333333% | Words Correct: 77.77777777777779%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 96.92307692307692% | Words Correct: 84.72222222222221%
+Total time taken:  130.57571411132812
+09/15/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.48it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 97.89473684210527% | Words Correct: 90.32258064516128%
+1th iteration: Letters Correct: 98.42105263157895% | Words Correct: 91.93548387096774%
+2th iteration: Letters Correct: 98.94736842105263% | Words Correct: 93.54838709677419%
+3th iteration: Letters Correct: 98.94736842105263% | Words Correct: 93.54838709677419%
+
+After II with ByT5: Letters Correct: 98.94736842105263% | Words Correct: 93.54838709677419%
+Total time taken:  72.2881932258606
+09/16/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.73it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 98.44559585492227% | Words Correct: 92.42424242424242%
+1th iteration: Letters Correct: 98.44559585492227% | Words Correct: 92.42424242424242%
+2th iteration: Letters Correct: 98.96373056994818% | Words Correct: 95.45454545454545%
+3th iteration: Letters Correct: 98.96373056994818% | Words Correct: 95.45454545454545%
+
+After II with ByT5: Letters Correct: 98.96373056994818% | Words Correct: 95.45454545454545%
+Total time taken:  68.25362253189087
+10/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:09<00:00,  6.45it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 95.1086956521739% | Words Correct: 83.33333333333334%
+1th iteration: Letters Correct: 95.65217391304348% | Words Correct: 84.61538461538461%
+2th iteration: Letters Correct: 95.65217391304348% | Words Correct: 84.61538461538461%
+
+After II with ByT5: Letters Correct: 95.65217391304348% | Words Correct: 84.61538461538461%
+Total time taken:  56.45598101615906
+11/22/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:09<00:00,  6.29it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 97.83783783783784% | Words Correct: 93.42105263157895%
+1th iteration: Letters Correct: 96.75675675675676% | Words Correct: 90.78947368421053%
+2th iteration: Letters Correct: 97.83783783783784% | Words Correct: 92.10526315789474%
+3th iteration: Letters Correct: 97.83783783783784% | Words Correct: 92.10526315789474%
+4th iteration: Letters Correct: 97.83783783783784% | Words Correct: 92.10526315789474%
+
+After II with ByT5: Letters Correct: 97.83783783783784% | Words Correct: 92.10526315789474%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 97.83783783783784% | Words Correct: 93.42105263157895%
+Total time taken:  104.29578852653503
+11/23/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.80it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 98.91891891891892% | Words Correct: 95.83333333333334%
+1th iteration: Letters Correct: 98.37837837837839% | Words Correct: 93.05555555555556%
+2th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.44444444444444%
+3th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.44444444444444%
+
+After II with ByT5: Letters Correct: 98.91891891891892% | Words Correct: 94.44444444444444%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 98.91891891891892% | Words Correct: 95.83333333333334%
+Total time taken:  102.40551233291626
+11/24/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.28it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with ByT5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  55.20644760131836
+11/25/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.63it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 96.8586387434555% | Words Correct: 88.23529411764706%
+1th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.05882352941177%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+3th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with ByT5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  67.58481121063232
+11/28/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:09<00:00,  6.07it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with ByT5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  54.60579466819763
+12/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.51it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+1th iteration: Letters Correct: 99.47089947089947% | Words Correct: 96.96969696969697%
+2th iteration: Letters Correct: 98.4126984126984% | Words Correct: 93.93939393939394%
+3th iteration: Letters Correct: 98.4126984126984% | Words Correct: 93.93939393939394%
+
+After II with ByT5: Letters Correct: 98.4126984126984% | Words Correct: 93.93939393939394%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  95.4590277671814
+12/02/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:10<00:00,  5.49it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 97.96954314720813% | Words Correct: 90.0%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with ByT5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  93.0864577293396
+12/03/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:19<00:00,  3.00it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 98.96373056994818% | Words Correct: 95.23809523809523%
+1th iteration: Letters Correct: 98.96373056994818% | Words Correct: 95.23809523809523%
+2th iteration: Letters Correct: 98.70466321243524% | Words Correct: 94.44444444444444%
+3th iteration: Letters Correct: 98.70466321243524% | Words Correct: 94.44444444444444%
+
+After II with ByT5: Letters Correct: 98.70466321243524% | Words Correct: 94.44444444444444%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 98.96373056994818% | Words Correct: 95.23809523809523%
+Total time taken:  116.54946613311768
+12/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:08<00:00,  6.81it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 98.34254143646409% | Words Correct: 91.93548387096774%
+1th iteration: Letters Correct: 98.34254143646409% | Words Correct: 91.93548387096774%
+2th iteration: Letters Correct: 98.34254143646409% | Words Correct: 91.93548387096774%
+3th iteration: Letters Correct: 98.34254143646409% | Words Correct: 91.93548387096774%
+
+After II with ByT5: Letters Correct: 98.34254143646409% | Words Correct: 91.93548387096774%
+Total time taken:  155.1598036289215
+12/09/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:11<00:00,  5.28it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 97.94871794871794% | Words Correct: 91.17647058823529%
+1th iteration: Letters Correct: 96.92307692307692% | Words Correct: 88.23529411764706%
+2th iteration: Letters Correct: 95.8974358974359% | Words Correct: 85.29411764705883%
+3th iteration: Letters Correct: 94.87179487179486% | Words Correct: 82.35294117647058%
+4th iteration: Letters Correct: 94.87179487179486% | Words Correct: 82.35294117647058%
+
+After II with ByT5: Letters Correct: 94.87179487179486% | Words Correct: 82.35294117647058%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 97.94871794871794% | Words Correct: 91.17647058823529%
+Total time taken:  148.39027452468872
+12/10/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+beginning BP iterations
+100%|██████████| 60/60 [00:18<00:00,  3.30it/s]
+done BP iterations
+
+Before II with T5-small: Letters Correct: 97.21448467966573% | Words Correct: 91.42857142857143%
+1th iteration: Letters Correct: 97.7715877437326% | Words Correct: 92.14285714285714%
+2th iteration: Letters Correct: 98.32869080779945% | Words Correct: 94.28571428571428%
+3th iteration: Letters Correct: 98.32869080779945% | Words Correct: 94.28571428571428%
+4th iteration: Letters Correct: 98.32869080779945% | Words Correct: 94.28571428571428%
+
+After II with ByT5: Letters Correct: 98.32869080779945% | Words Correct: 94.28571428571428%
+Total time taken:  206.69936347007751
