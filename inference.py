@@ -26,8 +26,8 @@ from solver.Utils import print_grid
 from utils import puz_to_json
 
 def solve(crossword):
-    solver = BPSolver(crossword, max_candidates=500000)
-    solution = solver.solve(num_iters=10, iterative_improvement_steps=5)
+    solver = BPSolver(crossword, max_candidates = 500000)
+    solution = solver.solve(num_iters = 10, iterative_improvement_steps = 5)
     print("*** Solver Output ***")
     print_grid(solution)
     print("*** Gold Solution ***")

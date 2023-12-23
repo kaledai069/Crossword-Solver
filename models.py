@@ -26,30 +26,37 @@ from DPR.dpr.utils.model_utils import load_states_from_checkpoint, get_model_obj
 
 from transformers import GPT2LMHeadModel, GPT2Tokenizer, T5ForConditionalGeneration, AutoTokenizer
 from segment_fill import segment_fill
+from wordsegment import load, segment
+load()
 
 SEGMENTER_CACHE = {}
 RERANKER_CACHE = {}
 
-def setup_closedbook(process_id):
+def setup_closedbook(model_path, ans_tsv_path, dense_embd_path, process_id):
     dpr = DPRForCrossword(
-        "./checkpoints/distilbert_EPOCHs_7_COMPLETE.bin",
-        "./checkpoints/all_answer_list.tsv",
-        "./checkpoints/distilbert_7_epochs_embeddings.*",
+        model_path,
+        ans_tsv_path,
+        dense_embd_path,
         retrievalmodel = False,
         process_id = process_id
     )
     return dpr
 
-def setup_t5_reranker(process_id):
+def setup_t5_reranker(reranker_path, process_id):
     tokenizer = AutoTokenizer.from_pretrained('t5-small')
-    model = T5ForConditionalGeneration.from_pretrained('./checkpoints/t5_small_32_seq_epoch_1/')
+    model = T5ForConditionalGeneration.from_pretrained(reranker_path)
     model.eval().to(torch.device('cuda' if torch.cuda.is_available() else 'cpu')) # .eval() -> Inference Mode
     return model, tokenizer
 
 def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_fills):
     global RERANKER_CACHE
     results = []
-    for clue, possibly_ungrammatical_fill in zip(clues, possibly_ungrammatical_fills):
+
+    segmented_fills = []
+    for answer in possibly_ungrammatical_fills:
+        segmented_fills.append(" ".join(segment(answer.lower())))
+
+    for clue, possibly_ungrammatical_fill in zip(clues, segmented_fills):
         if not possibly_ungrammatical_fill.islower():
             possibly_ungrammatical_fill = possibly_ungrammatical_fill.lower()
         clue = preprocess_clue_fn(clue)
@@ -67,7 +74,7 @@ def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_
             continue
         else:
             with torch.inference_mode():
-                inputs = tokenizer([clue], return_tensors='pt')['input_ids'].to(model.device)
+                inputs = tokenizer(["Q: " + clue], return_tensors='pt')['input_ids'].to(model.device)
                 labels = tokenizer([possibly_ungrammatical_fill], return_tensors='pt')['input_ids'].to(model.device)
                 loss = model(inputs, labels = labels)
                 answer_length = labels.shape[1]
@@ -323,9 +330,16 @@ class DPRForCrossword(object):
         )
 
         # index all passages
-        ctx_files_pattern = args.encoded_ctx_file
-        input_paths = glob.glob(ctx_files_pattern)
-        self.retriever.index.index_data(input_paths)
+        embd_file_path = args.encoded_ctx_file
+        if isinstance(embd_file_path, str):
+            file_path = embd_file_path
+        else:
+            file_path = embd_file_path[0]
+        self.retriever.index.index_data(file_path)
+
+        # ctx_files_pattern = args.encoded_ctx_file
+        # input_paths = glob.glob(ctx_files_pattern)
+        # self.retriever.index.index_data(input_paths)
 
         self.all_passages = self.load_passages(args.ctx_file)
         self.fill2id = {}

@@ -20,12 +20,12 @@ from solver.Utils import print_grid, get_word_flips
 from solver.Solver import Solver
 from models import setup_t5_reranker, t5_reranker_score_with_clue
 
-# our answer set
-answer_set = set()
-with open(r'./checkpoints/all_answer_list.tsv', 'r') as rf: 
-    for line in rf:
-        w = ''.join([c.upper() for c in (line.split('\t')[-1]).upper() if c in string.ascii_uppercase])
-        answer_set.add(w)
+# # our answer set
+# answer_set = set()
+# with open(r'./checkpoints/all_answer_list.tsv', 'r') as rf: 
+#     for line in rf:
+#         w = ''.join([c.upper() for c in (line.split('\t')[-1]).upper() if c in string.ascii_uppercase])
+#         answer_set.add(w)
 
 # the probability of each alphabetical character in the crossword
 UNIGRAM_PROBS = [('A', 0.0897379968935765), ('B', 0.02121248877769636), ('C', 0.03482206634145926), ('D', 0.03700942543460491), ('E', 0.1159773210750429), ('F', 0.017257461694024614), ('G', 0.025429024796296124), ('H', 0.033122967601502), ('I', 0.06800036223479956), ('J', 0.00294611331754349), ('K', 0.013860682888259786), ('L', 0.05130800574373874), ('M', 0.027962776827660175), ('N', 0.06631994270448001), ('O', 0.07374646543246745), ('P', 0.026750756212433214), ('Q', 0.001507814175439393), ('R', 0.07080460813737305), ('S', 0.07410988246048224), ('T', 0.07242993582154593), ('U', 0.0289272388037645), ('V', 0.009153522059555467), ('W', 0.01434705167591524), ('X', 0.003096729223103298), ('Y', 0.01749958208224007), ('Z', 0.002659777584995724)]
@@ -133,14 +133,29 @@ class BPCell:
 class BPSolver(Solver):
     def __init__(self, 
                  crossword, 
-                 max_candidates = 500000,
+                 model_path,
+                 ans_tsv_path,
+                 dense_embd_path,
+                 reranker_path,
+                 max_candidates = 40000,
                  process_id=0,
                  **kwargs):
-        super().__init__(crossword, 
-                         max_candidates=max_candidates,
+        super().__init__(crossword,
+                         model_path,
+                         ans_tsv_path,
+                         dense_embd_path, 
+                         max_candidates = max_candidates,
                          process_id=process_id,
                          **kwargs)
         self.crossword = crossword
+        self.reranker_path = reranker_path
+         # our answer set
+        self.answer_set = set()
+        with open(ans_tsv_path, 'r') as rf: 
+            for line in rf:
+                w = ''.join([c.upper() for c in (line.split('\t')[-1]).upper() if c in string.ascii_uppercase])
+                self.answer_set.add(w)
+
         self.reset()
     
     # the first function after solving the crossword using first pass model, begins with the reset local function 
@@ -169,6 +184,7 @@ class BPSolver(Solver):
         return float_numbers
     
     def solve(self, num_iters = 10, iterative_improvement_steps = 5, return_greedy_states = False, return_ii_states = False):
+        output_results = {}
         # run solving for num_iters iterations
         print('beginning BP iterations')
         for _ in trange(num_iters):
@@ -188,12 +204,19 @@ class BPSolver(Solver):
         else:
             grid = self.greedy_sequential_word_solution()
             all_grids = []
-        grid = self.greedy_sequential_word_solution()
+
+        output_results['first pass model'] = {}
+        output_results['first pass model']['grid'] = grid
+        
+        # grid = self.greedy_sequential_word_solution()
         # print('=====Greedy search grid=====')
         # print_grid(grid)
         
         _, accu_log = self.evaluate(grid, False)
         [ori_letter_accu, ori_word_accu] = self.extract_float(accu_log)
+        output_results['first pass model']['letter accuracy'] = ori_letter_accu
+        output_results['first pass model']['word accuracy'] = ori_word_accu
+
 
         original_grid_solution = deepcopy(grid)
 
@@ -206,7 +229,7 @@ class BPSolver(Solver):
                 return grid
         
         #loading the ByT5 reranker model
-        self.reranker, self.tokenizer = setup_t5_reranker(self.process_id)
+        self.reranker, self.tokenizer = setup_t5_reranker(self.reranker_path, self.process_id)
         
         for i in range(iterative_improvement_steps):
             # print('starting iterative improvement step ' + str(i))
@@ -249,7 +272,7 @@ class BPSolver(Solver):
         for clue in uncertain_answers.keys():
             initial_word = uncertain_answers[clue]
             # print("INITIAL WORD: ", initial_word)
-            clue_flips = get_word_flips(initial_word, 10) # flip then segment
+            clue_flips = get_word_flips(initial_word, 20) # flip then segment
             # print(clue_flips)
             clue_positions = [key for key, value in self.crossword.variables.items() if value['clue'] == clue]
             # print(clue_positions)
@@ -326,7 +349,7 @@ class BPSolver(Solver):
         # find uncertain answers
         # right now the heuristic we use is any answer that is not in the answer set
         for clue in original_qa_pairs.keys():
-            if original_qa_pairs[clue] not in answer_set:
+            if original_qa_pairs[clue] not in self.answer_set:
                 uncertain_answers[clue] = original_qa_pairs[clue]
 
         return uncertain_answers
