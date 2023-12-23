@@ -14,7 +14,7 @@ from copy import deepcopy
 
 import numpy as np
 from scipy.special import log_softmax, softmax
-from tqdm import trange
+from tqdm import trange, tqdm
 
 from solver.Utils import print_grid, get_word_flips
 from solver.Solver import Solver
@@ -186,8 +186,8 @@ class BPSolver(Solver):
     def solve(self, num_iters = 10, iterative_improvement_steps = 5, return_greedy_states = False, return_ii_states = False):
         output_results = {}
         # run solving for num_iters iterations
-        print('beginning BP iterations')
-        for _ in trange(num_iters):
+        print('\nBeginning Belief Propagation iteration steps')
+        for _ in tqdm(range(num_iters), ncols = 100):
             for var in self.bp_vars:
                 var.propagate()
             for cell in self.bp_cells:
@@ -196,7 +196,7 @@ class BPSolver(Solver):
                 cell.propagate()
             for var in self.bp_vars:
                 var.sync_state()
-        print('done BP iterations')
+        print('Belief Propagation iteration complete\n')
        
         # Get the current based grid based on greedy selection from the marginals
         if return_greedy_states:
@@ -222,15 +222,22 @@ class BPSolver(Solver):
 
         print(f"\nBefore II with T5-small: {accu_log}")
 
-        if iterative_improvement_steps < 1:
+        if iterative_improvement_steps < 1 or ori_letter_accu == 100.0:
+            # if the letter accuracy reaches maximum leave this here without further second pass model 
             if return_greedy_states or return_ii_states:
-                return grid, all_grids
+                return output_results, all_grids
             else:
-                return grid
+                return output_results
+        
         
         #loading the ByT5 reranker model
         self.reranker, self.tokenizer = setup_t5_reranker(self.reranker_path, self.process_id)
         
+        output_results['second pass model'] = {}
+        output_results['second pass model']['all grids'] = []
+        output_results['second pass model']['all letter accuracy'] = []
+        output_results['second pass model']['all word accuracy'] = []
+
         for i in range(iterative_improvement_steps):
             # print('starting iterative improvement step ' + str(i))
             # print("Accuracy if we knew to stop right now")
@@ -239,15 +246,17 @@ class BPSolver(Solver):
             grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
             _, accu_log = self.evaluate(grid, False)
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
-
             print(f"{i+1}th iteration: {accu_log}")
+
+            # saving output results
+            output_results['second pass model']['all grids'].append(grid)
+            output_results['second pass model']['all letter accuracy'].append(temp_letter_accu)
+            output_results['second pass model']['all word accuracy'].append(temp_word_accu)
 
             if not did_iterative_improvement_make_edit:
                 break
             if return_ii_states:
                 all_grids.append(deepcopy(grid))
-            # print('after iterative improvement step ' + str(i))
-            # print_grid(grid)
 
         _, accu_log = self.evaluate(grid, False)
         print(f"\nAfter II with ByT5: {accu_log}")
@@ -257,11 +266,18 @@ class BPSolver(Solver):
             grid = deepcopy(original_grid_solution)
             _, accu_log = self.evaluate(grid, False)
             print(f"\nFinal Accuracy Stat: {accu_log}")
+        
+        temp_lett_accu_list = output_results['second pass model']['all letter accuracy'].copy()
+        ii_max_index = temp_lett_accu_list.index(max(temp_lett_accu_list))
+
+        output_results['second pass model']['final grid'] = output_results['second pass model']['all grids'][ii_max_index]
+        output_results['second pass model']['final letter'] = output_results['second pass model']['all letter accuracy'][ii_max_index]
+        output_results['second pass model']['final word'] = output_results['second pass model']['all word accuracy'][ii_max_index]
 
         if return_greedy_states or return_ii_states:
-            return grid, all_grids
+            return output_results, all_grids
         else:
-            return grid
+            return output_results
 
     def get_candidate_replacements(self, uncertain_answers, grid):
         # find alternate answers for all the uncertain words
