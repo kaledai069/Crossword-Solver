@@ -74,8 +74,8 @@ def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_
             continue
         else:
             with torch.inference_mode():
-                inputs = tokenizer(["Q: " + clue], return_tensors='pt')['input_ids'].to(model.device)
-                labels = tokenizer([possibly_ungrammatical_fill], return_tensors='pt')['input_ids'].to(model.device)
+                inputs = tokenizer(["Q: " + clue], max_length = 64, truncation = True, padding = 'max_length', return_tensors='pt')['input_ids'].to(model.device)
+                labels = tokenizer([possibly_ungrammatical_fill], max_length = 32, truncation = True, padding = 'max_length', return_tensors='pt')['input_ids'].to(model.device)
                 loss = model(inputs, labels = labels)
                 answer_length = labels.shape[1]
                 logprob = -loss[0].item() * answer_length

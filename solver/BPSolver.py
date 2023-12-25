@@ -464,7 +464,7 @@ class BPSolver(Solver):
                 # print('clue', self.crossword.variables[clue_index]['clue'])
             # print('original score:', original_grid_score, 'modified score:', modified_grid_score)
                 
-            if modified_grid_score - original_grid_score > 0.40:
+            if modified_grid_score - original_grid_score > 0.35:
                 # print('found a possible edit')
                 possible_edits.append((modified_grid, modified_grid_score, replacements))
             # print()
