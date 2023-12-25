@@ -71,68 +71,28 @@ def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_
     for answer in possibly_ungrammatical_fills:
         segmented_fills.append(" ".join(segment(answer.lower())))
     
-    clues = []
-    fills = []
-    
-    # post processing clue and cached result
     for clue, possibly_ungrammatical_fill in zip(clues, segmented_fills):
         clue = post_process_clue(clue)
-        clues.append(clue)
-        fills.append(possibly_ungrammatical_fill)
 
+        if clue + possibly_ungrammatical_fill in RERANKER_CACHE:
+            results.append(RERANKER_CACHE[clue + possibly_ungrammatical_fill])
+            continue
+        else:
+            with torch.no_grad(), torch.inference_mode():
+                # move all the input tensors to the GPU (cuda)
+                inputs = tokenizer(["Q: " + clue], max_length = 64, truncation = True, padding = 'max_length', return_tensors='pt')['input_ids'].to(device)
+                labels = tokenizer([possibly_ungrammatical_fill], max_length = 32, truncation = True, padding = 'max_length', return_tensors='pt')['input_ids'].to(device)
 
-    batch_size = 16
-    for i in range(0, len(clues), batch_size):
-        batch_clues = clues[i : i + batch_size]
-        batch_fills = fills[i : i + batch_size]
+                # model mode set to evaluation 
+                model.eval()
 
-        batch_fills_length = sum([len(fill) for fill in batch_fills])
-
-        batch_inputs = tokenizer(["Q: " + clue for clue in batch_clues], max_length = 64, truncation = True, padding = 'max_length', return_tensors = 'pt')['input_ids'].to(device)
-        batch_labels = tokenizer(batch_fills, max_length = 32, truncation = True, padding = 'max_length', return_tensors = 'pt')['input_ids'].to(device)
-
-        with torch.no_grad(), torch.inference_mode():
-            # model mode to evaluation 
-            model.eval()
-
-            # perform inference on the batches 
-            batch_loss = model(batch_inputs, labels = batch_labels)
-            batch_logprobs = -batch_loss[0].item() * batch_fills_length 
-            results.append(batch_logprobs)
-    
+                loss = model(inputs, labels = labels)
+                answer_length = labels.shape[1]
+                logprob = -loss[0].item() * answer_length
+                results.append(logprob)
+                RERANKER_CACHE[clue + possibly_ungrammatical_fill] = logprob
+                
     return results
-
-    # for clue, possibly_ungrammatical_fill in zip(clues, segmented_fills):
-
-
-    #     clue = preprocess_clue_fn(clue)
-    #     if clue[-3:] == '. .':
-    #         clue = clue[:-3]
-    #     elif clue[-3:] == ' ..':
-    #         clue = clue[:-3]
-    #     elif clue[-2:] == '..':
-    #         clue = clue[:-2]
-    #     elif clue[-1] == '.':
-    #         clue = clue[:-1]
-
-    #     if clue + possibly_ungrammatical_fill in RERANKER_CACHE:
-    #         results.append(RERANKER_CACHE[clue + possibly_ungrammatical_fill])
-    #         continue
-    #     else:
-    #         with torch.no_grad(), torch.inference_mode():
-    #             # move all the input tensors to the GPU (cuda)
-    #             inputs = tokenizer(["Q: " + clue], max_length = 64, truncation = True, padding = 'max_length', return_tensors='pt')['input_ids'].to(model.device)
-    #             labels = tokenizer([possibly_ungrammatical_fill], max_length = 32, truncation = True, padding = 'max_length', return_tensors='pt')['input_ids'].to(model.device)
-
-    #             # model mode set to evaluation 
-    #             model.eval()
-
-    #             loss = model(inputs, labels = labels)
-    #             answer_length = labels.shape[1]
-    #             logprob = -loss[0].item() * answer_length
-    #             results.append(logprob)
-    #             RERANKER_CACHE[clue + possibly_ungrammatical_fill] = logprob
-    # return results
 
 def preprocess_clue_fn(clue):
     clue = str(clue)
