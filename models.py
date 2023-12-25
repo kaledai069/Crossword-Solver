@@ -71,39 +71,33 @@ def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_
     for answer in possibly_ungrammatical_fills:
         segmented_fills.append(" ".join(segment(answer.lower())))
 
-    remaining_clues = []
-    remaining_fills = []
-
     # post processing clue and cached result
     for clue, possibly_ungrammatical_fill in zip(clues, segmented_fills):
         clue = post_process_clue(clue)
-        if clue + possibly_ungrammatical_fill in RERANKER_CACHE:
-            results.append(RERANKER_CACHE[clue + possibly_ungrammatical_fill])
-        else:
-            remaining_clues.append(clue)
-            remaining_fills.append(possibly_ungrammatical_fill)
+        clues.append(clue)
+        fills.append(possibly_ungrammatical_fill)
+
+    clues = []
+    fills = []
 
     batch_size = 16
-    for i in range(0, len(remaining_clues), batch_size):
-        batch_clues = remaining_clues[i : i + batch_size]
-        batch_fills = remaining_fills[i : i + batch_size]
+    for i in range(0, len(clues), batch_size):
+        batch_clues = clues[i : i + batch_size]
+        batch_fills = fills[i : i + batch_size]
 
-        batch_inputs = tokenizer(["Q: " + clue for clue in batch_clues], max_length = 64, truncation = True, padding = 'max_length', return_tensors = 'pt').to(device)
-        batch_labels = tokenizer(batch_fills, max_length = 32, truncation = True, padding = 'max_length', return_tensors = 'pt').to(device)
+        batch_fills_length = sum([len(fill) for fill in batch_fills])
+
+        batch_inputs = tokenizer(["Q: " + clue for clue in batch_clues], max_length = 64, truncation = True, padding = 'max_length', return_tensors = 'pt')['input_ids'].to(device)
+        batch_labels = tokenizer(batch_fills, max_length = 32, truncation = True, padding = 'max_length', return_tensors = 'pt')['input_ids'].to(device)
 
         with torch.no_grad(), torch.inference_mode():
             # model mode to evaluation 
             model.eval()
 
             # perform inference on the batches 
-            batch_loss = model(**batch_inputs, labels=batch_labels)
-            batch_answer_lengths = batch_labels['input_ids'].shape[1]
-            batch_logprobs = [-loss.item() * answer_length for loss, answer_length in zip(batch_loss, batch_answer_lengths)]
-            results.extend(batch_logprobs)
-
-            # update cache for each pair in the batch
-            for clue, fill, logprob in zip(batch_clues, batch_fills, batch_logprobs):
-                RERANKER_CACHE[clue + fill] = logprob
+            batch_loss = model(batch_inputs, labels = batch_labels)
+            batch_logprobs = -batch_loss[0].item() * batch_fills_length 
+            results.append(batch_logprobs)
     
     return results
 
