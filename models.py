@@ -80,8 +80,8 @@ def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_
         else:
             with torch.no_grad(), torch.inference_mode():
                 # move all the input tensors to the GPU (cuda)
-                inputs = tokenizer(["Q: " + clue], max_length = 64, truncation = True, padding = 'max_length', return_tensors='pt')['input_ids'].to(device)
-                labels = tokenizer([possibly_ungrammatical_fill], max_length = 32, truncation = True, padding = 'max_length', return_tensors='pt')['input_ids'].to(device)
+                inputs = tokenizer(["Q: " + clue], return_tensors='pt')['input_ids'].to(device)
+                labels = tokenizer([possibly_ungrammatical_fill], return_tensors='pt')['input_ids'].to(device)
 
                 # model mode set to evaluation 
                 model.eval()
@@ -91,7 +91,7 @@ def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_
                 logprob = -loss[0].item() * answer_length
                 results.append(logprob)
                 RERANKER_CACHE[clue + possibly_ungrammatical_fill] = logprob
-                
+
     return results
 
 def preprocess_clue_fn(clue):
