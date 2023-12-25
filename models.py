@@ -70,15 +70,16 @@ def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_
     segmented_fills = []
     for answer in possibly_ungrammatical_fills:
         segmented_fills.append(" ".join(segment(answer.lower())))
-
+    
+    clues = []
+    fills = []
+    
     # post processing clue and cached result
     for clue, possibly_ungrammatical_fill in zip(clues, segmented_fills):
         clue = post_process_clue(clue)
         clues.append(clue)
         fills.append(possibly_ungrammatical_fill)
 
-    clues = []
-    fills = []
 
     batch_size = 16
     for i in range(0, len(clues), batch_size):
