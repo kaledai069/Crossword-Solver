@@ -1,0 +1,774 @@
+11/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+config.json: 100%
+483/483 [00:00<00:00, 22.0kB/s]
+model.safetensors: 100%
+268M/268M [00:01<00:00, 216MB/s]
+tokenizer_config.json: 100%
+28.0/28.0 [00:00<00:00, 1.11kB/s]
+vocab.txt: 100%
+232k/232k [00:00<00:00, 1.40MB/s]
+tokenizer.json: 100%
+466k/466k [00:00<00:00, 1.86MB/s]
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.30it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.42931937172776% | Words Correct: 93.42105263157895%
+tokenizer_config.json: 100%
+2.32k/2.32k [00:00<00:00, 167kB/s]
+spiece.model: 100%
+792k/792k [00:00<00:00, 9.20MB/s]
+tokenizer.json: 100%
+1.39M/1.39M [00:00<00:00, 3.39MB/s]
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  140.94580698013306
+11/02/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.70it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.91891891891892% | Words Correct: 96.05263157894737%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  66.39933753013611
+11/03/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.41it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 99.48186528497409% | Words Correct: 97.14285714285714%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  55.433831214904785
+11/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.86it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 97.88359788359789% | Words Correct: 89.39393939393939%
+1th iteration: Letters Correct: 99.47089947089947% | Words Correct: 96.96969696969697%
+2th iteration: Letters Correct: 99.47089947089947% | Words Correct: 96.96969696969697%
+
+After II with T5: Letters Correct: 99.47089947089947% | Words Correct: 96.96969696969697%
+Total time taken:  147.34326267242432
+11/05/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:18<00:00,  3.18it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 96.19565217391305% | Words Correct: 88.57142857142857%
+1th iteration: Letters Correct: 97.01086956521739% | Words Correct: 88.57142857142857%
+2th iteration: Letters Correct: 97.82608695652173% | Words Correct: 92.14285714285714%
+3th iteration: Letters Correct: 97.82608695652173% | Words Correct: 92.14285714285714%
+
+After II with T5: Letters Correct: 97.82608695652173% | Words Correct: 92.14285714285714%
+Total time taken:  477.1008882522583
+11/06/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.20it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
+1th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
+2th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
+
+After II with T5: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
+Total time taken:  151.15249848365784
+11/07/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.92it/s]
+Belief Propagation iteration complete
+
+
+Error occured for date -  11/07/2023
+11/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Error occured for date -  11/08/2023
+11/09/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.26it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 99.47643979057592% | Words Correct: 97.36842105263158%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  77.03344345092773
+11/10/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.34it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.95287958115183% | Words Correct: 94.44444444444444%
+1th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.22222222222221%
+2th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.22222222222221%
+
+After II with T5: Letters Correct: 99.47643979057592% | Words Correct: 97.22222222222221%
+Total time taken:  65.01746654510498
+11/11/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.31it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  49.598729848861694
+11/12/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Error occured for date -  11/12/2023
+11/13/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.39it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.3957219251337% | Words Correct: 94.5945945945946%
+1th iteration: Letters Correct: 98.93048128342245% | Words Correct: 94.5945945945946%
+2th iteration: Letters Correct: 99.46524064171123% | Words Correct: 97.2972972972973%
+3th iteration: Letters Correct: 99.46524064171123% | Words Correct: 97.2972972972973%
+
+After II with T5: Letters Correct: 99.46524064171123% | Words Correct: 97.2972972972973%
+Total time taken:  144.1332676410675
+11/14/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.32it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  50.22243070602417
+11/15/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.61it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 97.2972972972973% | Words Correct: 89.47368421052632%
+1th iteration: Letters Correct: 96.21621621621622% | Words Correct: 85.52631578947368%
+2th iteration: Letters Correct: 95.67567567567568% | Words Correct: 84.21052631578947%
+3th iteration: Letters Correct: 95.67567567567568% | Words Correct: 84.21052631578947%
+
+After II with T5: Letters Correct: 95.67567567567568% | Words Correct: 84.21052631578947%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 97.2972972972973% | Words Correct: 89.47368421052632%
+Total time taken:  108.40088486671448
+11/16/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Error occured for date -  11/16/2023
+11/17/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.54it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 99.48186528497409% | Words Correct: 97.22222222222221%
+1th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.22222222222221%
+2th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.22222222222221%
+
+After II with T5: Letters Correct: 99.48186528497409% | Words Correct: 97.22222222222221%
+Total time taken:  118.50957369804382
+11/18/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.16it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 99.48186528497409% | Words Correct: 97.05882352941177%
+1th iteration: Letters Correct: 97.92746113989638% | Words Correct: 89.70588235294117%
+2th iteration: Letters Correct: 97.92746113989638% | Words Correct: 89.70588235294117%
+
+After II with T5: Letters Correct: 97.92746113989638% | Words Correct: 89.70588235294117%
+
+Reverting the changes due to worse output from second pass iterative handle. 
+
+
+Final Accuracy Stat: Letters Correct: 99.48186528497409% | Words Correct: 97.05882352941177%
+Total time taken:  81.34130358695984
+11/19/2023
+ERROR has occured.
+
+Error occured for date -  11/19/2023
+11/20/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Error occured for date -  11/20/2023
+11/21/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.06it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  50.21256160736084
+11/22/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.02it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 97.83783783783784% | Words Correct: 93.42105263157895%
+1th iteration: Letters Correct: 98.37837837837839% | Words Correct: 94.73684210526315%
+2th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.36842105263158%
+3th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  127.25972628593445
+11/23/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.47it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.91891891891892% | Words Correct: 95.83333333333334%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  99.52387356758118
+11/24/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.20it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  51.63758730888367
+11/25/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.99it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 96.8586387434555% | Words Correct: 88.23529411764706%
+1th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.05882352941177%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  90.81548738479614
+11/26/2023
+ERROR has occured.
+
+Error occured for date -  11/26/2023
+11/27/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.27it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  53.62056493759155
+11/28/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.73it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  51.42131948471069
+11/29/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.40it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  50.643083333969116
+11/30/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Error occured for date -  11/30/2023
+12/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.79it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  51.504443883895874
+12/02/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.23it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 97.96954314720813% | Words Correct: 90.0%
+1th iteration: Letters Correct: 99.49238578680203% | Words Correct: 97.14285714285714%
+2th iteration: Letters Correct: 99.49238578680203% | Words Correct: 97.14285714285714%
+
+After II with T5: Letters Correct: 99.49238578680203% | Words Correct: 97.14285714285714%
+Total time taken:  140.03985333442688
+12/03/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:20<00:00,  2.86it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.96373056994818% | Words Correct: 95.23809523809523%
+1th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.61904761904762%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  172.76937770843506
+12/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  6.68it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  50.123393297195435
+12/05/2023
+ERROR has occured.
+
+Error occured for date -  12/05/2023
+12/06/2023
+ERROR has occured.
+
+Error occured for date -  12/06/2023
+12/07/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.56it/s]
+Belief Propagation iteration complete
+
+
+Error occured for date -  12/07/2023
+12/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.10it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.34254143646409% | Words Correct: 91.93548387096774%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  167.24413990974426
+12/09/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.48it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 97.94871794871794% | Words Correct: 91.17647058823529%
+1th iteration: Letters Correct: 98.97435897435898% | Words Correct: 95.58823529411765%
+2th iteration: Letters Correct: 98.97435897435898% | Words Correct: 95.58823529411765%
+3th iteration: Letters Correct: 98.46153846153847% | Words Correct: 94.11764705882352%
+4th iteration: Letters Correct: 98.46153846153847% | Words Correct: 94.11764705882352%
+
+After II with T5: Letters Correct: 98.46153846153847% | Words Correct: 94.11764705882352%
+Total time taken:  241.41604685783386
+12/10/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:17<00:00,  3.38it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 97.21448467966573% | Words Correct: 91.42857142857143%
+1th iteration: Letters Correct: 97.49303621169916% | Words Correct: 92.14285714285714%
+2th iteration: Letters Correct: 97.7715877437326% | Words Correct: 93.57142857142857%
+3th iteration: Letters Correct: 97.7715877437326% | Words Correct: 93.57142857142857%
+4th iteration: Letters Correct: 98.32869080779945% | Words Correct: 94.28571428571428%
+5th iteration: Letters Correct: 98.88579387186628% | Words Correct: 96.42857142857143%
+6th iteration: Letters Correct: 98.88579387186628% | Words Correct: 96.42857142857143%
+
+After II with T5: Letters Correct: 98.88579387186628% | Words Correct: 96.42857142857143%
+Total time taken:  574.3470547199249
+12/11/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.30it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  56.394986391067505
+12/12/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.08it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  56.29921102523804
+12/13/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.67it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  55.308027505874634
+12/14/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.66it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  55.368088483810425
+12/15/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.98it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 90.9090909090909% | Words Correct: 84.72222222222221%
+1th iteration: Letters Correct: 91.44385026737967% | Words Correct: 86.11111111111111%
+2th iteration: Letters Correct: 92.51336898395722% | Words Correct: 86.11111111111111%
+3th iteration: Letters Correct: 93.58288770053476% | Words Correct: 86.11111111111111%
+4th iteration: Letters Correct: 94.6524064171123% | Words Correct: 88.88888888888889%
+5th iteration: Letters Correct: 94.6524064171123% | Words Correct: 88.88888888888889%
+
+After II with T5: Letters Correct: 94.6524064171123% | Words Correct: 88.88888888888889%
+Total time taken:  774.8076350688934
+12/16/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Error occured for date -  12/16/2023
+12/17/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Error occured for date -  12/17/2023
+12/18/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.12it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  56.324957609176636
+12/19/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.23it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 99.47089947089947% | Words Correct: 97.43589743589743%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  74.67173838615417
+12/20/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.33it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  55.87899684906006
+12/21/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.29it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.38709677419355% | Words Correct: 93.5064935064935%
+1th iteration: Letters Correct: 99.46236559139786% | Words Correct: 97.40259740259741%
+2th iteration: Letters Correct: 99.46236559139786% | Words Correct: 97.40259740259741%
+
+After II with T5: Letters Correct: 99.46236559139786% | Words Correct: 97.40259740259741%
+Total time taken:  102.73880910873413
+12/22/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.27it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 98.42931937172776% | Words Correct: 94.28571428571428%
+1th iteration: Letters Correct: 98.95287958115183% | Words Correct: 94.28571428571428%
+2th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.14285714285714%
+3th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.14285714285714%
+
+After II with T5: Letters Correct: 99.47643979057592% | Words Correct: 97.14285714285714%
+Total time taken:  148.01644897460938
+12/23/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:12<00:00,  4.68it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 99.5049504950495% | Words Correct: 97.05882352941177%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  117.5594482421875
+12/24/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Error occured for date -  12/24/2023
+12/25/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.79it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  55.18431258201599
+12/26/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.15it/s]
+Belief Propagation iteration complete
+
+
+Before II with T5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  58.42877960205078
