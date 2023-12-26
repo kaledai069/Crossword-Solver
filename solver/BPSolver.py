@@ -246,6 +246,7 @@ class BPSolver(Solver):
             grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
             _, accu_log = self.evaluate(grid, False)
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
+
             print(f"{i+1}th iteration: {accu_log}")
 
             # saving output results
@@ -253,13 +254,13 @@ class BPSolver(Solver):
             output_results['second pass model']['all letter accuracy'].append(temp_letter_accu)
             output_results['second pass model']['all word accuracy'].append(temp_word_accu)
 
-            if not did_iterative_improvement_make_edit:
+            if not did_iterative_improvement_make_edit or temp_letter_accu == 100.0:
                 break
             if return_ii_states:
                 all_grids.append(deepcopy(grid))
 
         _, accu_log = self.evaluate(grid, False)
-        print(f"\nAfter II with ByT5: {accu_log}")
+        print(f"\nAfter II with T5: {accu_log}")
 
         if temp_letter_accu < ori_letter_accu or temp_word_accu < ori_word_accu:
             print("\nReverting the changes due to worse output from second pass iterative handle. \n")
