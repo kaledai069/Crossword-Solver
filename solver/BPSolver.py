@@ -381,7 +381,7 @@ class BPSolver(Solver):
             letters = ''.join([grid[cell.position[0]][cell.position[1]] for cell in sorted(list(cells), key=lambda c: c.position)])
             clues.append(self.crossword.variables[clue]['clue'])
             answers.append(letters)
-        scores = t5_reranker_score_with_clue(self.reranker, self.tokenizer, clues, answers)
+        scores = t5_reranker_score_with_clue(self.reranker, self.tokenizer, self.reranker_model_type, clues, answers)
         return sum(scores)
     
     def greedy_sequential_word_solution(self, return_grids = False):

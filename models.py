@@ -8,6 +8,7 @@ import sys
 from typing import List, Tuple, Dict
 import re
 import math
+import copy
 import collections
 
 import numpy as np
@@ -24,7 +25,7 @@ from DPR.dpr.indexer.faiss_indexers import DenseIndexer, DenseFlatIndexer
 from DPR.dpr.utils.data_utils import Tensorizer
 from DPR.dpr.utils.model_utils import load_states_from_checkpoint, get_model_obj
 
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, T5ForConditionalGeneration, AutoTokenizer
+from transformers import T5ForConditionalGeneration, AutoTokenizer
 from segment_fill import segment_fill
 from wordsegment import load, segment
 load()
@@ -60,16 +61,20 @@ def post_process_clue(clue):
         clue = clue[:-1]
     return clue
 
-def t5_reranker_score_with_clue(model, tokenizer, clues, possibly_ungrammatical_fills):
+def t5_reranker_score_with_clue(model, tokenizer, model_type, clues, possibly_ungrammatical_fills):
     global RERANKER_CACHE
     results = []
     device = model.device
-
-    segmented_fills = []
-    for answer in possibly_ungrammatical_fills:
-        segmented_fills.append(" ".join(segment(answer.lower())))
     
-    for clue, possibly_ungrammatical_fill in zip(clues, segmented_fills):
+    fills = possibly_ungrammatical_fills.copy()
+
+    if model_type == 't5-small':
+        segmented_fills = []
+        for answer in possibly_ungrammatical_fills:
+            segmented_fills.append(" ".join(segment(answer.lower())))
+        fills = segmented_fills.copy()
+    
+    for clue, possibly_ungrammatical_fill in zip(clues, fills):
         clue = post_process_clue(clue)
 
         if clue + possibly_ungrammatical_fill in RERANKER_CACHE:
