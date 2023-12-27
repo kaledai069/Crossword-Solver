@@ -75,6 +75,10 @@ def t5_reranker_score_with_clue(model, tokenizer, model_type, clues, possibly_un
         fills = segmented_fills.copy()
     
     for clue, possibly_ungrammatical_fill in zip(clues, fills):
+        # possibly here is where the byt5 failed
+        if not possibly_ungrammatical_fill.islower():
+            possibly_ungrammatical_fill = possibly_ungrammatical_fill.lower()
+
         clue = post_process_clue(clue)
 
         if clue + possibly_ungrammatical_fill in RERANKER_CACHE:
