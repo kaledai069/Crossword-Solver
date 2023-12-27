@@ -233,7 +233,8 @@ class BPSolver(Solver):
         
         
         #loading the ByT5 reranker model
-        self.reranker, self.tokenizer = setup_t5_reranker(self.reranker_path, self.process_id, self.reranker_model_type)
+        print(self.reranker_model_type)
+        self.reranker, self.tokenizer = setup_t5_reranker(self.reranker_path, self.reranker_model_type)
         
         output_results['second pass model'] = {}
         output_results['second pass model']['all grids'] = []
