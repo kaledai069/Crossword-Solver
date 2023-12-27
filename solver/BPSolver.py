@@ -292,7 +292,7 @@ class BPSolver(Solver):
         for clue in uncertain_answers.keys():
             initial_word = uncertain_answers[clue]
             # print("INITIAL WORD: ", initial_word)
-            clue_flips = get_word_flips(initial_word, 15) # flip then segment
+            clue_flips = get_word_flips(initial_word, 10) # flip then segment
             # print(clue_flips)
             clue_positions = [key for key, value in self.crossword.variables.items() if value['clue'] == clue]
             # print(clue_positions)
@@ -468,7 +468,7 @@ class BPSolver(Solver):
                 # print('clue', self.crossword.variables[clue_index]['clue'])
             # print('original score:', original_grid_score, 'modified score:', modified_grid_score)
                 
-            if modified_grid_score - original_grid_score > 0.35:
+            if modified_grid_score - original_grid_score > 0.50:
                 # print('found a possible edit')
                 possible_edits.append((modified_grid, modified_grid_score, replacements))
             # print()
