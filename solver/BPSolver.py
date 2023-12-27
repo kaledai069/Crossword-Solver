@@ -137,6 +137,7 @@ class BPSolver(Solver):
                  ans_tsv_path,
                  dense_embd_path,
                  reranker_path,
+                 reranker_model_type = 't5-small',
                  max_candidates = 40000,
                  process_id=0,
                  **kwargs):
@@ -149,6 +150,7 @@ class BPSolver(Solver):
                          **kwargs)
         self.crossword = crossword
         self.reranker_path = reranker_path
+        self.reranker_model_type = reranker_model_type
          # our answer set
         self.answer_set = set()
         with open(ans_tsv_path, 'r') as rf: 
@@ -231,7 +233,7 @@ class BPSolver(Solver):
         
         
         #loading the ByT5 reranker model
-        self.reranker, self.tokenizer = setup_t5_reranker(self.reranker_path, self.process_id)
+        self.reranker, self.tokenizer = setup_t5_reranker(self.reranker_path, self.process_id, self.reranker_model_type)
         
         output_results['second pass model'] = {}
         output_results['second pass model']['all grids'] = []

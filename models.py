@@ -24,7 +24,7 @@ from DPR.dpr.indexer.faiss_indexers import DenseIndexer, DenseFlatIndexer
 from DPR.dpr.utils.data_utils import Tensorizer
 from DPR.dpr.utils.model_utils import load_states_from_checkpoint, get_model_obj
 
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, T5ForConditionalGeneration, AutoTokenizer, BartTokenizer, BartForConditionalGeneration
+from transformers import GPT2LMHeadModel, GPT2Tokenizer, T5ForConditionalGeneration, AutoTokenizer
 from segment_fill import segment_fill
 from wordsegment import load, segment
 load()
@@ -42,11 +42,9 @@ def setup_closedbook(model_path, ans_tsv_path, dense_embd_path, process_id):
     )
     return dpr
 
-def setup_t5_reranker(reranker_path, process_id):
-    # tokenizer = AutoTokenizer.from_pretrained('t5-small')
-    # model = T5ForConditionalGeneration.from_pretrained(reranker_path)
-    tokenizer = BartTokenizer.from_pretrained('facebook/bart-base')
-    model = BartForConditionalGeneration.from_pretrained(reranker_path)
+def setup_t5_reranker(reranker_path, process_id, model_type = 't5-small'):
+    tokenizer = AutoTokenizer.from_pretrained(model_type)
+    model = T5ForConditionalGeneration.from_pretrained(reranker_path)
     model.eval().to(torch.device('cuda' if torch.cuda.is_available() else 'cpu')) # .eval() -> Inference Mode
     return model, tokenizer
 
