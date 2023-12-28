@@ -3,43 +3,19 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = do_l
 WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
 WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
-config.json: 100%
-483/483 [00:00<00:00, 13.4kB/s]
-model.safetensors: 100%
-268M/268M [00:01<00:00, 156MB/s]
-tokenizer_config.json: 100%
-28.0/28.0 [00:00<00:00, 876B/s]
-vocab.txt: 100%
-232k/232k [00:00<00:00, 8.08MB/s]
-tokenizer.json: 100%
-466k/466k [00:00<00:00, 7.40MB/s]
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:07<00:00,  7.55it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.37it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 98.42931937172776% | Words Correct: 93.42105263157895%
 google/byt5-small
-tokenizer_config.json: 100%
-2.59k/2.59k [00:00<00:00, 160kB/s]
-config.json: 100%
-698/698 [00:00<00:00, 44.7kB/s]
-special_tokens_map.json: 100%
-2.50k/2.50k [00:00<00:00, 114kB/s]
-1th iteration: Letters Correct: 96.33507853403141% | Words Correct: 85.52631578947368%
-2th iteration: Letters Correct: 96.8586387434555% | Words Correct: 86.8421052631579%
-3th iteration: Letters Correct: 96.33507853403141% | Words Correct: 85.52631578947368%
-4th iteration: Letters Correct: 95.81151832460732% | Words Correct: 84.21052631578947%
-5th iteration: Letters Correct: 95.28795811518324% | Words Correct: 84.21052631578947%
-6th iteration: Letters Correct: 95.28795811518324% | Words Correct: 84.21052631578947%
+1th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.36842105263158%
+2th iteration: Letters Correct: 98.42931937172776% | Words Correct: 93.42105263157895%
+3th iteration: Letters Correct: 98.42931937172776% | Words Correct: 93.42105263157895%
 
-After II with T5: Letters Correct: 95.28795811518324% | Words Correct: 84.21052631578947%
-
-Reverting the changes due to worse output from second pass iterative handle. 
-
-
-Final Accuracy Stat: Letters Correct: 98.42931937172776% | Words Correct: 93.42105263157895%
+After II with T5: Letters Correct: 98.42931937172776% | Words Correct: 93.42105263157895%
 
 11/02/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -48,17 +24,15 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.89it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  6.84it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 98.91891891891892% | Words Correct: 96.05263157894737%
 google/byt5-small
-1th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.36842105263158%
-2th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.36842105263158%
-3th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.36842105263158%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 99.45945945945947% | Words Correct: 97.36842105263158%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 11/03/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -67,7 +41,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.95it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.34it/s]
 Belief Propagation iteration complete
 
 
@@ -84,15 +58,16 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.51it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  6.80it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 97.88359788359789% | Words Correct: 89.39393939393939%
 google/byt5-small
-1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+1th iteration: Letters Correct: 99.47089947089947% | Words Correct: 96.96969696969697%
+2th iteration: Letters Correct: 99.47089947089947% | Words Correct: 96.96969696969697%
 
-After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+After II with T5: Letters Correct: 99.47089947089947% | Words Correct: 96.96969696969697%
 
 11/05/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -101,16 +76,18 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:17<00:00,  3.44it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:17<00:00,  3.51it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 96.19565217391305% | Words Correct: 88.57142857142857%
 google/byt5-small
-1th iteration: Letters Correct: 97.82608695652173% | Words Correct: 92.14285714285714%
-2th iteration: Letters Correct: 99.18478260869566% | Words Correct: 96.42857142857143%
-3th iteration: Letters Correct: 99.72826086956522% | Words Correct: 98.57142857142858%
-4th iteration: Letters Correct: 99.72826086956522% | Words Correct: 98.57142857142858%
+1th iteration: Letters Correct: 97.55434782608695% | Words Correct: 92.14285714285714%
+2th iteration: Letters Correct: 98.36956521739131% | Words Correct: 95.0%
+3th iteration: Letters Correct: 98.91304347826086% | Words Correct: 95.71428571428572%
+4th iteration: Letters Correct: 99.18478260869566% | Words Correct: 96.42857142857143%
+5th iteration: Letters Correct: 99.72826086956522% | Words Correct: 98.57142857142858%
+6th iteration: Letters Correct: 99.72826086956522% | Words Correct: 98.57142857142858%
 
 After II with T5: Letters Correct: 99.72826086956522% | Words Correct: 98.57142857142858%
 
@@ -121,16 +98,15 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.72it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.20it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
 google/byt5-small
-1th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
-2th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 11/07/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -139,7 +115,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  6.68it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.25it/s]
 Belief Propagation iteration complete
 
 An error has occured in 11/07/2023.
@@ -158,7 +134,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.15it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.75it/s]
 Belief Propagation iteration complete
 
 
@@ -175,7 +151,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.96it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.45it/s]
 Belief Propagation iteration complete
 
 
@@ -213,17 +189,17 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.43it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.29it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 98.3957219251337% | Words Correct: 94.5945945945946%
 google/byt5-small
-1th iteration: Letters Correct: 98.3957219251337% | Words Correct: 91.8918918918919%
-2th iteration: Letters Correct: 98.93048128342245% | Words Correct: 94.5945945945946%
-3th iteration: Letters Correct: 98.93048128342245% | Words Correct: 94.5945945945946%
+1th iteration: Letters Correct: 98.93048128342245% | Words Correct: 94.5945945945946%
+2th iteration: Letters Correct: 99.46524064171123% | Words Correct: 97.2972972972973%
+3th iteration: Letters Correct: 99.46524064171123% | Words Correct: 97.2972972972973%
 
-After II with T5: Letters Correct: 98.93048128342245% | Words Correct: 94.5945945945946%
+After II with T5: Letters Correct: 99.46524064171123% | Words Correct: 97.2972972972973%
 
 11/14/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -232,7 +208,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.20it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.04it/s]
 Belief Propagation iteration complete
 
 
@@ -245,21 +221,17 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.25it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.57it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 97.2972972972973% | Words Correct: 89.47368421052632%
 google/byt5-small
-1th iteration: Letters Correct: 97.2972972972973% | Words Correct: 88.1578947368421%
-2th iteration: Letters Correct: 97.2972972972973% | Words Correct: 88.1578947368421%
+1th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
+2th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.36842105263158%
+3th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.36842105263158%
 
-After II with T5: Letters Correct: 97.2972972972973% | Words Correct: 88.1578947368421%
-
-Reverting the changes due to worse output from second pass iterative handle. 
-
-
-Final Accuracy Stat: Letters Correct: 97.2972972972973% | Words Correct: 89.47368421052632%
+After II with T5: Letters Correct: 99.45945945945947% | Words Correct: 97.36842105263158%
 
 11/16/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -275,16 +247,15 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.18it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.97it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 99.48186528497409% | Words Correct: 97.22222222222221%
 google/byt5-small
-1th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.22222222222221%
-2th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.22222222222221%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 99.48186528497409% | Words Correct: 97.22222222222221%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 11/18/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -293,21 +264,15 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.20it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.50it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 99.48186528497409% | Words Correct: 97.05882352941177%
 google/byt5-small
-1th iteration: Letters Correct: 98.96373056994818% | Words Correct: 94.11764705882352%
-2th iteration: Letters Correct: 98.96373056994818% | Words Correct: 94.11764705882352%
+1th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.05882352941177%
 
-After II with T5: Letters Correct: 98.96373056994818% | Words Correct: 94.11764705882352%
-
-Reverting the changes due to worse output from second pass iterative handle. 
-
-
-Final Accuracy Stat: Letters Correct: 99.48186528497409% | Words Correct: 97.05882352941177%
+After II with T5: Letters Correct: 99.48186528497409% | Words Correct: 97.05882352941177%
 
 11/19/2023
 ERROR has occured.
@@ -327,7 +292,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.23it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.13it/s]
 Belief Propagation iteration complete
 
 
@@ -340,23 +305,18 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.91it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  6.80it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 97.83783783783784% | Words Correct: 93.42105263157895%
 google/byt5-small
-1th iteration: Letters Correct: 98.37837837837839% | Words Correct: 94.73684210526315%
-2th iteration: Letters Correct: 97.83783783783784% | Words Correct: 93.42105263157895%
-3th iteration: Letters Correct: 97.2972972972973% | Words Correct: 92.10526315789474%
-4th iteration: Letters Correct: 97.2972972972973% | Words Correct: 92.10526315789474%
+1th iteration: Letters Correct: 98.91891891891892% | Words Correct: 94.73684210526315%
+2th iteration: Letters Correct: 98.91891891891892% | Words Correct: 96.05263157894737%
+3th iteration: Letters Correct: 98.37837837837839% | Words Correct: 94.73684210526315%
+4th iteration: Letters Correct: 98.37837837837839% | Words Correct: 94.73684210526315%
 
-After II with T5: Letters Correct: 97.2972972972973% | Words Correct: 92.10526315789474%
-
-Reverting the changes due to worse output from second pass iterative handle. 
-
-
-Final Accuracy Stat: Letters Correct: 97.83783783783784% | Words Correct: 93.42105263157895%
+After II with T5: Letters Correct: 98.37837837837839% | Words Correct: 94.73684210526315%
 
 11/23/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -365,17 +325,15 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.88it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  6.73it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 98.91891891891892% | Words Correct: 95.83333333333334%
 google/byt5-small
-1th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.22222222222221%
-2th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.22222222222221%
-3th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.22222222222221%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 99.45945945945947% | Words Correct: 97.22222222222221%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 11/24/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -384,7 +342,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.30it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.87it/s]
 Belief Propagation iteration complete
 
 
@@ -397,17 +355,16 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.07it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.88it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 96.8586387434555% | Words Correct: 88.23529411764706%
 google/byt5-small
-1th iteration: Letters Correct: 98.42931937172776% | Words Correct: 92.64705882352942%
-2th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.05882352941177%
-3th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.05882352941177%
+1th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.05882352941177%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 99.47643979057592% | Words Correct: 97.05882352941177%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 11/26/2023
 ERROR has occured.
@@ -420,7 +377,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.75it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.50it/s]
 Belief Propagation iteration complete
 
 
@@ -433,7 +390,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.02it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.80it/s]
 Belief Propagation iteration complete
 
 
@@ -446,7 +403,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.57it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.76it/s]
 Belief Propagation iteration complete
 
 
@@ -466,7 +423,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.40it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.02it/s]
 Belief Propagation iteration complete
 
 
@@ -485,18 +442,9 @@ Belief Propagation iteration complete
 
 Before II with T5-small: Letters Correct: 97.96954314720813% | Words Correct: 90.0%
 google/byt5-small
-1th iteration: Letters Correct: 98.47715736040608% | Words Correct: 91.42857142857143%
-2th iteration: Letters Correct: 96.95431472081218% | Words Correct: 87.14285714285714%
-3th iteration: Letters Correct: 96.44670050761421% | Words Correct: 85.71428571428571%
-4th iteration: Letters Correct: 96.95431472081218% | Words Correct: 87.14285714285714%
-5th iteration: Letters Correct: 96.95431472081218% | Words Correct: 87.14285714285714%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 96.95431472081218% | Words Correct: 87.14285714285714%
-
-Reverting the changes due to worse output from second pass iterative handle. 
-
-
-Final Accuracy Stat: Letters Correct: 97.96954314720813% | Words Correct: 90.0%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 12/03/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -505,19 +453,16 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:20<00:00,  2.96it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:19<00:00,  3.02it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 98.96373056994818% | Words Correct: 95.23809523809523%
 google/byt5-small
 1th iteration: Letters Correct: 99.74093264248705% | Words Correct: 98.4126984126984%
-2th iteration: Letters Correct: 99.74093264248705% | Words Correct: 98.4126984126984%
-3th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.61904761904762%
-4th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.61904761904762%
-5th iteration: Letters Correct: 99.48186528497409% | Words Correct: 97.61904761904762%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 99.48186528497409% | Words Correct: 97.61904761904762%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 12/04/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -526,7 +471,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  6.97it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.52it/s]
 Belief Propagation iteration complete
 
 
@@ -547,7 +492,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.16it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.46it/s]
 Belief Propagation iteration complete
 
 An error has occured in 12/07/2023.
@@ -559,21 +504,16 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  7.23it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:08<00:00,  6.81it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 98.34254143646409% | Words Correct: 91.93548387096774%
 google/byt5-small
-1th iteration: Letters Correct: 96.13259668508287% | Words Correct: 85.48387096774194%
-2th iteration: Letters Correct: 96.13259668508287% | Words Correct: 85.48387096774194%
+1th iteration: Letters Correct: 98.89502762430939% | Words Correct: 95.16129032258065%
+2th iteration: Letters Correct: 98.89502762430939% | Words Correct: 95.16129032258065%
 
-After II with T5: Letters Correct: 96.13259668508287% | Words Correct: 85.48387096774194%
-
-Reverting the changes due to worse output from second pass iterative handle. 
-
-
-Final Accuracy Stat: Letters Correct: 98.34254143646409% | Words Correct: 91.93548387096774%
+After II with T5: Letters Correct: 98.89502762430939% | Words Correct: 95.16129032258065%
 
 12/09/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -582,21 +522,18 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.43it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.84it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 97.94871794871794% | Words Correct: 91.17647058823529%
 google/byt5-small
-1th iteration: Letters Correct: 96.92307692307692% | Words Correct: 88.23529411764706%
-2th iteration: Letters Correct: 96.92307692307692% | Words Correct: 88.23529411764706%
+1th iteration: Letters Correct: 98.46153846153847% | Words Correct: 94.11764705882352%
+2th iteration: Letters Correct: 98.46153846153847% | Words Correct: 94.11764705882352%
+3th iteration: Letters Correct: 98.46153846153847% | Words Correct: 94.11764705882352%
+4th iteration: Letters Correct: 98.46153846153847% | Words Correct: 94.11764705882352%
 
-After II with T5: Letters Correct: 96.92307692307692% | Words Correct: 88.23529411764706%
-
-Reverting the changes due to worse output from second pass iterative handle. 
-
-
-Final Accuracy Stat: Letters Correct: 97.94871794871794% | Words Correct: 91.17647058823529%
+After II with T5: Letters Correct: 98.46153846153847% | Words Correct: 94.11764705882352%
 
 12/10/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -605,17 +542,18 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:17<00:00,  3.45it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:18<00:00,  3.32it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 97.21448467966573% | Words Correct: 91.42857142857143%
 google/byt5-small
-1th iteration: Letters Correct: 97.7715877437326% | Words Correct: 92.14285714285714%
+1th iteration: Letters Correct: 98.32869080779945% | Words Correct: 95.0%
 2th iteration: Letters Correct: 99.16434540389972% | Words Correct: 96.42857142857143%
-3th iteration: Letters Correct: 99.16434540389972% | Words Correct: 96.42857142857143%
+3th iteration: Letters Correct: 99.72144846796658% | Words Correct: 98.57142857142858%
+4th iteration: Letters Correct: 99.72144846796658% | Words Correct: 98.57142857142858%
 
-After II with T5: Letters Correct: 99.16434540389972% | Words Correct: 96.42857142857143%
+After II with T5: Letters Correct: 99.72144846796658% | Words Correct: 98.57142857142858%
 
 12/11/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -624,7 +562,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.49it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.42it/s]
 Belief Propagation iteration complete
 
 
@@ -637,7 +575,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.46it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.41it/s]
 Belief Propagation iteration complete
 
 
@@ -650,7 +588,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.08it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.84it/s]
 Belief Propagation iteration complete
 
 
@@ -663,7 +601,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.57it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.32it/s]
 Belief Propagation iteration complete
 
 
@@ -676,24 +614,20 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.89it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.60it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 90.9090909090909% | Words Correct: 84.72222222222221%
 google/byt5-small
-1th iteration: Letters Correct: 90.37433155080214% | Words Correct: 81.94444444444444%
-2th iteration: Letters Correct: 89.3048128342246% | Words Correct: 79.16666666666666%
-3th iteration: Letters Correct: 89.3048128342246% | Words Correct: 80.55555555555556%
-4th iteration: Letters Correct: 88.77005347593582% | Words Correct: 80.55555555555556%
-5th iteration: Letters Correct: 87.70053475935828% | Words Correct: 79.16666666666666%
-6th iteration: Letters Correct: 88.23529411764706% | Words Correct: 79.16666666666666%
-7th iteration: Letters Correct: 87.16577540106952% | Words Correct: 77.77777777777779%
-8th iteration: Letters Correct: 87.16577540106952% | Words Correct: 77.77777777777779%
-9th iteration: Letters Correct: 87.70053475935828% | Words Correct: 79.16666666666666%
-10th iteration: Letters Correct: 87.70053475935828% | Words Correct: 79.16666666666666%
+1th iteration: Letters Correct: 90.37433155080214% | Words Correct: 83.33333333333334%
+2th iteration: Letters Correct: 90.9090909090909% | Words Correct: 83.33333333333334%
+3th iteration: Letters Correct: 90.9090909090909% | Words Correct: 83.33333333333334%
+4th iteration: Letters Correct: 90.37433155080214% | Words Correct: 81.94444444444444%
+5th iteration: Letters Correct: 89.3048128342246% | Words Correct: 80.55555555555556%
+6th iteration: Letters Correct: 89.3048128342246% | Words Correct: 80.55555555555556%
 
-After II with T5: Letters Correct: 87.70053475935828% | Words Correct: 79.16666666666666%
+After II with T5: Letters Correct: 89.3048128342246% | Words Correct: 80.55555555555556%
 
 Reverting the changes due to worse output from second pass iterative handle. 
 
@@ -721,7 +655,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.61it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.73it/s]
 Belief Propagation iteration complete
 
 
@@ -734,16 +668,15 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.13it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.25it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 99.47089947089947% | Words Correct: 97.43589743589743%
 google/byt5-small
-1th iteration: Letters Correct: 99.47089947089947% | Words Correct: 97.43589743589743%
-2th iteration: Letters Correct: 99.47089947089947% | Words Correct: 97.43589743589743%
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 99.47089947089947% | Words Correct: 97.43589743589743%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 12/20/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -752,7 +685,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.82it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.18it/s]
 Belief Propagation iteration complete
 
 
@@ -765,7 +698,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.19it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.81it/s]
 Belief Propagation iteration complete
 
 
@@ -783,24 +716,16 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:09<00:00,  6.35it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.71it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 98.42931937172776% | Words Correct: 94.28571428571428%
 google/byt5-small
-1th iteration: Letters Correct: 98.42931937172776% | Words Correct: 92.85714285714286%
-2th iteration: Letters Correct: 97.90575916230367% | Words Correct: 94.28571428571428%
-3th iteration: Letters Correct: 97.38219895287958% | Words Correct: 92.85714285714286%
-4th iteration: Letters Correct: 97.38219895287958% | Words Correct: 92.85714285714286%
-5th iteration: Letters Correct: 97.38219895287958% | Words Correct: 92.85714285714286%
+1th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.14285714285714%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
 
-After II with T5: Letters Correct: 97.38219895287958% | Words Correct: 92.85714285714286%
-
-Reverting the changes due to worse output from second pass iterative handle. 
-
-
-Final Accuracy Stat: Letters Correct: 98.42931937172776% | Words Correct: 94.28571428571428%
+After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
 
 12/23/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -809,15 +734,16 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.69it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.58it/s]
 Belief Propagation iteration complete
 
 
 Before II with T5-small: Letters Correct: 99.5049504950495% | Words Correct: 97.05882352941177%
 google/byt5-small
-1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+1th iteration: Letters Correct: 99.5049504950495% | Words Correct: 97.05882352941177%
+2th iteration: Letters Correct: 99.5049504950495% | Words Correct: 97.05882352941177%
 
-After II with T5: Letters Correct: 100.0% | Words Correct: 100.0%
+After II with T5: Letters Correct: 99.5049504950495% | Words Correct: 97.05882352941177%
 
 12/24/2023
 WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
@@ -833,7 +759,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.97it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.85it/s]
 Belief Propagation iteration complete
 
 
@@ -846,7 +772,7 @@ WARNING:root:Overriding args parameter value from checkpoint state. Param = enco
 WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
 
 Beginning Belief Propagation iteration steps
-100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.55it/s]
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.36it/s]
 Belief Propagation iteration complete
 
 
