@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 
-WORKERS = 4
+WORKERS = 16
 SKIPDAY = 1
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
 PORTALS = [
@@ -46,12 +46,13 @@ CURRENT_PORTAL = 0
 crossword_data = []
 
 # starting and ending dates
-start_date = datetime.date(2023, 12, 28)
+start_date = datetime.date(2023, 7, 1)
 end_date = datetime.date(2023, 12, 28)
 
 # base_outline_url
 base_url = "https://crossword-solver.io/crossword-answers/" + PORTALS[CURRENT_PORTAL] + '/'
 
+print(CURRENT_PORTAL, PORTALS[CURRENT_PORTAL])
 
 def download_crossword_data(date):
     # Format the date in the required format
@@ -59,8 +60,6 @@ def download_crossword_data(date):
 
     # Build the complete URL
     url = base_url + formatted_date + "-answers/"
-
-    print(url)
 
     try:
         # Send a GET request to the URL with SSL verification
