@@ -44,7 +44,7 @@ def setup_closedbook(model_path, ans_tsv_path, dense_embd_path, process_id):
     return dpr
 
 def setup_t5_reranker(reranker_path, reranker_model_type = 't5-small'):
-    tokenizer = AutoTokenizer.from_pretrained('google/byt5-small')
+    tokenizer = AutoTokenizer.from_pretrained(reranker_model_type)
     model = T5ForConditionalGeneration.from_pretrained(reranker_path)
     model.eval().to(torch.device('cuda' if torch.cuda.is_available() else 'cpu')) # .eval() -> Inference Mode
     return model, tokenizer
