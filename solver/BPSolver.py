@@ -284,34 +284,80 @@ class BPSolver(Solver):
 
         first_pass_grid = deepcopy(original_grid_solution)
         second_pass_grid = output_results['second pass model']['final grid']
-        
-        # find the changed cells
+        did_some_improvement = False
+
         possible_wrong_cell_list = []
-        print("Crossword Size:", self.crossword.size)
-        
         for i in range(self.crossword.size[0]):
             for j in range(self.crossword.size[1]):
                 if first_pass_grid[i][j] != second_pass_grid[i][j]:
-                    possible_wrong_cell_list.append([(i, j), first_pass_grid[i][j], second_pass_grid[i][j]])
-        
-        # best second pass grid solution overall grid score for initial reference
-        second_pass_grid_score = self.score_grid(second_pass_grid)
-        
-        temp_grid = deepcopy(second_pass_grid)
-        did_some_improvement = False
+                    possible_wrong_cell_list.append([(i, j), first_pass_grid[i][j], second_pass_grid[i][j]])    
+
+        improvement_cells = {}
         for wrong_cell in possible_wrong_cell_list:
+            cell_position = wrong_cell[0]
+
+            improvement_cells[cell_position] = {}
+            improvement_cells[cell_position]['fillings'] = []
+            improvement_cells[cell_position]['cells'] = []
+            improvement_cells[cell_position]['clues'] = []
+            
+            improvement_cells[cell_position]['f_pass value'] = wrong_cell[1]
+            improvement_cells[cell_position]['s_pass value'] = wrong_cell[2]
+            for key, var in self.crossword.variables.items():
+                if cell_position in var['cells']:
+                    improvement_cells[cell_position]['fillings'].append(key)
+                    improvement_cells[cell_position]['cells'].append(var['cells'])
+                    improvement_cells[cell_position]['clues'].append(var['clue'])
+            
+        improvement_captures = {}
+
+        temp_grid = deepcopy(second_pass_grid)
+        for pos, data in improvement_cells.items():
+            improvement_captures[pos] = []
             before_improvement_grid = deepcopy(temp_grid)
 
-            to_edit_with = wrong_cell[1]
-            temp_grid[wrong_cell[0][0]][wrong_cell[0][1]] = to_edit_with
-            modified_grid_score = self.score_grid(temp_grid)
-            print(f"Before Refinement Score: {second_pass_grid_score}\nModified Grid Score: {modified_grid_score}")
-            if (modified_grid_score - second_pass_grid_score) > self.score_improvement_threshold:
-                second_pass_grid_score = modified_grid_score
+            for i, answer_pos in enumerate(data['cells']):
+                previous_ans = self.get_grid_ans(answer_pos, before_improvement_grid)
+
+                temp_grid[pos[0]][pos[1]] = data['f_pass value']
+                new_ans = self.get_grid_ans(answer_pos, temp_grid)
+
+                improvement_captures[pos].append([data['clues'][i], (previous_ans, new_ans)])
+            
+            if self.do_improve(improvement_captures[pos], self.reranker, self.tokenizer):
                 did_some_improvement = True
             else:
                 temp_grid = deepcopy(before_improvement_grid)
+    
 
+        '''
+        # # find the changed cells
+        # possible_wrong_cell_list = []
+        # print("Crossword Size:", self.crossword.size)
+
+        # for i in range(self.crossword.size[0]):
+        #     for j in range(self.crossword.size[1]):
+        #         if first_pass_grid[i][j] != second_pass_grid[i][j]:
+        #             possible_wrong_cell_list.append([(i, j), first_pass_grid[i][j], second_pass_grid[i][j]])
+        
+        # # best second pass grid solution overall grid score for initial reference
+        # second_pass_grid_score = self.score_grid(second_pass_grid)
+        
+        # temp_grid = deepcopy(second_pass_grid)
+        # did_some_improvement = False
+        # for wrong_cell in possible_wrong_cell_list:
+        #     before_improvement_grid = deepcopy(temp_grid)
+
+        #     to_edit_with = wrong_cell[1]
+        #     temp_grid[wrong_cell[0][0]][wrong_cell[0][1]] = to_edit_with
+        #     modified_grid_score = self.score_grid(temp_grid)
+        #     print(f"Before Refinement Score: {second_pass_grid_score}\nModified Grid Score: {modified_grid_score}")
+        #     if (modified_grid_score - second_pass_grid_score) > self.score_improvement_threshold:
+        #         second_pass_grid_score = modified_grid_score
+        #         did_some_improvement = True
+        #     else:
+        #         temp_grid = deepcopy(before_improvement_grid)
+        '''
         if did_some_improvement:
             output_results['second pass model']['last grid'] = temp_grid
             _, accu_log = self.evaluate(temp_grid, False)
@@ -323,6 +369,31 @@ class BPSolver(Solver):
             return output_results, all_grids
         else:
             return output_results
+    
+    def do_improve(refinement_list, model, tokenizer):
+        improvement_count = 0
+        for data in refinement_list:
+            clue = data[0]
+            ans_pair = data[1]
+            input = tokenizer(["Q: " + clue], return_tensors = 'pt')['input_ids']
+            label_b = tokenizer([ans_pair[0].lower()], return_tensors = 'pt')['input_ids']
+            label_a = tokenizer([ans_pair[1].lower()], return_tensors = 'pt')['input_ids']
+
+            output_b = model(input, labels = label_b)
+            loss_b = -output_b.loss.item() * len(ans_pair[0])
+
+            output_a = model(input, labels = label_a)
+            loss_a = -output_a.loss.item() * len(ans_pair[0])
+
+            if loss_a > loss_b:
+                improvement_count += 1
+
+        return improvement_count == 2
+    def get_grid_ans(self, ans_positions, grid):
+        word = ''
+        for pos in ans_positions:
+            word += grid[pos[0]][pos[1]]
+        return word
 
     def get_candidate_replacements(self, uncertain_answers, grid):
         # find alternate answers for all the uncertain words
