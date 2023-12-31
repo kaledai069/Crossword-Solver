@@ -389,7 +389,7 @@ class BPSolver(Solver):
                 improvement_count += 1
 
         return improvement_count == 2
-    ``
+    
     def get_grid_ans(self, ans_positions, grid):
         word = ''
         for pos in ans_positions:
