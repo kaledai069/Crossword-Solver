@@ -370,7 +370,7 @@ class BPSolver(Solver):
         else:
             return output_results
     
-    def do_improve(refinement_list, model, tokenizer):
+    def do_improve(self, refinement_list, model, tokenizer):
         improvement_count = 0
         for data in refinement_list:
             clue = data[0]
@@ -389,6 +389,7 @@ class BPSolver(Solver):
                 improvement_count += 1
 
         return improvement_count == 2
+    ``
     def get_grid_ans(self, ans_positions, grid):
         word = ''
         for pos in ans_positions:
