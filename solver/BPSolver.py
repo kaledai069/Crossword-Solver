@@ -139,6 +139,7 @@ class BPSolver(Solver):
                  reranker_path,
                  reranker_model_type = 't5-small',
                  max_candidates = 40000,
+                 score_improvement_threshold = 0.5,
                  process_id=0,
                  **kwargs):
         super().__init__(crossword,
@@ -151,6 +152,8 @@ class BPSolver(Solver):
         self.crossword = crossword
         self.reranker_path = reranker_path
         self.reranker_model_type = reranker_model_type
+        self.score_improvement_threshold = score_improvement_threshold
+
          # our answer set
         self.answer_set = set()
         with open(ans_tsv_path, 'r') as rf: 
@@ -468,7 +471,7 @@ class BPSolver(Solver):
                 # print('clue', self.crossword.variables[clue_index]['clue'])
             # print('original score:', original_grid_score, 'modified score:', modified_grid_score)
                 
-            if modified_grid_score - original_grid_score > 0.50:
+            if modified_grid_score - original_grid_score > self.score_improvement_threshold:
                 # print('found a possible edit')
                 possible_edits.append((modified_grid, modified_grid_score, replacements))
             # print()
