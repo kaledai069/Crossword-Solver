@@ -5,7 +5,7 @@ import math
 from wordsegment import load, segment, clean
 load()
 
-dictionary = set([a.strip() for a in open('solver/new_words_alpha.txt','r').readlines()])
+dictionary = set([a.strip() for a in open('solver/words_alpha.txt','r').readlines()])
 
 def num_words(fill):
     '''segment the text into multiple words and count how many words the text has in total'''
