@@ -279,12 +279,16 @@ class BPSolver(Solver):
         output_results['second pass model']['final grid'] = output_results['second pass model']['all grids'][ii_max_index]
         output_results['second pass model']['final letter'] = output_results['second pass model']['all letter accuracy'][ii_max_index]
         output_results['second pass model']['final word'] = output_results['second pass model']['all word accuracy'][ii_max_index]
+        
+        print("\nStarting last refinement step: ")
 
         first_pass_grid = deepcopy(original_grid_solution)
         second_pass_grid = output_results['second pass model']['final grid']
         
         # find the changed cells
         possible_wrong_cell_list = []
+        print("Crossword Size:", self.crossword.size)
+        
         for i in range(self.crossword.size[0]):
             for j in range(self.crossword.size[1]):
                 if first_pass_grid[i][j] != second_pass_grid[i][j]:
@@ -301,7 +305,7 @@ class BPSolver(Solver):
             to_edit_with = wrong_cell[1]
             temp_grid[wrong_cell[0][0]][wrong_cell[0][1]] = to_edit_with
             modified_grid_score = self.score_grid(temp_grid)
-
+            print(f"Before Refinement Score: {second_pass_grid_score}\nModified Grid Score: {modified_grid_score}")
             if (modified_grid_score - second_pass_grid_score) > self.score_improvement_threshold:
                 second_pass_grid_score = modified_grid_score
                 did_some_improvement = True
