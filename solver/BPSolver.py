@@ -222,7 +222,6 @@ class BPSolver(Solver):
         output_results['first pass model']['letter accuracy'] = ori_letter_accu
         output_results['first pass model']['word accuracy'] = ori_word_accu
 
-
         original_grid_solution = deepcopy(grid)
 
         print(f"\nBefore II with T5-small: {accu_log}")
@@ -280,6 +279,41 @@ class BPSolver(Solver):
         output_results['second pass model']['final grid'] = output_results['second pass model']['all grids'][ii_max_index]
         output_results['second pass model']['final letter'] = output_results['second pass model']['all letter accuracy'][ii_max_index]
         output_results['second pass model']['final word'] = output_results['second pass model']['all word accuracy'][ii_max_index]
+
+        first_pass_grid = deepcopy(original_grid_solution)
+        second_pass_grid = output_results['second pass model']['final grid']
+        
+        # find the changed cells
+        possible_wrong_cell_list = []
+        for i in range(self.crossword.size[0]):
+            for j in range(self.crossword.size[1]):
+                if first_pass_grid[i][j] != second_pass_grid[i][j]:
+                    possible_wrong_cell_list.append([(i, j), first_pass_grid[i][j], second_pass_grid[i][j]])
+        
+        # best second pass grid solution overall grid score for initial reference
+        second_pass_grid_score = self.score_grid(second_pass_grid)
+        
+        temp_grid = deepcopy(second_pass_grid)
+        did_some_improvement = False
+        for wrong_cell in possible_wrong_cell_list:
+            before_improvement_grid = deepcopy(temp_grid)
+
+            to_edit_with = wrong_cell[1]
+            temp_grid[wrong_cell[0][0]][wrong_cell[0][1]] = to_edit_with
+            modified_grid_score = self.score_grid(temp_grid)
+
+            if (modified_grid_score - second_pass_grid_score) > self.score_improvement_threshold:
+                second_pass_grid_score = modified_grid_score
+                did_some_improvement = True
+            else:
+                temp_grid = deepcopy(before_improvement_grid)
+
+        if did_some_improvement:
+            output_results['second pass model']['last grid'] = temp_grid
+            _, accu_log = self.evaluate(temp_grid, False)
+            [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
+            output_results['second pass model']['last letter accuracy'] = temp_letter_accu
+            output_results['second pass model']['last word accuracy'] = temp_word_accu
 
         if return_greedy_states or return_ii_states:
             return output_results, all_grids

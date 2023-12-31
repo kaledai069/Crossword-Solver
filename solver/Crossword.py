@@ -17,6 +17,7 @@ class Crossword:
     def __init__(self, data):
         self.initialize_grids(grid=data["grid"])
         self.initialize_clues(clues=data["clues"])
+        self.size = (data['metadata']['rows'], data['metadata']['cols'])
         self.initialize_variables()
 
     def initialize_grids(self, grid):
