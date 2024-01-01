@@ -251,8 +251,8 @@ class BPSolver(Solver):
             grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
             _, accu_log = self.evaluate(grid, False)
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
-
             print(f"{i+1}th iteration: {accu_log}")
+            
 
             # saving output results
             output_results['second pass model']['all grids'].append(grid)
@@ -329,38 +329,10 @@ class BPSolver(Solver):
             else:
                 temp_grid = deepcopy(before_improvement_grid)
     
-
-        '''
-        # # find the changed cells
-        # possible_wrong_cell_list = []
-        # print("Crossword Size:", self.crossword.size)
-
-        # for i in range(self.crossword.size[0]):
-        #     for j in range(self.crossword.size[1]):
-        #         if first_pass_grid[i][j] != second_pass_grid[i][j]:
-        #             possible_wrong_cell_list.append([(i, j), first_pass_grid[i][j], second_pass_grid[i][j]])
-        
-        # # best second pass grid solution overall grid score for initial reference
-        # second_pass_grid_score = self.score_grid(second_pass_grid)
-        
-        # temp_grid = deepcopy(second_pass_grid)
-        # did_some_improvement = False
-        # for wrong_cell in possible_wrong_cell_list:
-        #     before_improvement_grid = deepcopy(temp_grid)
-
-        #     to_edit_with = wrong_cell[1]
-        #     temp_grid[wrong_cell[0][0]][wrong_cell[0][1]] = to_edit_with
-        #     modified_grid_score = self.score_grid(temp_grid)
-        #     print(f"Before Refinement Score: {second_pass_grid_score}\nModified Grid Score: {modified_grid_score}")
-        #     if (modified_grid_score - second_pass_grid_score) > self.score_improvement_threshold:
-        #         second_pass_grid_score = modified_grid_score
-        #         did_some_improvement = True
-        #     else:
-        #         temp_grid = deepcopy(before_improvement_grid)
-        '''
         if did_some_improvement:
             output_results['second pass model']['last grid'] = temp_grid
             _, accu_log = self.evaluate(temp_grid, False)
+            print("\nAfter Refinement: {accu_log}")
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
             output_results['second pass model']['last letter accuracy'] = temp_letter_accu
             output_results['second pass model']['last word accuracy'] = temp_word_accu

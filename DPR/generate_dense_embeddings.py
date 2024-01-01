@@ -73,7 +73,8 @@ def gen_ctx_vectors(
         )
         # NOTE: for DistilBERT Dense Embeddings generation take the 'ctx_seg_batch' off the model input arguments
         with torch.no_grad():
-            _, out, _ = model(ctx_ids_batch, ctx_seg_batch, ctx_attn_mask)
+            # _, out, _ = model(ctx_ids_batch, ctx_seg_batch, ctx_attn_mask)
+            _, out, _ = model(ctx_ids_batch, ctx_attn_mask) # for distilbert dense embedding generation
         out = out.cpu()
 
         ctx_ids = [r[0] for r in ctx_rows[batch_start : batch_start + bsz]]
@@ -191,7 +192,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--batch_size",
         type=int,
-        default=32,
+        default = 32,
         help="Batch size for the passage encoder forward pass",
     )
     args = parser.parse_args()
