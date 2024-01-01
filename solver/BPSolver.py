@@ -252,7 +252,7 @@ class BPSolver(Solver):
             _, accu_log = self.evaluate(grid, False)
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
             print(f"{i+1}th iteration: {accu_log}")
-            
+
 
             # saving output results
             output_results['second pass model']['all grids'].append(grid)
@@ -344,12 +344,13 @@ class BPSolver(Solver):
     
     def do_improve(self, refinement_list, model, tokenizer):
         improvement_count = 0
+        device = model.device
         for data in refinement_list:
             clue = data[0]
             ans_pair = data[1]
-            input = tokenizer(["Q: " + clue], return_tensors = 'pt')['input_ids']
-            label_b = tokenizer([ans_pair[0].lower()], return_tensors = 'pt')['input_ids']
-            label_a = tokenizer([ans_pair[1].lower()], return_tensors = 'pt')['input_ids']
+            input = tokenizer(["Q: " + clue], return_tensors = 'pt')['input_ids'].to(device)
+            label_b = tokenizer([ans_pair[0].lower()], return_tensors = 'pt')['input_ids'].to(device)
+            label_a = tokenizer([ans_pair[1].lower()], return_tensors = 'pt')['input_ids'].to(device)
 
             output_b = model(input, labels = label_b)
             loss_b = -output_b.loss.item() * len(ans_pair[0])
