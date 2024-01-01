@@ -1,0 +1,1109 @@
+{
+    "metadata": {
+        "date": null,
+        "rows": 15,
+        "cols": 15
+    },
+    "clues": {
+        "across": {
+            "1": [
+                "Uncommon bills ",
+                " TWOS"
+            ],
+            "5": [
+                "On something ",
+                " HIGH"
+            ],
+            "9": [
+                "Capital where W. E. B. Du Bois is buried ",
+                " ACCRA"
+            ],
+            "14": [
+                "Waikiki's island ",
+                " OAHU"
+            ],
+            "15": [
+                "Most of the Mongol Empire's domain ",
+                " ASIA"
+            ],
+            "16": [
+                "Player at SoFi Stadium ",
+                " LARAM"
+            ],
+            "17": [
+                "Small cut ",
+                " TRIM"
+            ],
+            "18": [
+                "Directive from a bear? ",
+                " SELL"
+            ],
+            "19": [
+                "Mashed-potato topping ",
+                " GRAVY"
+            ],
+            "20": [
+                "*Bar offering for big spenders ",
+                " TOPSHELFBOOZE"
+            ],
+            "23": [
+                "\"___ up or shut up!\" ",
+                " PUT"
+            ],
+            "24": [
+                "General audience? ",
+                " ARMY"
+            ],
+            "25": [
+                "*Seasonal immune-boosting offering ",
+                " FLUVACCINE"
+            ],
+            "30": [
+                "\"So that was it all along!\" ",
+                " AHA"
+            ],
+            "33": [
+                "Creature with a digging foot ",
+                " CLAM"
+            ],
+            "34": [
+                "Bit of autumnal decoration ",
+                " GOURD"
+            ],
+            "35": [
+                "High-altitude goat ",
+                " IBEX"
+            ],
+            "36": [
+                "Shrill cry ",
+                " YAWP"
+            ],
+            "37": [
+                "Barstool reader, often ",
+                " BRO"
+            ],
+            "38": [
+                "Mexican sauce with black, green, and red varieties ",
+                " MOLE"
+            ],
+            "39": [
+                "Developers' offerings ",
+                " APPS"
+            ],
+            "40": [
+                "Venue with stands ",
+                " ARENA"
+            ],
+            "42": [
+                "Unenforceable ",
+                " NULL"
+            ],
+            "43": [
+                "Cryptography-oriented org. ",
+                " NSA"
+            ],
+            "44": [
+                "*End-of-year offering featuring a group of students ",
+                " CLASSPHOTO"
+            ],
+            "46": [
+                "\"The language of the unheard,\" per MLK ",
+                " RIOT"
+            ],
+            "48": [
+                "Back muscle, briefly ",
+                " LAT"
+            ],
+            "49": [
+                "\"Couldn't hurt\" ... or what could be said of the answers to the starred clues? ",
+                " ITSWORTHASHOT"
+            ],
+            "55": [
+                "Janelle behind the Wondaland record label ",
+                " MONAE"
+            ],
+            "56": [
+                "Chimney residue ",
+                " SOOT"
+            ],
+            "57": [
+                "Site with a \"Buy it now\" button ",
+                " EBAY"
+            ],
+            "59": [
+                "Have to put a coin in a jar, say ",
+                " SWEAR"
+            ],
+            "60": [
+                "\"I saw,\" to one taking 41-Down ",
+                " VIDI"
+            ],
+            "61": [
+                "Kelly of morning TV ",
+                " RIPA"
+            ],
+            "62": [
+                "Drug-task-force agents ",
+                " NARCS"
+            ],
+            "63": [
+                "Course of action ",
+                " PLAN"
+            ],
+            "64": [
+                "Site with a Craft Supplies & Tools section ",
+                " ETSY"
+            ]
+        },
+        "down": {
+            "1": [
+                "Little potato nugget ",
+                " TOT"
+            ],
+            "2": [
+                "Witch costume stick-on ",
+                " WART"
+            ],
+            "3": [
+                "State with I-70, I-71, I-75, I-76, and I-77 ",
+                " OHIO"
+            ],
+            "4": [
+                "Machines with a rhyming name that are active on rainy days ",
+                " SUMPPUMPS"
+            ],
+            "5": [
+                "Symbol also called an octothorp ",
+                " HASHTAG"
+            ],
+            "6": [
+                "\"Gotcha\" ",
+                " ISEE"
+            ],
+            "7": [
+                "Eel's \"lung\" ",
+                " GILL"
+            ],
+            "8": [
+                "Either product of an even split ",
+                " HALF"
+            ],
+            "9": [
+                "Former VP behind the Climate Reality Project ",
+                " ALGORE"
+            ],
+            "10": [
+                "Bounce ",
+                " CAROM"
+            ],
+            "11": [
+                "Head over heels for ",
+                " CRAZYABOUT"
+            ],
+            "12": [
+                "Five-star review, say ",
+                " RAVE"
+            ],
+            "13": [
+                "Florence's _Little Women_ role ",
+                " AMY"
+            ],
+            "21": [
+                "Yukon or Tahoe, e.g. ",
+                " SUV"
+            ],
+            "22": [
+                "Word after _rubber_ or _klezmer_ ",
+                " BAND"
+            ],
+            "25": [
+                "Book jackets have two ",
+                " FLAPS"
+            ],
+            "26": [
+                "Powerful practice person ",
+                " LAWPARTNER"
+            ],
+            "27": [
+                "Snake with a hood ",
+                " COBRA"
+            ],
+            "28": [
+                "Pickles or salts, as meat ",
+                " CURES"
+            ],
+            "29": [
+                "Some clubs ",
+                " IRONS"
+            ],
+            "31": [
+                "\"Did we get cut off?\" ",
+                " HELLO"
+            ],
+            "32": [
+                "Ice-skating leap ",
+                " AXEL"
+            ],
+            "33": [
+                "_C_ , on a printer cartridge ",
+                " CYAN"
+            ],
+            "35": [
+                "Message whispered to someone on the phone with an obnoxious caller ",
+                " IMNOTHERE"
+            ],
+            "40": [
+                "Voice part that means \"high\" in Italian ",
+                " ALTO"
+            ],
+            "41": [
+                "High-level language class in which you might read Horace ",
+                " APLATIN"
+            ],
+            "44": [
+                "Trembles in fear ",
+                " COWERS"
+            ],
+            "45": [
+                "Holds in one's grasp ",
+                " HAS"
+            ],
+            "47": [
+                "Newton with three laws ",
+                " ISAAC"
+            ],
+            "49": [
+                "State with a botched caucus in 2020 ",
+                " IOWA"
+            ],
+            "50": [
+                "Inviter's request ",
+                " RSVP"
+            ],
+            "51": [
+                "Work nonstop ",
+                " TOIL"
+            ],
+            "52": [
+                "Kotb of morning TV ",
+                " HODA"
+            ],
+            "53": [
+                "Memorial news item, for short ",
+                " OBIT"
+            ],
+            "54": [
+                "Faucets ",
+                " TAPS"
+            ],
+            "55": [
+                "AOL rival since 1995 ",
+                " MSN"
+            ],
+            "58": [
+                "\"Yippee!\" ",
+                " YAY"
+            ]
+        }
+    },
+    "grid": [
+        [
+            [
+                "1",
+                "T"
+            ],
+            [
+                "2",
+                "W"
+            ],
+            [
+                "3",
+                "O"
+            ],
+            [
+                "4",
+                "S"
+            ],
+            "BLACK",
+            [
+                "5",
+                "H"
+            ],
+            [
+                "6",
+                "I"
+            ],
+            [
+                "7",
+                "G"
+            ],
+            [
+                "8",
+                "H"
+            ],
+            "BLACK",
+            [
+                "9",
+                "A"
+            ],
+            [
+                "10",
+                "C"
+            ],
+            [
+                "11",
+                "C"
+            ],
+            [
+                "12",
+                "R"
+            ],
+            [
+                "13",
+                "A"
+            ]
+        ],
+        [
+            [
+                "14",
+                "O"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "H"
+            ],
+            [
+                "",
+                "U"
+            ],
+            "BLACK",
+            [
+                "15",
+                "A"
+            ],
+            [
+                "",
+                "S"
+            ],
+            [
+                "",
+                "I"
+            ],
+            [
+                "",
+                "A"
+            ],
+            "BLACK",
+            [
+                "16",
+                "L"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "M"
+            ]
+        ],
+        [
+            [
+                "17",
+                "T"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "I"
+            ],
+            [
+                "",
+                "M"
+            ],
+            "BLACK",
+            [
+                "18",
+                "S"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "L"
+            ],
+            [
+                "",
+                "L"
+            ],
+            "BLACK",
+            [
+                "19",
+                "G"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "V"
+            ],
+            [
+                "",
+                "Y"
+            ]
+        ],
+        [
+            "BLACK",
+            [
+                "20",
+                "T"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "P"
+            ],
+            [
+                "21",
+                "S"
+            ],
+            [
+                "",
+                "H"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "L"
+            ],
+            [
+                "",
+                "F"
+            ],
+            [
+                "22",
+                "B"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "Z"
+            ],
+            [
+                "",
+                "E"
+            ],
+            "BLACK"
+        ],
+        [
+            "BLACK",
+            "BLACK",
+            "BLACK",
+            [
+                "23",
+                "P"
+            ],
+            [
+                "",
+                "U"
+            ],
+            [
+                "",
+                "T"
+            ],
+            "BLACK",
+            "BLACK",
+            "BLACK",
+            [
+                "24",
+                "A"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "M"
+            ],
+            [
+                "",
+                "Y"
+            ],
+            "BLACK",
+            "BLACK"
+        ],
+        [
+            "BLACK",
+            [
+                "25",
+                "F"
+            ],
+            [
+                "26",
+                "L"
+            ],
+            [
+                "",
+                "U"
+            ],
+            [
+                "",
+                "V"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "27",
+                "C"
+            ],
+            [
+                "28",
+                "C"
+            ],
+            [
+                "29",
+                "I"
+            ],
+            [
+                "",
+                "N"
+            ],
+            [
+                "",
+                "E"
+            ],
+            "BLACK",
+            [
+                "30",
+                "A"
+            ],
+            [
+                "31",
+                "H"
+            ],
+            [
+                "32",
+                "A"
+            ]
+        ],
+        [
+            [
+                "33",
+                "C"
+            ],
+            [
+                "",
+                "L"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "M"
+            ],
+            "BLACK",
+            [
+                "34",
+                "G"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "U"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "D"
+            ],
+            "BLACK",
+            [
+                "35",
+                "I"
+            ],
+            [
+                "",
+                "B"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "X"
+            ]
+        ],
+        [
+            [
+                "36",
+                "Y"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "W"
+            ],
+            [
+                "",
+                "P"
+            ],
+            "BLACK",
+            "BLACK",
+            [
+                "37",
+                "B"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "O"
+            ],
+            "BLACK",
+            "BLACK",
+            [
+                "38",
+                "M"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "L"
+            ],
+            [
+                "",
+                "E"
+            ]
+        ],
+        [
+            [
+                "39",
+                "A"
+            ],
+            [
+                "",
+                "P"
+            ],
+            [
+                "",
+                "P"
+            ],
+            [
+                "",
+                "S"
+            ],
+            "BLACK",
+            [
+                "40",
+                "A"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "N"
+            ],
+            [
+                "41",
+                "A"
+            ],
+            "BLACK",
+            [
+                "42",
+                "N"
+            ],
+            [
+                "",
+                "U"
+            ],
+            [
+                "",
+                "L"
+            ],
+            [
+                "",
+                "L"
+            ]
+        ],
+        [
+            [
+                "43",
+                "N"
+            ],
+            [
+                "",
+                "S"
+            ],
+            [
+                "",
+                "A"
+            ],
+            "BLACK",
+            [
+                "44",
+                "C"
+            ],
+            [
+                "",
+                "L"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "S"
+            ],
+            [
+                "",
+                "S"
+            ],
+            [
+                "",
+                "P"
+            ],
+            [
+                "45",
+                "H"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "T"
+            ],
+            [
+                "",
+                "O"
+            ],
+            "BLACK"
+        ],
+        [
+            "BLACK",
+            "BLACK",
+            [
+                "46",
+                "R"
+            ],
+            [
+                "47",
+                "I"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "T"
+            ],
+            "BLACK",
+            "BLACK",
+            "BLACK",
+            [
+                "48",
+                "L"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "T"
+            ],
+            "BLACK",
+            "BLACK",
+            "BLACK"
+        ],
+        [
+            "BLACK",
+            [
+                "49",
+                "I"
+            ],
+            [
+                "",
+                "T"
+            ],
+            [
+                "",
+                "S"
+            ],
+            [
+                "",
+                "W"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "50",
+                "R"
+            ],
+            [
+                "51",
+                "T"
+            ],
+            [
+                "52",
+                "H"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "S"
+            ],
+            [
+                "",
+                "H"
+            ],
+            [
+                "53",
+                "O"
+            ],
+            [
+                "54",
+                "T"
+            ],
+            "BLACK"
+        ],
+        [
+            [
+                "55",
+                "M"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "N"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "E"
+            ],
+            "BLACK",
+            [
+                "56",
+                "S"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "T"
+            ],
+            "BLACK",
+            [
+                "57",
+                "E"
+            ],
+            [
+                "",
+                "B"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "58",
+                "Y"
+            ]
+        ],
+        [
+            [
+                "59",
+                "S"
+            ],
+            [
+                "",
+                "W"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "R"
+            ],
+            "BLACK",
+            [
+                "60",
+                "V"
+            ],
+            [
+                "",
+                "I"
+            ],
+            [
+                "",
+                "D"
+            ],
+            [
+                "",
+                "I"
+            ],
+            "BLACK",
+            [
+                "61",
+                "R"
+            ],
+            [
+                "",
+                "I"
+            ],
+            [
+                "",
+                "P"
+            ],
+            [
+                "",
+                "A"
+            ]
+        ],
+        [
+            [
+                "62",
+                "N"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "C"
+            ],
+            [
+                "",
+                "S"
+            ],
+            "BLACK",
+            [
+                "63",
+                "P"
+            ],
+            [
+                "",
+                "L"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "N"
+            ],
+            "BLACK",
+            [
+                "64",
+                "E"
+            ],
+            [
+                "",
+                "T"
+            ],
+            [
+                "",
+                "S"
+            ],
+            [
+                "",
+                "Y"
+            ]
+        ]
+    ]
+}

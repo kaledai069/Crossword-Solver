@@ -1,0 +1,424 @@
+{
+    "metadata": {
+        "date": null,
+        "rows": 9,
+        "cols": 9
+    },
+    "clues": {
+        "across": {
+            "1": [
+                "With 1-Down, phrase of resolution ",
+                " NEWYEAR"
+            ],
+            "8": [
+                "Betters ",
+                " ENHANCES"
+            ],
+            "10": [
+                "Controller with gesture recognition ",
+                " WIIREMOTE"
+            ],
+            "12": [
+                "School ___ (teacher on the frontier) ",
+                " MARM"
+            ],
+            "13": [
+                "\" _In principio ___ Verbum_ \" (Gospel opening) ",
+                " ERAT"
+            ],
+            "14": [
+                "Certain stocking shades ",
+                " ECRUS"
+            ],
+            "16": [
+                "Mamadou ___, Senegal's first prime minister ",
+                " DIA"
+            ],
+            "17": [
+                "Jeremiad ",
+                " LAMENT"
+            ],
+            "19": [
+                "Blows up in one's face ",
+                " BACKFIRES"
+            ],
+            "22": [
+                "How bananas are bought ",
+                " UNPEELED"
+            ],
+            "23": [
+                "Color that's out of this world? ",
+                " MARSRED"
+            ]
+        },
+        "down": {
+            "1": [
+                "See 1-Across ",
+                " NEWME"
+            ],
+            "2": [
+                "Early computer called \"the Giant Brain\" ",
+                " ENIAC"
+            ],
+            "3": [
+                "Sound from a big fan ",
+                " WHIRR"
+            ],
+            "4": [
+                "Kippahs ",
+                " YARMULKES"
+            ],
+            "5": [
+                "SF-to-SLC dir. ",
+                " ENE"
+            ],
+            "6": [
+                "Company that produces explosive tennis balls and giant rubber bands ",
+                " ACME"
+            ],
+            "7": [
+                "Shuffled around ",
+                " REORDERED"
+            ],
+            "9": [
+                "Completed a deck, perhaps ",
+                " STAINED"
+            ],
+            "11": [
+                "Plural French word that spells its singular English translation backwards ",
+                " ETATS"
+            ],
+            "15": [
+                "Less vulnerable ",
+                " SAFER"
+            ],
+            "18": [
+                "Unit for many trails ",
+                " MILE"
+            ],
+            "19": [
+                "Take a Camel, say ",
+                " BUM"
+            ],
+            "20": [
+                "Marta portrayer in _Knives Out_ ",
+                " ANA"
+            ],
+            "21": [
+                "Revival method, briefly ",
+                " CPR"
+            ]
+        }
+    },
+    "grid": [
+        [
+            [
+                "1",
+                "N"
+            ],
+            [
+                "2",
+                "E"
+            ],
+            [
+                "3",
+                "W"
+            ],
+            [
+                "4",
+                "Y"
+            ],
+            [
+                "5",
+                "E"
+            ],
+            [
+                "6",
+                "A"
+            ],
+            [
+                "7",
+                "R"
+            ],
+            "BLACK",
+            "BLACK"
+        ],
+        [
+            [
+                "8",
+                "E"
+            ],
+            [
+                "",
+                "N"
+            ],
+            [
+                "",
+                "H"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "N"
+            ],
+            [
+                "",
+                "C"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "9",
+                "S"
+            ],
+            "BLACK"
+        ],
+        [
+            [
+                "10",
+                "W"
+            ],
+            [
+                "",
+                "I"
+            ],
+            [
+                "",
+                "I"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "M"
+            ],
+            [
+                "",
+                "O"
+            ],
+            [
+                "",
+                "T"
+            ],
+            [
+                "11",
+                "E"
+            ]
+        ],
+        [
+            [
+                "12",
+                "M"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "M"
+            ],
+            "BLACK",
+            [
+                "13",
+                "E"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "T"
+            ]
+        ],
+        [
+            [
+                "14",
+                "E"
+            ],
+            [
+                "",
+                "C"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "U"
+            ],
+            [
+                "15",
+                "S"
+            ],
+            "BLACK",
+            [
+                "16",
+                "D"
+            ],
+            [
+                "",
+                "I"
+            ],
+            [
+                "",
+                "A"
+            ]
+        ],
+        [
+            "BLACK",
+            "BLACK",
+            "BLACK",
+            [
+                "17",
+                "L"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "18",
+                "M"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "N"
+            ],
+            [
+                "",
+                "T"
+            ]
+        ],
+        [
+            [
+                "19",
+                "B"
+            ],
+            [
+                "20",
+                "A"
+            ],
+            [
+                "21",
+                "C"
+            ],
+            [
+                "",
+                "K"
+            ],
+            [
+                "",
+                "F"
+            ],
+            [
+                "",
+                "I"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "S"
+            ]
+        ],
+        [
+            [
+                "22",
+                "U"
+            ],
+            [
+                "",
+                "N"
+            ],
+            [
+                "",
+                "P"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "L"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "D"
+            ],
+            "BLACK"
+        ],
+        [
+            [
+                "23",
+                "M"
+            ],
+            [
+                "",
+                "A"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "S"
+            ],
+            [
+                "",
+                "R"
+            ],
+            [
+                "",
+                "E"
+            ],
+            [
+                "",
+                "D"
+            ],
+            "BLACK",
+            "BLACK"
+        ]
+    ]
+}
