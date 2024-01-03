@@ -1,0 +1,6 @@
+,Source,First Pass Letter Accuracy,First Pass Word Accuracy,First Pass Perfect Puzzle Accuracy,Second Pass Letter Accuracy,Second Pass Word Accuracy,Second Pass Perfect Puzzle Accuracy
+0,Atlantic,99.49,97.8,76.4,99.86,99.34,91.01
+1,News Day,99.73,98.91,75.0,99.93,99.66,90.0
+2,The LA Times,99.81,99.23,80.71,99.99,99.93,97.14
+3,The New Yorker,99.36,97.61,55.7,99.81,99.18,79.75
+4,New York Times,99.38,97.65,56.0,99.76,99.18,83.2
