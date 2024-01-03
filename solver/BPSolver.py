@@ -37,7 +37,6 @@ UNIGRAM_PROBS = [('A', 0.0897379968935765), ('B', 0.02121248877769636), ('C', 0.
 LETTER_SMOOTHING_FACTOR = [0.0, 0.0, 0.04395604395604396, 0.0001372495196266813, 0.0005752186417796561, 0.0019841824329989103, 0.0048042463338563764, 0.013325257419745608, 0.027154447774285505, 0.06513517299341645, 0.12527790128946198, 0.22003002358996354, 0.23172376584839494, 0.254873006497342, 0.3985086992543496, 0.2764976958525346, 0.672645739910314, 0.6818181818181818, 0.8571428571428571, 0.8245614035087719, 0.8, 0.71900826446281, 0.0]
 
 T5_COUNTER = 0
-NUM_CLUE_ANSWER = 0
 
 class BPVar:
     def __init__(self, name, variable, candidates, cells): 
@@ -195,7 +194,6 @@ class BPSolver(Solver):
     
     def solve(self, num_iters = 10, iterative_improvement_steps = 5, return_greedy_states = False, return_ii_states = False):
         global T5_COUNTER
-        global NUM_CLUE_ANSWER
 
         output_results = {}
         # run solving for num_iters iterations
@@ -358,8 +356,8 @@ class BPSolver(Solver):
         if return_greedy_states or return_ii_states:
             return output_results, all_grids
         else:
-            print(f"Total times the second pass model is called: {T5_COUNTER * NUM_CLUE_ANSWER}")
-            output_results['second pass model']['call count'] = T5_COUNTER * NUM_CLUE_ANSWER
+            print(f"Total times the second pass model is called: {T5_COUNTER}")
+            output_results['second pass model']['call count'] = T5_COUNTER
             return output_results
         
     
@@ -491,9 +489,8 @@ class BPSolver(Solver):
             clues.append(self.crossword.variables[clue]['clue'])
             answers.append(letters)
         
-        T5_COUNTER += 1
-        NUM_CLUE_ANSWER = len(clues)
-        scores = t5_reranker_score_with_clue(self.reranker, self.tokenizer, self.reranker_model_type, clues, answers)
+        scores, t5_run_count = t5_reranker_score_with_clue(self.reranker, self.tokenizer, self.reranker_model_type, clues, answers)
+        T5_COUNTER += t5_run_count
         return sum(scores)
     
     def greedy_sequential_word_solution(self, return_grids = False):

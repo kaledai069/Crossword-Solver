@@ -63,6 +63,7 @@ def post_process_clue(clue):
 
 def t5_reranker_score_with_clue(model, tokenizer, model_type, clues, possibly_ungrammatical_fills):
     global RERANKER_CACHE
+    count = 0
     results = []
     device = model.device
     
@@ -86,6 +87,8 @@ def t5_reranker_score_with_clue(model, tokenizer, model_type, clues, possibly_un
             continue
         else:
             with torch.no_grad(), torch.inference_mode():
+                # how many times the t5-small model is actually ran
+                count += 1
                 # move all the input tensors to the GPU (cuda)
                 inputs = tokenizer(["Q: " + clue], return_tensors='pt')['input_ids'].to(device)
                 labels = tokenizer([possibly_ungrammatical_fill], return_tensors='pt')['input_ids'].to(device)
@@ -99,7 +102,7 @@ def t5_reranker_score_with_clue(model, tokenizer, model_type, clues, possibly_un
                 results.append(logprob)
                 RERANKER_CACHE[clue + possibly_ungrammatical_fill] = logprob
 
-    return results
+    return results, count
 
 def preprocess_clue_fn(clue):
     clue = str(clue)
