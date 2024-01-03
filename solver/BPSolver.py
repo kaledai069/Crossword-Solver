@@ -9,6 +9,8 @@ We instead using iterative search after the fact by replacing characters one-by-
 import math
 import string
 import re
+import time
+
 from collections import defaultdict
 from copy import deepcopy
 
@@ -33,6 +35,9 @@ UNIGRAM_PROBS = [('A', 0.0897379968935765), ('B', 0.02121248877769636), ('C', 0.
 # the LETTER_SMOOTHING_FACTOR controls how much we interpolate with the unigram LM. TODO this should be tuned. 
 # Right now it is set according to the probability that the answer is not in the answer set
 LETTER_SMOOTHING_FACTOR = [0.0, 0.0, 0.04395604395604396, 0.0001372495196266813, 0.0005752186417796561, 0.0019841824329989103, 0.0048042463338563764, 0.013325257419745608, 0.027154447774285505, 0.06513517299341645, 0.12527790128946198, 0.22003002358996354, 0.23172376584839494, 0.254873006497342, 0.3985086992543496, 0.2764976958525346, 0.672645739910314, 0.6818181818181818, 0.8571428571428571, 0.8245614035087719, 0.8, 0.71900826446281, 0.0]
+
+T5_COUNTER = 0
+NUM_CLUE_ANSWER = 0
 
 class BPVar:
     def __init__(self, name, variable, candidates, cells): 
@@ -189,6 +194,9 @@ class BPSolver(Solver):
         return float_numbers
     
     def solve(self, num_iters = 10, iterative_improvement_steps = 5, return_greedy_states = False, return_ii_states = False):
+        global T5_COUNTER
+        global NUM_CLUE_ANSWER
+
         output_results = {}
         # run solving for num_iters iterations
         print('\nBeginning Belief Propagation iteration steps')
@@ -213,10 +221,6 @@ class BPSolver(Solver):
         output_results['first pass model'] = {}
         output_results['first pass model']['grid'] = grid
         
-        # grid = self.greedy_sequential_word_solution()
-        # print('=====Greedy search grid=====')
-        # print_grid(grid)
-        
         _, accu_log = self.evaluate(grid, False)
         [ori_letter_accu, ori_word_accu] = self.extract_float(accu_log)
         output_results['first pass model']['letter accuracy'] = ori_letter_accu
@@ -224,7 +228,7 @@ class BPSolver(Solver):
 
         original_grid_solution = deepcopy(grid)
 
-        print(f"\nBefore II with T5-small: {accu_log}")
+        print(f"Before Iterative Improvement with t5-small: {accu_log}")
 
         if iterative_improvement_steps < 1 or ori_letter_accu == 100.0 or ori_word_accu < 85.0:
             # if the letter accuracy reaches maximum leave this here without further second pass model 
@@ -232,7 +236,6 @@ class BPSolver(Solver):
                 return output_results, all_grids
             else:
                 return output_results
-        
         
         #loading the ByT5 reranker model
         print(self.reranker_model_type)
@@ -244,6 +247,8 @@ class BPSolver(Solver):
         output_results['second pass model']['all word accuracy'] = []
         intermediate_II_results = []
 
+        second_pass_start_time = time.time()
+        print('-'*100)
         print("Starting Iterative Improvement with T5-small")
         for i in range(iterative_improvement_steps):
             grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
@@ -272,14 +277,18 @@ class BPSolver(Solver):
             if return_ii_states:
                 all_grids.append(deepcopy(grid))
 
+        # track the time for the second pass model only
+        second_pass_end_time = time.time()
         _, accu_log = self.evaluate(grid, False)
-        print(f"\nAfter II with T5: {accu_log}")
+        print(f"\nAfter Iterative Improvement with t5-small: {accu_log}")
 
         if temp_letter_accu < ori_letter_accu or temp_word_accu < ori_word_accu:
-            print("\nReverting the changes due to worse output from second pass iterative handle. \n")
+            print("Reverting the changes due to worse output from second pass iterative handle. ")
             grid = deepcopy(original_grid_solution)
             _, accu_log = self.evaluate(grid, False)
             print(f"\nFinal Accuracy Stat: {accu_log}")
+
+        print(f"Total time taken for t5-small: {second_pass_end_time - second_pass_start_time} seconds")
         
         temp_lett_accu_list = output_results['second pass model']['all letter accuracy'].copy()
         ii_max_index = temp_lett_accu_list.index(max(temp_lett_accu_list))
@@ -288,6 +297,7 @@ class BPSolver(Solver):
         output_results['second pass model']['final letter'] = output_results['second pass model']['all letter accuracy'][ii_max_index]
         output_results['second pass model']['final word'] = output_results['second pass model']['all word accuracy'][ii_max_index]
         
+        print("-"*100)
         print("\nStarting last refinement step: ")
 
         first_pass_grid = deepcopy(original_grid_solution)
@@ -340,15 +350,18 @@ class BPSolver(Solver):
         if did_some_improvement:
             output_results['second pass model']['last grid'] = temp_grid
             _, accu_log = self.evaluate(temp_grid, False)
-            print("\nAfter Refinement: {accu_log}")
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
             output_results['second pass model']['last letter accuracy'] = temp_letter_accu
             output_results['second pass model']['last word accuracy'] = temp_word_accu
+            print(f"\nAfter Refinement: {accu_log}")
 
         if return_greedy_states or return_ii_states:
             return output_results, all_grids
         else:
+            print(f"Total times the second pass model is called: {T5_COUNTER * NUM_CLUE_ANSWER}")
+            output_results['second pass model']['call count'] = T5_COUNTER * NUM_CLUE_ANSWER
             return output_results
+        
     
     def do_improve(self, refinement_list, model, tokenizer):
         improvement_count = 0
@@ -469,12 +482,17 @@ class BPSolver(Solver):
         return uncertain_answers
     
     def score_grid(self, grid):
+        global T5_COUNTER
+        global NUM_CLUE_ANSWER
         clues = []
         answers = []
         for clue, cells in self.bp_cells_by_clue.items():
             letters = ''.join([grid[cell.position[0]][cell.position[1]] for cell in sorted(list(cells), key=lambda c: c.position)])
             clues.append(self.crossword.variables[clue]['clue'])
             answers.append(letters)
+        
+        T5_COUNTER += 1
+        NUM_CLUE_ANSWER = len(clues)
         scores = t5_reranker_score_with_clue(self.reranker, self.tokenizer, self.reranker_model_type, clues, answers)
         return sum(scores)
     
