@@ -2,5 +2,5 @@ checkpoints/
 logs/
 __pycache__/
 demo/*.json
-Crossword Scrapper/json/atlantic/
-Crossword Scrapper/puz/atlantic/
+Crossword Scrapper/json/
+Crossword Scrapper/puz/

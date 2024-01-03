@@ -226,7 +226,7 @@ class BPSolver(Solver):
 
         print(f"\nBefore II with T5-small: {accu_log}")
 
-        if iterative_improvement_steps < 1 or ori_letter_accu == 100.0:
+        if iterative_improvement_steps < 1 or ori_letter_accu == 100.0 or ori_word_accu < 85.0:
             # if the letter accuracy reaches maximum leave this here without further second pass model 
             if return_greedy_states or return_ii_states:
                 return output_results, all_grids
@@ -242,22 +242,30 @@ class BPSolver(Solver):
         output_results['second pass model']['all grids'] = []
         output_results['second pass model']['all letter accuracy'] = []
         output_results['second pass model']['all word accuracy'] = []
+        intermediate_II_results = []
 
+        print("Starting Iterative Improvement with T5-small")
         for i in range(iterative_improvement_steps):
-            # print('starting iterative improvement step ' + str(i))
-            # print("Accuracy if we knew to stop right now")
-            # self.evaluate(grid) 
-
             grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
             _, accu_log = self.evaluate(grid, False)
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
-            print(f"{i+1}th iteration: {accu_log}")
 
+            # track the iterative ongoing grid accuracies
+            intermediate_II_results.append([temp_letter_accu, temp_word_accu])
+            print(f"{i+1}th iteration: {accu_log}")
 
             # saving output results
             output_results['second pass model']['all grids'].append(grid)
             output_results['second pass model']['all letter accuracy'].append(temp_letter_accu)
             output_results['second pass model']['all word accuracy'].append(temp_word_accu)
+            
+            # get the hell out of the II, if the consecutive improvement doesn't shows much result
+            if len(intermediate_II_results) > 1:
+                former_accuracies = sum(intermediate_II_results[-2])
+                later_accuracies = sum(intermediate_II_results[-1])
+
+                if later_accuracies <= former_accuracies:
+                    break
 
             if not did_iterative_improvement_make_edit or temp_letter_accu == 100.0:
                 break
