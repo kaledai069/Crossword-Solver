@@ -228,7 +228,7 @@ class BPSolver(Solver):
 
         print(f"Before Iterative Improvement with t5-small: {accu_log}")
 
-        if iterative_improvement_steps < 1 or ori_letter_accu == 100.0 or ori_word_accu < 85.0:
+        if iterative_improvement_steps < 1 or ori_letter_accu == 100.0:
             # if the letter accuracy reaches maximum leave this here without further second pass model 
             if return_greedy_states or return_ii_states:
                 return output_results, all_grids
