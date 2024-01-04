@@ -1,0 +1,494 @@
+07/20/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+/usr/local/lib/python3.10/dist-packages/huggingface_hub/utils/_token.py:72: UserWarning: 
+The secret `HF_TOKEN` does not exist in your Colab secrets.
+To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
+You will be able to reuse this secret in all of your notebooks.
+Please note that authentication is recommended but still optional to access public models or datasets.
+  warnings.warn(
+config.json: 100%
+483/483 [00:00<00:00, 21.5kB/s]
+model.safetensors: 100%
+268M/268M [00:01<00:00, 219MB/s]
+tokenizer_config.json: 100%
+28.0/28.0 [00:00<00:00, 1.33kB/s]
+vocab.txt: 100%
+232k/232k [00:00<00:00, 3.56MB/s]
+tokenizer.json: 100%
+466k/466k [00:00<00:00, 2.37MB/s]
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.50it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 93.44262295081968% | Words Correct: 79.48717948717949%
+t5-small
+/usr/local/lib/python3.10/dist-packages/huggingface_hub/utils/_token.py:72: UserWarning: 
+The secret `HF_TOKEN` does not exist in your Colab secrets.
+To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
+You will be able to reuse this secret in all of your notebooks.
+Please note that authentication is recommended but still optional to access public models or datasets.
+  warnings.warn(
+tokenizer_config.json: 100%
+2.32k/2.32k [00:00<00:00, 149kB/s]
+spiece.model: 100%
+792k/792k [00:00<00:00, 11.3MB/s]
+tokenizer.json: 100%
+1.39M/1.39M [00:00<00:00, 6.89MB/s]
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 92.89617486338798% | Words Correct: 79.48717948717949%
+2th iteration: Letters Correct: 92.89617486338798% | Words Correct: 79.48717948717949%
+
+After Iterative Improvement with t5-small: Letters Correct: 92.89617486338798% | Words Correct: 79.48717948717949%
+Reverting the changes due to worse output from second pass iterative handle. 
+
+Final Accuracy Stat: Letters Correct: 93.44262295081968% | Words Correct: 79.48717948717949%
+Total time taken for t5-small: 354.45490193367004 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+
+After Refinement: Letters Correct: 92.89617486338798% | Words Correct: 79.48717948717949%
+Total times the second pass model is called: 3945
+Total time taken:  510.9453225135803
+07/27/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.31it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 97.83783783783784% | Words Correct: 92.3076923076923%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 99.45945945945947% | Words Correct: 97.43589743589743%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 29.729202270507812 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 4332
+Total time taken:  106.52752661705017
+07/29/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.14it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  65.9425196647644
+08/05/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:13<00:00,  4.56it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  63.86286640167236
+08/13/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:22<00:00,  2.70it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 99.7229916897507% | Words Correct: 98.50746268656717%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 24.73508095741272 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 4633
+Total time taken:  117.92988014221191
+08/17/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.11it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 97.84946236559139% | Words Correct: 91.02564102564102%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 32.48980355262756 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 5039
+Total time taken:  103.63211989402771
+08/18/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.22it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 96.29629629629629% | Words Correct: 90.27777777777779%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 97.35449735449735% | Words Correct: 93.05555555555556%
+2th iteration: Letters Correct: 97.35449735449735% | Words Correct: 93.05555555555556%
+
+After Iterative Improvement with t5-small: Letters Correct: 97.35449735449735% | Words Correct: 93.05555555555556%
+Total time taken for t5-small: 66.01335096359253 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 5743
+Total time taken:  134.1421663761139
+08/30/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:10<00:00,  5.55it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 95.6989247311828% | Words Correct: 83.33333333333334%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 98.9247311827957% | Words Correct: 94.87179487179486%
+2th iteration: Letters Correct: 98.9247311827957% | Words Correct: 94.87179487179486%
+
+After Iterative Improvement with t5-small: Letters Correct: 98.9247311827957% | Words Correct: 94.87179487179486%
+Total time taken for t5-small: 70.23701071739197 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+
+After Refinement: Letters Correct: 98.38709677419355% | Words Correct: 92.3076923076923%
+Total times the second pass model is called: 6543
+Total time taken:  149.27801942825317
+09/01/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:12<00:00,  4.63it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 99.48717948717949% | Words Correct: 97.22222222222221%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 14.051763534545898 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 6737
+Total time taken:  84.1175377368927
+09/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:12<00:00,  4.73it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 98.46153846153847% | Words Correct: 91.66666666666666%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 99.48717948717949% | Words Correct: 97.22222222222221%
+2th iteration: Letters Correct: 99.48717948717949% | Words Correct: 97.22222222222221%
+
+After Iterative Improvement with t5-small: Letters Correct: 99.48717948717949% | Words Correct: 97.22222222222221%
+Total time taken for t5-small: 53.33348536491394 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+
+After Refinement: Letters Correct: 98.97435897435898% | Words Correct: 94.44444444444444%
+Total times the second pass model is called: 7287
+Total time taken:  121.66457915306091
+09/15/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:12<00:00,  4.68it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 97.89473684210527% | Words Correct: 90.32258064516128%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 98.42105263157895% | Words Correct: 91.93548387096774%
+2th iteration: Letters Correct: 99.47368421052632% | Words Correct: 96.7741935483871%
+3th iteration: Letters Correct: 99.47368421052632% | Words Correct: 96.7741935483871%
+
+After Iterative Improvement with t5-small: Letters Correct: 99.47368421052632% | Words Correct: 96.7741935483871%
+Total time taken for t5-small: 83.32122898101807 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+
+After Refinement: Letters Correct: 98.94736842105263% | Words Correct: 93.54838709677419%
+Total times the second pass model is called: 8085
+Total time taken:  150.68422675132751
+09/16/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.04it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 99.48186528497409% | Words Correct: 96.96969696969697%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 11.473235368728638 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+
+After Refinement: Letters Correct: 99.48186528497409% | Words Correct: 96.96969696969697%
+Total times the second pass model is called: 8235
+Total time taken:  84.80845999717712
+10/04/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:12<00:00,  4.99it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 95.1086956521739% | Words Correct: 83.33333333333334%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 95.65217391304348% | Words Correct: 84.61538461538461%
+2th iteration: Letters Correct: 95.65217391304348% | Words Correct: 84.61538461538461%
+
+After Iterative Improvement with t5-small: Letters Correct: 95.65217391304348% | Words Correct: 84.61538461538461%
+Total time taken for t5-small: 18.381932973861694 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+
+After Refinement: Letters Correct: 95.65217391304348% | Words Correct: 84.61538461538461%
+Total times the second pass model is called: 8452
+Total time taken:  93.31659483909607
+11/22/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.07it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  62.86717772483826
+11/23/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.18it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 98.91891891891892% | Words Correct: 95.83333333333334%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 58.60728216171265 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 9160
+Total time taken:  129.73619627952576
+11/25/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:11<00:00,  5.08it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 97.38219895287958% | Words Correct: 91.17647058823529%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 99.47643979057592% | Words Correct: 97.05882352941177%
+2th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 31.251673460006714 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 9512
+Total time taken:  102.03907322883606
+12/02/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:13<00:00,  4.59it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 99.49238578680203% | Words Correct: 97.14285714285714%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 21.83378839492798 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 9804
+Total time taken:  91.73885989189148
+12/03/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:23<00:00,  2.52it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken:  90.59855031967163
+12/08/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:16<00:00,  3.54it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 99.4475138121547% | Words Correct: 96.7741935483871%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 100.0% | Words Correct: 100.0%
+
+After Iterative Improvement with t5-small: Letters Correct: 100.0% | Words Correct: 100.0%
+Total time taken for t5-small: 32.015193700790405 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 10191
+Total time taken:  106.23881602287292
+12/09/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:12<00:00,  4.63it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 98.97435897435898% | Words Correct: 95.58823529411765%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 98.97435897435898% | Words Correct: 95.58823529411765%
+2th iteration: Letters Correct: 98.97435897435898% | Words Correct: 95.58823529411765%
+
+After Iterative Improvement with t5-small: Letters Correct: 98.97435897435898% | Words Correct: 95.58823529411765%
+Total time taken for t5-small: 81.17936301231384 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 11113
+Total time taken:  158.884290933609
+12/10/2023
+WARNING:root:Overriding args parameter value from checkpoint state. Param = do_lower_case, value = True
+WARNING:root:Overriding args parameter value from checkpoint state. Param = pretrained_model_cfg, value = distilbert-base-uncased
+WARNING:root:Overriding args parameter value from checkpoint state. Param = encoder_model_type, value = hf_distilbert
+WARNING:root:Overriding args parameter value from checkpoint state. Param = sequence_length, value = 32
+
+Beginning Belief Propagation iteration steps
+100%|███████████████████████████████████████████████████████████████| 60/60 [00:21<00:00,  2.75it/s]
+Belief Propagation iteration complete
+
+Before Iterative Improvement with t5-small: Letters Correct: 98.88579387186628% | Words Correct: 95.71428571428572%
+t5-small
+----------------------------------------------------------------------------------------------------
+Starting Iterative Improvement with T5-small
+1th iteration: Letters Correct: 99.44289693593315% | Words Correct: 97.85714285714285%
+2th iteration: Letters Correct: 99.72144846796658% | Words Correct: 98.57142857142858%
+3th iteration: Letters Correct: 99.72144846796658% | Words Correct: 98.57142857142858%
+
+After Iterative Improvement with t5-small: Letters Correct: 99.72144846796658% | Words Correct: 98.57142857142858%
+Total time taken for t5-small: 287.1931300163269 seconds
+----------------------------------------------------------------------------------------------------
+
+Starting last refinement step: 
+Total times the second pass model is called: 13306
+Total time taken:  380.7285478115082
