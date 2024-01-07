@@ -126,12 +126,12 @@ class BPCell:
         self.log_probs = log_softmax(sum(self.directional_scores))
 
     def propagate(self):
-        assert len(self.crossing_vars) == 2
-        # try:
-        for i, v in enumerate(self.crossing_vars):
-            v._propagate_to_var(self, self.directional_scores[1-i])
-        # except IndexError:
-            # pass
+        # assert len(self.crossing_vars) == 2
+        try:
+            for i, v in enumerate(self.crossing_vars):
+                v._propagate_to_var(self, self.directional_scores[1-i])
+        except IndexError:
+            pass
 
 
 class BPSolver(Solver):
