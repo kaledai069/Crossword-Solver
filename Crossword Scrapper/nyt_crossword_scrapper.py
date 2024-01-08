@@ -104,8 +104,8 @@ def fetch_nyt_crossword(dateStr):
 
 publication_keyword = "nyt"
 publication = 'new-york-times'
-start_date = datetime.date(2023, 8, 1)
-end_date= datetime.date(2023, 8, 31)
+start_date = datetime.date(2024, 1, 8)
+end_date= datetime.date(2024, 1, 8)
 puz_output_dir = "./puz"
 json_output_dir = "./json"
 
