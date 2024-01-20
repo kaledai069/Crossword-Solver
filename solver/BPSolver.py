@@ -204,17 +204,18 @@ class BPSolver(Solver):
         output_results = {}
 
         # Lets prettify the terminal outputs
-        print(''.join(['#' if i % 2==0 else '-' for i in range(101)]))
+        print(''.join(['#' if i % 2==0 else '-' for i in range(106)]))
 
-        boundary_line = '-' * 101
+        boundary_line = '-' * 106
         second_line = "First Pass: DistilBERT Bi-Encoder with Belief Propagation"
         middle_position = (len(boundary_line) - len(second_line)) // 2
         print(boundary_line)
-        print(f"{second_line:>{middle_position + len(second_line)}}")
+        print(f"|{second_line:>{middle_position + len(second_line)}}{'|':>{middle_position - 1}}")
         print(boundary_line)
 
-        print('\n\t\t\tLoopy Belief Propagation Starts.\n')
-        for _ in tqdm(range(num_iters), ncols = 120):
+        custom_bar_format = "{l_bar}{bar}|"
+        print('\nLoopy Belief Propagation Starts.\n')
+        for _ in tqdm(range(num_iters), ncols = 106, bar_format = custom_bar_format):
             for var in self.bp_vars:
                 var.propagate()
             for cell in self.bp_cells:
@@ -243,14 +244,14 @@ class BPSolver(Solver):
         original_grid_solution = deepcopy(grid)
         
         print(f"First Pass Model Accuracy Report --→ Letters Accuracy: {ori_letter_accu:.2f}% | Words Accuracy: {ori_word_accu:.2f}%")
-        print(boundary_line, '\n')
+        print("*" * 106, '\n')
 
         if iterative_improvement_steps < 1 or ori_letter_accu == 100.0:
             # if the letter accuracy reaches maximum leave this here without further second pass model 
             if return_greedy_states or return_ii_states:
                 return output_results, all_grids
             else:
-                print(''.join(['X' if i%5==0 else '-' for i in range(101)]))
+                print(''.join(['#' if i%5==0 else '-' for i in range(106)]))
                 return output_results
         
         #loading the reranker model
@@ -265,8 +266,8 @@ class BPSolver(Solver):
         second_line = f"Second Pass: Iterative Improvement with '{self.reranker_model_type}'"
         middle_position = (len(boundary_line) - len(second_line)) // 2
         print(boundary_line)
-        print(f"{second_line:>{middle_position + len(second_line)}}")
-        print(boundary_line, '\n')
+        print(f"|{second_line:>{middle_position + len(second_line)}}{'|':>{middle_position - 1}}")
+        print("*"*106, '\n')
 
         second_pass_start_time = time.time()
         for i in range(iterative_improvement_steps):
@@ -324,13 +325,12 @@ class BPSolver(Solver):
         print(f"\nTime Taken by Second Pass Re-ranker Model: {second_pass_tt} seconds.")
         print(f"Re-ranker Model Invoke Count: {T5_COUNTER}")
         print(f"Re-ranker Model Average Inference Time: {(second_pass_tt / T5_COUNTER) * 1000:.2f} ms")
-        print(boundary_line, '\n')
+        print("*" * 106, '\n')
 
-        boundary_line = '-' * 100
         second_line = "Post-Refinement Step"
         middle_position = (len(boundary_line) - len(second_line)) // 2
         print(boundary_line)
-        print(f"{second_line:>{middle_position + len(second_line)}}")
+        print(f"|{second_line:>{middle_position + len(second_line)}}{'|':>{middle_position - 1}}")
         print(boundary_line, '\n')
 
         first_pass_grid = deepcopy(original_grid_solution)
@@ -389,12 +389,12 @@ class BPSolver(Solver):
             print(f"Last-Refinement Accuracy Report --→ Letters Accuracy: {temp_letter_accu:.2f}% | Words Accuracy: {temp_word_accu:.2f}%")
         else:
             print("\tDid no improvment in Last-Refinement Step!")
-        print(boundary_line, '\n')
+        print("*" * 106, '\n')
 
         if return_greedy_states or return_ii_states:
             return output_results, all_grids
         else:
-            print(''.join(['#' if i % 2==0 else '-' for i in range(101)]))
+            print(''.join(['#' if i % 2==0 else '-' for i in range(106)]))
             output_results['second pass model']['call count'] = T5_COUNTER
             return output_results
         
