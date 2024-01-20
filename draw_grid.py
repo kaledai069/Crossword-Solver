@@ -2,7 +2,6 @@ import numpy as np
 import cv2
 
 def draw_grid(data, grid_size, overlay_truth_matrix, grid_num_matrix, accu_list, all_clue_info, wrong_clues, puzzle_date = None):
-    print(len(grid_num_matrix), len(grid_num_matrix[0]))
     rows, cols = grid_size
     cell_size = 38
     padding_w = 10
@@ -61,7 +60,6 @@ def draw_grid(data, grid_size, overlay_truth_matrix, grid_num_matrix, accu_list,
     word_accuracy_text = f"Word Accuracy: {accu_list[1]:.2f} %"
     word_text_size = cv2.getTextSize(word_accuracy_text, font, font_scale, font_thickness)[0]
     font = cv2.FONT_HERSHEY_DUPLEX
-    print(word_text_size)
     t_x = width // 2 + (rows * cell_size) // 2 - word_text_size[0]
     t_y = 30
     cv2.putText(image, word_accuracy_text, (t_x, t_y), font, 0.65, (0, 0, 0), font_thickness, cv2.LINE_AA)

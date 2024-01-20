@@ -246,7 +246,7 @@ class BPSolver(Solver):
         original_grid_solution = deepcopy(grid)
         
         print(f"First Pass Model Accuracy Report --→ Letters Accuracy: {ori_letter_accu:.2f}% | Words Accuracy: {ori_word_accu:.2f}%\n")
-        print("*" * 106)
+        print("-" * 106)
 
         print(boundary_line_2)
 
@@ -265,6 +265,7 @@ class BPSolver(Solver):
         output_results['second pass model']['all grids'] = []
         output_results['second pass model']['all letter accuracy'] = []
         output_results['second pass model']['all word accuracy'] = []
+        output_results['second pass model']['uncertain_pairs'] = []
         intermediate_II_results = []
 
         second_line = f"Second Pass: Iterative Improvement with '{self.reranker_model_type}'"
@@ -275,7 +276,7 @@ class BPSolver(Solver):
 
         second_pass_start_time = time.time()
         for i in range(iterative_improvement_steps):
-            grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
+            grid, did_iterative_improvement_make_edit, uncertain_pairs = self.iterative_improvement(grid)
             _, accu_log = self.evaluate(grid, False)
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
 
@@ -288,6 +289,7 @@ class BPSolver(Solver):
             output_results['second pass model']['all grids'].append(grid)
             output_results['second pass model']['all letter accuracy'].append(temp_letter_accu)
             output_results['second pass model']['all word accuracy'].append(temp_word_accu)
+            output_results['second pass model']['uncertain_pairs'].append(uncertain_pairs)
             
             # get the hell out of the II, if the consecutive improvement doesn't shows much result
             if len(intermediate_II_results) > 1:
@@ -323,13 +325,15 @@ class BPSolver(Solver):
         output_results['second pass model']['final letter'] = output_results['second pass model']['all letter accuracy'][ii_max_index]
         output_results['second pass model']['final word'] = output_results['second pass model']['all word accuracy'][ii_max_index]
 
+        output_results['second pass model']['best index'] = ii_max_index
+
         print(f"\nSecond Pass Model Accuracy Report ({ordinal(ii_max_index+1)} Iteration) --→ Letters Accuracy: {output_results['second pass model']['final letter'] :.2f}% | Words Accuracy: {output_results['second pass model']['final word']:.2f}%")
         
         second_pass_tt = second_pass_end_time - second_pass_start_time
         print(f"\nTime Taken by Second Pass Re-ranker Model: {second_pass_tt} seconds.")
         print(f"Re-ranker Model Invoke Count: {T5_COUNTER}")
         print(f"Re-ranker Model Average Inference Time: {(second_pass_tt / T5_COUNTER) * 1000:.2f} ms\n")
-        print("*" * 106)
+        print(boundary_line_1)
 
         print(boundary_line_2)
 
@@ -595,12 +599,7 @@ class BPSolver(Solver):
     def iterative_improvement(self, grid):
         # check the grid for uncertain areas and save those words to be analyzed in local search, aka looking for alternate candidates
         uncertain_answers = self.get_uncertain_answers(grid) 
-        # print(uncertain_answers)
         self.candidate_replacements = self.get_candidate_replacements(uncertain_answers, grid)
-        # print(len(self.candidate_replacements))
-        # print(self.candidate_replacements[:10])
-
-        # print('\nstarting iterative improvement')
         original_grid_score = self.score_grid(grid)
         possible_edits = []
         for replacements in self.candidate_replacements:
@@ -608,7 +607,6 @@ class BPSolver(Solver):
             for cell, letter in replacements:
                 modified_grid[cell.position[0]][cell.position[1]] = letter
             modified_grid_score = self.score_grid(modified_grid)
-            # print('candidate edit')
             variables = set(sum([cell.crossing_vars for cell, _ in replacements], []))
 
             # just to who the original answer, score and modified scores
@@ -648,6 +646,6 @@ class BPSolver(Solver):
                     original_fill = ''.join([grid[cell.position[0]][cell.position[1]] for cell in var.ordered_cells])
                     modified_fill = ''.join([new_grid[cell.position[0]][cell.position[1]] for cell in var.ordered_cells])
                     # print('original:', original_fill, 'modified:', modified_fill)
-            return new_grid, True
+            return new_grid, True, uncertain_answers
         else:
-            return grid, False
+            return grid, False, uncertain_answers

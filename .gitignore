@@ -4,3 +4,4 @@ __pycache__/
 demo/*.json
 Crossword Scrapper/json/
 Crossword Scrapper/puz/
+.ipynb_checkpoints/
