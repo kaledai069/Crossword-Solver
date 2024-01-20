@@ -314,7 +314,7 @@ class DPRForCrossword(object):
         args.encoded_ctx_file = encoded_ctx_file
         args.batch_size = batch_size
         # self.device = torch.device("cuda:"+str(process_id%torch.cuda.device_count()))
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
         setup_args_gpu(args)
         print_args(args)
