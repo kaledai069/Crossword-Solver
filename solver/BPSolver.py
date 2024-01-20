@@ -133,6 +133,12 @@ class BPCell:
         except IndexError:
             pass
 
+def ordinal(number):
+    if 10 <= number % 100 <= 20:
+        suffix = 'th'
+    else:
+        suffix = {1: 'st', 2: 'nd', 3: 'rd'}.get(number % 10, 'th')
+    return str(number) + suffix
 
 class BPSolver(Solver):
     def __init__(self, 
@@ -196,9 +202,17 @@ class BPSolver(Solver):
         global T5_COUNTER
 
         output_results = {}
-        # run solving for num_iters iterations
-        print('\nBeginning Belief Propagation iteration steps')
-        for _ in tqdm(range(num_iters), ncols = 100):
+
+        # Lets prettify the terminal outputs
+        print(''.join(['#' if i % 2==0 else '-' for i in range(101)]))
+        boundary_line = '-' * 100
+        second_line = "First Pass: DistilBERT Bi-Encoder with Belief Propagation"
+        middle_position = (len(boundary_line) - len(second_line)) // 2
+        print(boundary_line)
+        print(f"{second_line:>{middle_position + len(second_line)}}")
+        print(boundary_line, '\n')
+        print('\nLoopy Belief Propagation Starts.\n')
+        for _ in tqdm(range(num_iters), ncols = 120):
             for var in self.bp_vars:
                 var.propagate()
             for cell in self.bp_cells:
@@ -207,7 +221,7 @@ class BPSolver(Solver):
                 cell.propagate()
             for var in self.bp_vars:
                 var.sync_state()
-        print('Belief Propagation iteration complete\n')
+        print('\nLoopy Belief Propagation Completed.\n')
        
         # Get the current based grid based on greedy selection from the marginals
         if return_greedy_states:
@@ -225,18 +239,18 @@ class BPSolver(Solver):
         output_results['first pass model']['word accuracy'] = ori_word_accu
 
         original_grid_solution = deepcopy(grid)
-
-        print(f"Before Iterative Improvement with t5-small: {accu_log}")
+        
+        print(f"First Pass Model Accuracy Report:\n\t\tLetters Accuracy: {ori_letter_accu:.2f}% | Words Accuracy: {ori_word_accu:.2f}%")
 
         if iterative_improvement_steps < 1 or ori_letter_accu == 100.0:
             # if the letter accuracy reaches maximum leave this here without further second pass model 
             if return_greedy_states or return_ii_states:
                 return output_results, all_grids
             else:
+                print("\n", ''.join(['X' if i%5==0 else '-' for i in range(101)]))
                 return output_results
         
-        #loading the ByT5 reranker model
-        print(self.reranker_model_type)
+        #loading the reranker model
         self.reranker, self.tokenizer = setup_t5_reranker(self.reranker_path, self.reranker_model_type)
         
         output_results['second pass model'] = {}
@@ -246,8 +260,14 @@ class BPSolver(Solver):
         intermediate_II_results = []
 
         second_pass_start_time = time.time()
-        print('-'*100)
-        print("Starting Iterative Improvement with T5-small")
+
+        boundary_line = '-' * 100
+        second_line = f"Second Pass: Iterative Improvement with '{self.reranker_model_type}'"
+        middle_position = (len(boundary_line) - len(second_line)) // 2
+        print(boundary_line)
+        print(f"{second_line:>{middle_position + len(second_line)}}")
+        print(boundary_line, '\n')
+
         for i in range(iterative_improvement_steps):
             grid, did_iterative_improvement_make_edit = self.iterative_improvement(grid)
             _, accu_log = self.evaluate(grid, False)
@@ -255,7 +275,8 @@ class BPSolver(Solver):
 
             # track the iterative ongoing grid accuracies
             intermediate_II_results.append([temp_letter_accu, temp_word_accu])
-            print(f"{i+1}th iteration: {accu_log}")
+
+            print(f"{ordinal(i+1)} Iteration Accuracy Report:\n\t\tLetters Accuracy: {temp_letter_accu:.2f}% | Words Accuracy: {temp_word_accu:.2f}%")
 
             # saving output results
             output_results['second pass model']['all grids'].append(grid)
@@ -265,38 +286,51 @@ class BPSolver(Solver):
             # get the hell out of the II, if the consecutive improvement doesn't shows much result
             if len(intermediate_II_results) > 1:
                 former_accuracies = sum(intermediate_II_results[-2])
-                later_accuracies = sum(intermediate_II_results[-1])
+                latter_accuracies = sum(intermediate_II_results[-1])
 
-                if later_accuracies <= former_accuracies:
+                if latter_accuracies <= former_accuracies:
                     break
 
             if not did_iterative_improvement_make_edit or temp_letter_accu == 100.0:
                 break
+
             if return_ii_states:
                 all_grids.append(deepcopy(grid))
 
         # track the time for the second pass model only
         second_pass_end_time = time.time()
         _, accu_log = self.evaluate(grid, False)
+
         print(f"\nAfter Iterative Improvement with t5-small: {accu_log}")
-
-        if temp_letter_accu < ori_letter_accu or temp_word_accu < ori_word_accu:
-            print("Reverting the changes due to worse output from second pass iterative handle. ")
-            grid = deepcopy(original_grid_solution)
-            _, accu_log = self.evaluate(grid, False)
-            print(f"\nFinal Accuracy Stat: {accu_log}")
-
-        print(f"Total time taken for t5-small: {second_pass_end_time - second_pass_start_time} seconds")
         
-        temp_lett_accu_list = output_results['second pass model']['all letter accuracy'].copy()
-        ii_max_index = temp_lett_accu_list.index(max(temp_lett_accu_list))
+        # lets hold out this reverting back to the original accuracy list
+        # if temp_letter_accu < ori_letter_accu or temp_word_accu < ori_word_accu:
+        #     print("Reverting the changes due to worse output from second pass iterative handle. ")
+        #     grid = deepcopy(original_grid_solution)
+        #     _, accu_log = self.evaluate(grid, False)
+        #     print(f"\nFinal Accuracy Stat: {accu_log}")
+
+        
+        second_pass_letter_accu_list = output_results['second pass model']['all letter accuracy'].copy()
+        ii_max_index = second_pass_letter_accu_list.index(max(second_pass_letter_accu_list))
 
         output_results['second pass model']['final grid'] = output_results['second pass model']['all grids'][ii_max_index]
         output_results['second pass model']['final letter'] = output_results['second pass model']['all letter accuracy'][ii_max_index]
         output_results['second pass model']['final word'] = output_results['second pass model']['all word accuracy'][ii_max_index]
+
+        print(f"\nSecond Pass Model Accuracy Report ({ordinal(ii_max_index+1)} Iteration):\n\t\tLetters Accuracy: {output_results['second pass model']['final letter'] :.2f}% | Words Accuracy: {output_results['second pass model']['final word']:.2f}%")
         
-        print("-"*100)
-        print("\nStarting last refinement step: ")
+        second_pass_tt = second_pass_end_time - second_pass_start_time
+        print(f"\nTime Taken by Second Pass Re-ranker Model: {second_pass_tt} seconds.")
+        print(f"Re-ranker Model Invoke Count: {T5_COUNTER}")
+        print(f"Re-ranker Model Average Inference Time: {(second_pass_tt / T5_COUNTER) * 1000:.2f} ms\n")
+
+        boundary_line = '-' * 100
+        second_line = "Post-Refinement Step"
+        middle_position = (len(boundary_line) - len(second_line)) // 2
+        print(boundary_line)
+        print(f"{second_line:>{middle_position + len(second_line)}}")
+        print(boundary_line, '\n')
 
         first_pass_grid = deepcopy(original_grid_solution)
         second_pass_grid = output_results['second pass model']['final grid']
@@ -351,12 +385,14 @@ class BPSolver(Solver):
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
             output_results['second pass model']['last letter accuracy'] = temp_letter_accu
             output_results['second pass model']['last word accuracy'] = temp_word_accu
-            print(f"\nAfter Refinement: {accu_log}")
+            print(f"Last-Refinement Accuracy Report:\n\t\tLetters Accuracy: {temp_letter_accu:.2f}% | Words Accuracy: {temp_word_accu:.2f}%")
+        else:
+            print("\tDid no improvment in Last-Refinement Step!")
 
         if return_greedy_states or return_ii_states:
             return output_results, all_grids
         else:
-            print(f"Total times the second pass model is called: {T5_COUNTER}")
+            print("\n",''.join(['#' if i % 2==0 else '-' for i in range(101)]))
             output_results['second pass model']['call count'] = T5_COUNTER
             return output_results
         
