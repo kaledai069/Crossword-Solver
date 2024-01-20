@@ -206,12 +206,13 @@ class BPSolver(Solver):
         # Lets prettify the terminal outputs
         print(''.join(['#' if i % 2==0 else '-' for i in range(106)]))
 
-        boundary_line = '-' * 106
+        boundary_line_1 = "*" * 106
+        boundary_line_2 = '-' * 106
         second_line = "First Pass: DistilBERT Bi-Encoder with Belief Propagation"
-        middle_position = (len(boundary_line) - len(second_line)) // 2
-        print(boundary_line)
+        middle_position = (len(boundary_line_1) - len(second_line)) // 2
+        print(boundary_line_1)
         print(f"|{second_line:>{middle_position + len(second_line)}}{'|':>{middle_position - 1}}")
-        print(boundary_line)
+        print(boundary_line_1)
 
         custom_bar_format = "{l_bar}{bar}|"
         print('\nLoopy Belief Propagation Starts.\n')
@@ -224,7 +225,7 @@ class BPSolver(Solver):
                 cell.propagate()
             for var in self.bp_vars:
                 var.sync_state()
-        print('\n\t\t\tLoopy Belief Propagation Completed.\n')
+        print('\nLoopy Belief Propagation Completed.\n')
        
         # Get the current based grid based on greedy selection from the marginals
         if return_greedy_states:
@@ -243,8 +244,11 @@ class BPSolver(Solver):
 
         original_grid_solution = deepcopy(grid)
         
-        print(f"First Pass Model Accuracy Report --→ Letters Accuracy: {ori_letter_accu:.2f}% | Words Accuracy: {ori_word_accu:.2f}%")
-        print("*" * 106, '\n')
+        print(f"First Pass Model Accuracy Report --→ Letters Accuracy: {ori_letter_accu:.2f}% | Words Accuracy: {ori_word_accu:.2f}%\n")
+        print("*" * 106)
+
+        print(boundary_line_2)
+        print(boundary_line_2)
 
         if iterative_improvement_steps < 1 or ori_letter_accu == 100.0:
             # if the letter accuracy reaches maximum leave this here without further second pass model 
@@ -264,10 +268,10 @@ class BPSolver(Solver):
         intermediate_II_results = []
 
         second_line = f"Second Pass: Iterative Improvement with '{self.reranker_model_type}'"
-        middle_position = (len(boundary_line) - len(second_line)) // 2
-        print(boundary_line)
+        middle_position = (len(boundary_line_1) - len(second_line)) // 2
+        print(boundary_line_1)
         print(f"|{second_line:>{middle_position + len(second_line)}}{'|':>{middle_position - 1}}")
-        print("*"*106, '\n')
+        print(boundary_line_1, '\n')
 
         second_pass_start_time = time.time()
         for i in range(iterative_improvement_steps):
@@ -324,14 +328,17 @@ class BPSolver(Solver):
         second_pass_tt = second_pass_end_time - second_pass_start_time
         print(f"\nTime Taken by Second Pass Re-ranker Model: {second_pass_tt} seconds.")
         print(f"Re-ranker Model Invoke Count: {T5_COUNTER}")
-        print(f"Re-ranker Model Average Inference Time: {(second_pass_tt / T5_COUNTER) * 1000:.2f} ms")
-        print("*" * 106, '\n')
+        print(f"Re-ranker Model Average Inference Time: {(second_pass_tt / T5_COUNTER) * 1000:.2f} ms\n")
+        print("*" * 106)
+
+        print(boundary_line_2)
+        print(boundary_line_2)
 
         second_line = "Post-Refinement Step"
-        middle_position = (len(boundary_line) - len(second_line)) // 2
-        print(boundary_line)
+        middle_position = (len(boundary_line_1) - len(second_line)) // 2
+        print(boundary_line_1)
         print(f"|{second_line:>{middle_position + len(second_line)}}{'|':>{middle_position - 1}}")
-        print(boundary_line, '\n')
+        print(boundary_line_1, '\n')
 
         first_pass_grid = deepcopy(original_grid_solution)
         second_pass_grid = output_results['second pass model']['final grid']
@@ -386,10 +393,10 @@ class BPSolver(Solver):
             [temp_letter_accu, temp_word_accu] = self.extract_float(accu_log)
             output_results['second pass model']['last letter accuracy'] = temp_letter_accu
             output_results['second pass model']['last word accuracy'] = temp_word_accu
-            print(f"Last-Refinement Accuracy Report --→ Letters Accuracy: {temp_letter_accu:.2f}% | Words Accuracy: {temp_word_accu:.2f}%")
+            print(f"Last-Refinement Accuracy Report --→ Letters Accuracy: {temp_letter_accu:.2f}% | Words Accuracy: {temp_word_accu:.2f}%\n")
         else:
-            print("\tDid no improvment in Last-Refinement Step!")
-        print("*" * 106, '\n')
+            print("\tDid no improvment in Last-Refinement Step!\n")
+        print(boundary_line_1)
 
         if return_greedy_states or return_ii_states:
             return output_results, all_grids
