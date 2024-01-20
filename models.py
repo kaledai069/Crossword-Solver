@@ -281,12 +281,12 @@ class DenseRetriever(object):
 class FakeRetrieverArgs:
     """Used to surpress the existing argparse inside DPR so we can have our own argparse"""
     def __init__(self):
-        self.do_lower_case = False
-        self.pretrained_model_cfg = None
-        self.encoder_model_type = None
+        self.do_lower_case = True
+        self.pretrained_model_cfg = 'distilbert-base-uncased'
+        self.encoder_model_type = 'hf_distilbert'
         self.model_file = None
         self.projection_dim = 0
-        self.sequence_length = 512
+        self.sequence_length = 32
         self.do_fill_lower_case = False
         self.desegment_valid_fill = False
         self.no_cuda = False
@@ -314,7 +314,7 @@ class DPRForCrossword(object):
         args.encoded_ctx_file = encoded_ctx_file
         args.batch_size = batch_size
         # self.device = torch.device("cuda:"+str(process_id%torch.cuda.device_count()))
-        self.device = 'cpu'
+        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
         setup_args_gpu(args)
         print_args(args)
