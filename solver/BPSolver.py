@@ -206,12 +206,13 @@ class BPSolver(Solver):
         # Lets prettify the terminal outputs
         print(''.join(['#' if i % 2==0 else '-' for i in range(106)]))
 
-        boundary_line_1 = "*" * 106
-        boundary_line_2 = '-' * 106
+        boundary_line_1 = '-' * 106
+        boundary_line_2 = "*" * 106
+        
         second_line = "First Pass: DistilBERT Bi-Encoder with Belief Propagation"
         middle_position = (len(boundary_line_1) - len(second_line)) // 2
         print(boundary_line_1)
-        print(f"|{second_line:>{middle_position + len(second_line)}}{'|':>{middle_position - 1}}")
+        print(f"|{second_line:>{middle_position + len(second_line)}}{'|':>{middle_position}}")
         print(boundary_line_1)
 
         custom_bar_format = "{l_bar}{bar}|"
@@ -247,7 +248,6 @@ class BPSolver(Solver):
         print(f"First Pass Model Accuracy Report --→ Letters Accuracy: {ori_letter_accu:.2f}% | Words Accuracy: {ori_word_accu:.2f}%\n")
         print("*" * 106)
 
-        print(boundary_line_2)
         print(boundary_line_2)
 
         if iterative_improvement_steps < 1 or ori_letter_accu == 100.0:
@@ -331,7 +331,6 @@ class BPSolver(Solver):
         print(f"Re-ranker Model Average Inference Time: {(second_pass_tt / T5_COUNTER) * 1000:.2f} ms\n")
         print("*" * 106)
 
-        print(boundary_line_2)
         print(boundary_line_2)
 
         second_line = "Post-Refinement Step"
