@@ -229,11 +229,12 @@ def set_encoder_params_from_state(state, args):
     ]
     for param, value in override_params:
         if hasattr(args, param):
-            logger.warning(
-                "Overriding args parameter value from checkpoint state. Param = %s, value = %s",
-                param,
-                value,
-            )
+            # logger.warning(
+            #     "Overriding args parameter value from checkpoint state. Param = %s, value = %s",
+            #     param,
+            #     value,
+            # )
+            pass
         setattr(args, param, value)
     return args
 
