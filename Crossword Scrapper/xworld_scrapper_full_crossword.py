@@ -71,10 +71,10 @@ def convert_to_json(publication, puz_output_dir, json_output_dir):
             json.dump(json_data, f)
 
 
-publication_keyword = "nyt"
-publication = 'new-york-times'
-start_date = datetime.date(2023, 8, 1)
-end_date= datetime.date(2023, 12, 31)
+publication_keyword = "sdpq"
+publication = 'simply-daily-puzzles-quick'
+start_date = datetime.date(2023, 6, 1)
+end_date= datetime.date(2024, 1, 31)
 puz_output_dir = "./puz"
 json_output_dir = "./json"
 
